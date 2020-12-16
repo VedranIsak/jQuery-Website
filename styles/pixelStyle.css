@@ -1,0 +1,63 @@
+    #pixel-header-img {
+        background-image: url('../images/pixelImages/header.png');
+    }
+    
+    #pixel-header-img-two {
+        background-image: url('../images/pixelImages/header.png');
+    }
+    
+    .pixel5-primary {
+        background-image: url('../images/pixelImages/pixel5ver1.png');
+        background-size: 80% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .pixel5-secondary {
+        background-image: url('../images/pixelImages/pixel5ver2.png');
+        background-size: 80% 95%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .pixel4a-primary {
+        background-image: url('../images/pixelImages/pixel4aver1.png');
+        background-size: 110% 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .pixel4a-secondary {
+        background-image: url('../images/pixelImages/pixel4aver2.webp');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .pixel4xl-primary {
+        background-image: url('../images/pixelImages/pixel4xlver1.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .pixel4xl-secondary {
+        background-image: url('../images/pixelImages/pixel4xlver2.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .pixel4-primary {
+        background-image: url('../images/pixelImages/pixel4ver1.jpg');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .pixel4-secondary {
+        background-image: url('../images/pixelImages/pixel4ver2.jpg');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }

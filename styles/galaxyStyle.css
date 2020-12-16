@@ -1,0 +1,45 @@
+.galaxy-header-img {
+    background-image: url('../images/galaxyImages/header.jpg');
+}
+
+.galaxys20-primary {
+    background-image: url('../images/galaxyImages/galaxys20ver1.webp');
+    background-size: 180% 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galaxys20-secondary {
+    background-image: url('../images/galaxyImages/galaxys20ver2.webp');
+    background-size: 180% 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galaxynote20-primary {
+    background-image: url('../images/galaxyImages/galaxynote20ver1.webp');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galaxynote20-secondary {
+    background-image: url('../images/galaxyImages/galaxynote20ver2.webp');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galaxys10-primary {
+    background-image: url('../images/galaxyImages/galaxys10ver1.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galaxys10-secondary {
+    background-image: url('../images/galaxyImages/galaxys10ver2.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

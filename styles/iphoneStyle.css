@@ -1,0 +1,31 @@
+.iphone-header-img {
+    background-image: url('../images/iphoneImages/header.jpg');
+}
+
+.iphone12promax-primary {
+    background-image: url('../images/iphoneImages/iphone12promaxver1.png');
+    background-size: 125% 125%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone12promax-secondary {
+    background-image: url('../images/iphoneImages/iphone12promaxver2.png');
+    background-size: 90% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone12-primary {
+    background-image: url('../images/iphoneImages/iphone12ver1.png');
+    background-size: 90% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone12-secondary {
+    background-image: url('../images/iphoneImages/iphone12ver2.png');
+    background-size: 125% 125%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
