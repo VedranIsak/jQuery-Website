@@ -265,7 +265,7 @@ div ::-webkit-scrollbar-thumb {
     grid-row-end: 6;
     background: transparent;
     color: white;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-radius: 10px 10px;
     transition: background 0.5s;
 }

@@ -66,7 +66,7 @@ $(document).ready(function(event) {
         } else {
             $this.removeClass("isClicked");
             textContainer.hide(1000);
-            $this.html("What is this website about");
+            $this.html("What this website is about");
         }
     });
 
