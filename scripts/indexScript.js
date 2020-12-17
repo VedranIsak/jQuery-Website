@@ -86,21 +86,29 @@ $(document).ready(function(event) {
     cartBtn.on("click", function(e) {
         $this = $(this);
         if (!$this.hasClass("isClicked")) {
-            $this.addClass("isClicked");
-            $("#billing-header").show(1000);
-            $("#order-header").show(1000);
-            $("#cart-form").show(1000);
-            $("#cart-items-container").show(1000);
-            $this.html("Hide your Cart");
-            $this.addClass("hide-cart-btn");
+            $this.fadeToggle(500);
+            setTimeout(() => {
+                $this.addClass("isClicked");
+                $("#billing-header").show(1000);
+                $("#order-header").show(1000);
+                $("#cart-form").show(1000);
+                $("#cart-items-container").show(1000);
+                $this.html("Hide your Cart");
+                $this.addClass("hide-cart-btn");
+                $this.fadeToggle(1000);
+            }, 600);
         } else {
-            $this.removeClass("isClicked");
-            $("#billing-header").hide(1000);
-            $("#order-header").hide(1000);
-            $("#cart-form").hide(1000);
-            $("#cart-items-container").hide(1000);
-            $this.html("View your Cart");
-            $this.removeClass("hide-cart-btn");
+            $this.fadeToggle(500);
+            setTimeout(() => {
+                $this.removeClass("isClicked");
+                $("#billing-header").hide(1000);
+                $("#order-header").hide(1000);
+                $("#cart-form").hide(1000);
+                $("#cart-items-container").hide(1000);
+                $this.html("View your Cart");
+                $this.removeClass("hide-cart-btn");
+                $this.fadeToggle(1000);
+            }, 600)
         }
     });
 

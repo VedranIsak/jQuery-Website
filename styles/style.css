@@ -83,8 +83,8 @@ table {
     width: 100vw;
     position: fixed;
     top: 0;
-    z-index: 2;
-    background: black;
+    z-index: 3;
+    background: transparent;
     opacity: 0.9;
 }
 
@@ -102,23 +102,20 @@ table {
     height: 100%;
     list-style-type: none;
     display: flex;
-    border-right: 0.5px solid white;
 }
 
-#navbar .menu-item a {
+#navbar .menu-item h2 {
     flex: 1 1 auto;
     align-self: center;
+    justify-self: center;
     width: 100%;
-    height: auto;
-    display: block;
     text-align: center;
-    text-decoration: none;
-    font-size: 2rem;
     color: white;
+    cursor: pointer;
     transition: text-shadow 0.5s;
 }
 
-#navbar .menu-item a:hover {
+#navbar .menu-item h2:hover {
     text-shadow: 1px 1px 4px;
 }
 
@@ -144,9 +141,7 @@ footer {
 }
 
 #bottom-footer h2 span {
-    padding: 1%;
+    padding: 0.5%;
     background: white;
     border-radius: 5px;
-    font-weight: 600;
-    text-shadow: 4px 4px 8px black;
 }
