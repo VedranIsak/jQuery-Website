@@ -38,7 +38,7 @@ $(document).ready(function(event) {
         }
         main.animate({
             'margin-left': '+=' + procentMargin + '%'
-        }, 2000, function() {
+        }, 1250, function() {
             indexer--
         })
     });
@@ -46,7 +46,7 @@ $(document).ready(function(event) {
     arrowRight.on("click", function(e) {
         main.animate({
             'margin-left': '-=' + procentMargin + '%'
-        }, 2000, function() {
+        }, 1250, function() {
             indexer++;
             if (indexer == 3) {
                 indexer = 0;

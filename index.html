@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/layoutStyle.css">
-    <link rel="stylesheet" href="../styles/indexStyle.css">
-    <link rel="stylesheet" href="../styles/pixelStyle.css">
-    <link rel="stylesheet" href="../styles/galaxyStyle.css">
-    <link rel="stylesheet" href="../styles/iphoneStyle.css">
-    <link rel="stylesheet" href="../styles/cartStyle.css">
+    <link rel="stylesheet" href="./styles/layoutStyle.css">
+    <link rel="stylesheet" href="./styles/indexStyle.css">
+    <link rel="stylesheet" href="./styles/pixelStyle.css">
+    <link rel="stylesheet" href="./styles/galaxyStyle.css">
+    <link rel="stylesheet" href="./styles/iphoneStyle.css">
+    <link rel="stylesheet" href="./styles/cartStyle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,10 +19,11 @@
     <title>Phonestore</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../scripts/indexScript.js"></script>
-    <script src="../scripts/pixelScript.js"></script>
-    <script src="../scripts/galaxyScript.js"></script>
-    <script src="../scripts/iphoneScript.js"></script>
+    <script src="./scripts/indexScript.js"></script>
+    <script src="./scripts/pixelScript.js"></script>
+    <script src="./scripts/galaxyScript.js"></script>
+    <script src="./scripts/iphoneScript.js"></script>
+    <script src="./scripts/cartScript.js"></script>
 </head>
 
 <body>
@@ -32,13 +32,13 @@
             <ul id="menu">
                 <li class="menu-item"></li>
                 <li class="menu-item">
-                    <h2>Pixel</h2>
+                    <h2 id="pixel-anchor">Pixel</h2>
                 </li>
                 <li class="menu-item">
-                    <h2>iPhone</h2>
+                    <h2 id="iphone-anchor">iPhone</h2>
                 </li>
                 <li class="menu-item">
-                    <h2>Galaxy</h2>
+                    <h2 id="galaxy-anchor">Galaxy</h2>
                 </li>
                 <li class="menu-item"></li>
             </ul>
@@ -94,7 +94,7 @@
                         <h2 class="name-header">Google Pixel 5</h2>
                         <p>
                             Released in 2020, the Pixel 5 is Google's latest flagship phone. The newest offering from the tech giant offers all of the specs that you expect in a modern flagship. A Qualcomm Snapdragon 765G, 8GB of RAM, 128GB Internal Storage, Google's patented camera
-                            technology and the latest version of Android are all packed inside of this beauty! Needless to say, this is an amazing phone.
+                            technology and the latest version of Android are all packed inside of this beauty!
                         </p>
                         <table class="content-table">
                             <tr>
@@ -206,7 +206,7 @@
                         <h2 class="name-header">Google Pixel 4XL</h2>
                         <p>
                             The Google Pixel 4XL might be a year old at this point, but that does not mean that you are making large concessions on performance by picking up this phone! Google crammed all that they were capable off into this phone back in 2019 at it shows. A large
-                            and dense 2K 6.3 inches OLED Panel and 6GB of DDR4 RAM is nothing to be sneezed at and on top of that phone is still upgradable to Android 11 and will be patched and updated by Google for some time!
+                            and dense 2K 6.3 inches OLED Panel and 6GB of DDR4 RAM is nothing to be sneezed at.
                         </p>
                         <table class="content-table">
                             <tr>
@@ -260,7 +260,7 @@
                         <h2 class="name-header">Google Pixel 4</h2>
                         <p>
                             If you are interested of getting the Pixel 4XL but you are not quite sure whether or not the large screen is something for you, then this phone is the one for you! The smaller regular Google Pixel 4 has the same CPU, GPU and RAM as its bigger brother,
-                            with the only significant difference between the two being the screen real estate. Not only is the Pixel 4 more compact and easier to hold, it is also cheaper than the 4XL. Needless to say, this phone is a bargain.
+                            with the only significant difference between the two being the screen real estate.
                         </p>
                         <table class="content-table">
                             <tr>
@@ -445,7 +445,7 @@
                         <h2 class="name-header">Samsung Galaxy S10</h2>
                         <p>
                             Released in 2019, the Galaxy S10 may be more than a year old at this point, but this phone still packs a punch. The former flagship from the Korean tech giant comes with a stunning 2K Amoled display, a powerful Exynos chipset and 8GB of DDR4 RAM. Needless
-                            to say, this is more than enough for essentially all users in today's market. Apart from that you also get Samsung's own version of Android with the One UI interface.
+                            to say, this is more than enough for essentially all users in today's market!
                         </p>
                         <table class="content-table">
                             <tr>
@@ -501,7 +501,7 @@
                         <h2 class="name-header">Samsung Galaxy Note 10</h2>
                         <p>
                             The Galaxy Note 10 was released to the public in 2019, and the phone came with the best specs that Samsung had to offer, which is to be expected. Apart from the powerful CPU and GPU the Note 10 also offered a massive 6.3 inch AMOLED display and, of course,
-                            the patented Samsung Stylus Pen. The pencil is what seperates the Note from the competition, and being a year old the Note 10 is far more cheaper than its successor, the Note 20.
+                            the patented Samsung Stylus Pen. This phone is simple a bargain!
                         </p>
                         <table class="content-table">
                             <tr>
@@ -577,8 +577,7 @@
                         <h2 class="name-header">Apple Iphone 12 Pro Max</h2>
                         <p>
                             The Apple Iphone 12 Pro Max is the latest flagship from the American tech giant. The phone comes at a premium price but that is due to the premium features it offers. Apart from having the latest Apple CPU and GPU, the Pro Max also offers 5G-compatability,
-                            a main camera equipped with a LiDAR scanner and 8 GB of DDR4 RAM. Needless to say, if you enjoy Apple's previous products, or better yet if you are already entrenched in the company's ecosystem, the Pro Max is definitely worth
-                            considering. There's not much more you could want in a phone!
+                            a main camera equipped with a LiDAR scanner and 8 GB of DDR4 RAM. This phone is as good as they come!
                         </p>
                         <table class="content-table">
                             <tr>
@@ -632,7 +631,7 @@
                         <h2 class="name-header">Apple Iphone 12</h2>
                         <p>
                             Released alongside the Pro Max the regular Apple iPhone 12 is directed to people who still want the latest iPhone, but withing a more constrained budget. In exchange for a significantly cheaper asking price you are giving up on screen size, RAM and the
-                            main camera. But the corners that you quit are not large by any means. And you still get the same CPU and GPU that the beefed up Pro Max is getting. If you are looking for value for your money, this is the phone for you!
+                            main camera. But the corners that you quit are not large by any means. If you are looking for value for your money, this is the phone for you!
                         </p>
                         <table class="content-table">
                             <tr>
@@ -688,7 +687,7 @@
                         <h2 class="name-header">Apple Iphone 11 Pro Max</h2>
                         <p>
                             The Apple iPhone 11 Pro Max is formiddable phone to this day, more than a year later after its release. The CPU and GPU are still performing at extremely high levels and the Main Camera is still capable of delivering absolutely stunning pictures. The
-                            iPhone 11 Pro Max is also a tad cheaper than the iPhone 12 Pro Max, which is surely to be appreciated!
+                            iPhone 11 Pro Max is also cheaper than the iPhone 12 Pro Max, which is surely to be appreciated!
                         </p>
                         <table class="content-table">
                             <tr>
@@ -741,7 +740,7 @@
                         <h2 class="name-header">Apple Iphone 11</h2>
                         <p>
                             The Apple iPhone 11 was released in 2019 and delivered on all the promises that the American techgiant had made. The software was polished, the camera amazing and the display absolutely stunning. More than a year later the Apple iPhone 11 is still a formiddable
-                            phone that is just of its more modern competition. But to accommodate that the price of this handset is a bit smaller than of its modern cousins.
+                            phone that is just shy of being as good as its more modern competition.
                         </p>
                         <table class="content-table">
                             <tr>

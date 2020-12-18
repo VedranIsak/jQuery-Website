@@ -1,4 +1,5 @@
  $(document).ready(function(event) {
+     const showButton = $(".show-cart-btn");
      var ul = $("#cart-items");
      var totalPrice = 0;
      var totalItems = 0;
@@ -69,6 +70,37 @@
              $("#total-items").html(totalItems);
          }
      }
+
+     showButton.on("click", function(e) {
+         $this = $(this);
+         if (!$this.hasClass("isClicked")) {
+             loadCartItems();
+             $this.fadeToggle(500);
+             setTimeout(() => {
+                 $this.addClass("isClicked");
+                 $("#billing-header").show(1000);
+                 $("#order-header").show(1000);
+                 $("#cart-form").show(1000);
+                 $("#cart-items-container").show(1000);
+                 $this.html("Hide your Cart");
+                 $this.addClass("hide-cart-btn");
+                 $this.fadeToggle(1000);
+             }, 600);
+         } else {
+             $this.fadeToggle(500);
+             setTimeout(() => {
+                 $this.removeClass("isClicked");
+                 $("#billing-header").hide(1000);
+                 $("#order-header").hide(1000);
+                 $("#cart-form").hide(1000);
+                 $("#cart-items-container").hide(1000);
+                 $this.html("View your Cart");
+                 $this.removeClass("hide-cart-btn");
+                 $this.fadeToggle(1000);
+             }, 600)
+         }
+     });
+
 
      $("input[type=checkbox]").change(function(e) {
          $this = $(this);

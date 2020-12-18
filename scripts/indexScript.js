@@ -4,10 +4,12 @@ $(document).ready(function(event) {
     const showButton = $("#show-btn");
     const textContainer = $(".text-container");
     const viewBtns = $(".view-btn");
-    const cartBtn = $(".show-cart-btn");
     var currentPage = "";
     const arrowRight = $(".arrow-right");
     const arrowLeft = $(".arrow-left");
+    const pixelAnchor = $("#pixel-anchor");
+    const iphoneAnchor = $("#iphone-anchor");
+    const galaxyAnchor = $("#galaxy-anchor");
 
     var indexer = 0;
     const procentMargin = '100';
@@ -25,6 +27,29 @@ $(document).ready(function(event) {
             });
         }, 20000);
     }
+
+    var fullHeight = homeImageContainer.css("height");
+    var lastTopScrollTop = 0;
+    var lastBottomScrollTop = fullHeight;
+    $(this).on("scroll", function(e) {
+        if ($("html, body").scrollTop() > 50 && $("html, body").scrollTop() < 200) {
+            var currentTopScrollTop = $(this).scrollTop();
+            if (currentTopScrollTop > lastTopScrollTop) {
+                $("html, body").stop(true, false).animate({
+                    scrollTop: fullHeight
+                }, 1000);
+            }
+            lastTopScrollTop = currentTopScrollTop;
+        } else if ($("html, body").scrollTop() > (fullHeight + 50) && $("html, body").scrollTop() < (fullHeight + 200)) {
+            var currentBottomScrollTop = $(this).scrollTop();
+            if (currentBottomScrollTop > lastBottomScrollTop) {
+                $("html, body").stop(true, false).animate({
+                    scrollTop: fullHeight
+                }, 1000);
+            }
+            lastBottomScrollTop = currentBottomScrollTop;
+        }
+    });
 
     // startSlide();
     $(imageContainers).find(".desc-container").hide();
@@ -70,6 +95,30 @@ $(document).ready(function(event) {
         }
     });
 
+    pixelAnchor.on("click", function(e) {
+        if (currentPage !== null) {
+            $(currentPage).hide(1000);
+        }
+        currentPage = "#pixel-section";
+        $(currentPage).show(1000);
+    });
+
+    iphoneAnchor.on("click", function(e) {
+        if (currentPage !== null) {
+            $(currentPage).hide(1000);
+        }
+        currentPage = "#iphone-section";
+        $(currentPage).show(1000);
+    });
+
+    galaxyAnchor.on("click", function(e) {
+        if (currentPage !== null) {
+            $(currentPage).hide(1000);
+        }
+        currentPage = "#galaxy-section";
+        $(currentPage).show(1000);
+    });
+
     viewBtns.on("click", function(e) {
         let headerTxt = $(this).prev("h2").text();
         let spacer = headerTxt.indexOf(' ');
@@ -82,34 +131,4 @@ $(document).ready(function(event) {
         currentPage = "#" + newPageLower + "-section";
         $(currentPage).show(1000);
     });
-
-    cartBtn.on("click", function(e) {
-        $this = $(this);
-        if (!$this.hasClass("isClicked")) {
-            $this.fadeToggle(500);
-            setTimeout(() => {
-                $this.addClass("isClicked");
-                $("#billing-header").show(1000);
-                $("#order-header").show(1000);
-                $("#cart-form").show(1000);
-                $("#cart-items-container").show(1000);
-                $this.html("Hide your Cart");
-                $this.addClass("hide-cart-btn");
-                $this.fadeToggle(1000);
-            }, 600);
-        } else {
-            $this.fadeToggle(500);
-            setTimeout(() => {
-                $this.removeClass("isClicked");
-                $("#billing-header").hide(1000);
-                $("#order-header").hide(1000);
-                $("#cart-form").hide(1000);
-                $("#cart-items-container").hide(1000);
-                $this.html("View your Cart");
-                $this.removeClass("hide-cart-btn");
-                $this.fadeToggle(1000);
-            }, 600)
-        }
-    });
-
 });
