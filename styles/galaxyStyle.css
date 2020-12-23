@@ -2,44 +2,101 @@
     background-image: url('../images/galaxyImages/header.jpg');
 }
 
-.galaxys20-primary {
-    background-image: url('../images/galaxyImages/galaxys20ver1.webp');
-    background-size: 180% 120%;
+.galaxys20-one {
+    background-image: url("../images/galaxyImages/galaxys20ver2.2_-Smartphone---Rosa");
+    background-size: 105% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.galaxys20-secondary {
-    background-image: url('../images/galaxyImages/galaxys20ver2.webp');
-    background-size: 180% 120%;
+.galaxys20-two {
+    background-image: url('../images/galaxyImages/galaxys20ver3.2_-Smartphone---Grå');
+    background-size: 105% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.galaxynote20-primary {
+.galaxys20-three {
+    background-image: url('../images/galaxyImages/galaxys20ver1.2_-Smartphone---Ljusblå');
+    background-size: 105% 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galaxynote20-one {
     background-image: url('../images/galaxyImages/galaxynote20ver1.webp');
-    background-size: 100% 100%;
+    background-size: 100% 95%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.galaxynote20-secondary {
+.galaxynote20-two {
     background-image: url('../images/galaxyImages/galaxynote20ver2.webp');
-    background-size: 100% 100%;
+    background-size: 100% 95%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.galaxys10-primary {
-    background-image: url('../images/galaxyImages/galaxys10ver1.png');
-    background-size: 100% 100%;
+.galaxys10-one {
+    background-image: url('../images/galaxyImages/galaxys20ver1.webp');
+    background-size: 100% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.galaxys10-secondary {
-    background-image: url('../images/galaxyImages/galaxys10ver2.jpg');
-    background-size: 100% 100%;
+.galaxys10-two {
+    background-image: url('../images/galaxyImages/galaxys20ver2.webp');
+    background-size: 100% 85%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.galaxynote10-one {
+    background-image: url("../images/galaxyImages/galaxynote10ver1.jpg");
+    background-size: 107.5% 86.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galaxynote10-two {
+    background-image: url("../images/galaxyImages/galaxynote10ver2.jpg");
+    background-size: 100% 86.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#galaxys20-img-one {
+    background: pink;
+}
+
+#galaxys20-img-two {
+    background: gray;
+}
+
+#galaxys20-img-three {
+    background: cyan;
+}
+
+#galaxys10-img-one {
+    background: cyan;
+}
+
+#galaxys10-img-two {
+    background: black;
+}
+
+#galaxynote20-img-one {
+    background: gray;
+}
+
+#galaxynote20-img-two {
+    background: pink;
+}
+
+#galaxynote10-img-one {
+    background: red;
+}
+
+#galaxynote10-img-two {
+    background: lightblue;
 }

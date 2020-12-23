@@ -5,8 +5,9 @@ $(document).ready(function(event) {
     const addPixel4Btn = $("#pixel4-cart-btn");
 
     const pixel5ImgContainer = $("#pixel5-img");
-    const pixel5Pri = $("#pixel5-primary-img");
-    const pixel5Sec = $("#pixel5-secondary-img");
+    const pixel5Pri = $("#pixel5-img-one");
+    const pixel5Sec = $("#pixel5-img-two");
+    const pixel5Thi = $("#pixel5-img-three")
 
     const pixel4aImgContainer = $("#pixel4a-img");
     const pixel4aPri = $("#pixel4a-primary-img");
@@ -79,6 +80,12 @@ $(document).ready(function(event) {
             pixel5ImgContainer.toggleClass("pixel5-secondary").toggleClass('pixel5-primary');
         }, 500);
         pixel5ImgContainer.fadeToggle(500);
+    });
+
+    pixel5Thi.on("click", function(e) {
+        console.log("third");
+        pixel5ImgContainer.fadeToggle(500).toggleClass("pixel5-primary");
+        pixel5ImgContainer.fadeToggle(500).addClass("pixel5-secondary");
     });
 
     pixel4aPri.on("click", function(e) {

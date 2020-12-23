@@ -24,6 +24,7 @@
     <script src="./scripts/galaxyScript.js"></script>
     <script src="./scripts/iphoneScript.js"></script>
     <script src="./scripts/cartScript.js"></script>
+    <script src="./scripts/layoutScript.js"></script>
 </head>
 
 <body>
@@ -44,8 +45,8 @@
             </ul>
         </navbar>
     </header>
-    <main>
-        <div id="home-content-container">
+    <main id="main-container">
+        <div id="home-content-container" class="scroll-child">
             <div class="arrow-right"></div>
             <div class="arrow-left"></div>
             <h1 id="main-header">Press for more options</h1>
@@ -77,728 +78,161 @@
             </div>
         </div>
 
-        <section id="pixel-section" class="phone-section">
-            <div id="pixel-arrow-left" class="phone-arrow-left"></div>
-            <div id="pixel-arrow-right" class="phone-arrow-right"></div>
-            <main id="pixel-main" class="phone-main">
-                <div id="pixel-header-img" class="phone-header-img">
-                    <h1>
-                        Google Pixel Phones
-                    </h1>
-                    <button id="hide-pixel-btn" class="hide-section-btn">Hide</button>
-                </div>
-
-                <div class="content-box-container">
-                    <div class="content-box">
-                        <div id="pixel5-img" class="img-container pixel5-primary"></div>
-                        <h2 class="name-header">Google Pixel 5</h2>
-                        <p>
-                            Released in 2020, the Pixel 5 is Google's latest flagship phone. The newest offering from the tech giant offers all of the specs that you expect in a modern flagship. A Qualcomm Snapdragon 765G, 8GB of RAM, 128GB Internal Storage, Google's patented camera
-                            technology and the latest version of Android are all packed inside of this beauty!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Snapdragon 765G</td>
-                                <td>Adreno 620</td>
-                                <td>8GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>12.2MP & 16MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>8MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.0 inches/OLED</td>
-                                <td>1080x2340/432 ppi</td>
-                                <td>Android 11 (Vanilla)</td>
-                            </tr>
-                            <td>
-
-                            </td>
-                        </table>
-
-                        <button id="pixel5-primary-img" class="primary-img-btn">Gray</button>
-                        <button id="pixel5-secondary-img" class="secondary-img-btn">Black</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/pixel-5.html?gclid=CjwKCAiA_Kz-BRAJEiwAhJNY75Dks6T4K6i0mvil2cyEtTh2v-9xJtoD5c1fLqF_glsCcaeFHP3JzBoC5wQQAvD_BwE" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/google_pixel_5-10386.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">699$</h2>
-                        </div>
-                        <button id="pixel5-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-
-                    <div class="content-box">
-                        <div id="pixel4a-img" class="img-container pixel4a-primary"></div>
-                        <h2 class="name-header">Google Pixel 4a 5G</h2>
-                        <p>
-                            Released alongside the Pixel 5, the 4a is Google's mid-range offering to the Android market. Despite being aimed for people that purchase phones on a tight budget, the Pixel 4a still packs alot of punch! Apart from the RAM the Pixel 4a is almost identical
-                            statswise to the 5! That means that you get the latest and greatest CPU, GPU and Camera that the market has to offer!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Snapdragon 765G</td>
-                                <td>Adreno 620</td>
-                                <td>6GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>12.2MP & 16MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>8MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.2 inches/OLED</td>
-                                <td>1080x2340/413 ppi</td>
-                                <td>Android 11 (Vanilla)</td>
-                            </tr>
-                        </table>
-                        <button id="pixel4a-primary-img" class="primary-img-btn">Black</button>
-                        <button id="pixel4a-secondary-img" class="secondary-img-btn">White</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/pixel-5.html?gclid=CjwKCAiA_Kz-BRAJEiwAhJNY75Dks6T4K6i0mvil2cyEtTh2v-9xJtoD5c1fLqF_glsCcaeFHP3JzBoC5wQQAvD_BwE" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/google_pixel_5-10386.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">499$</h2>
-                        </div>
-                        <button id="pixel4a-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="content-box-container">
-                    <div class="content-box">
-                        <div id="pixel4xl-img" class="img-container pixel4xl-primary"></div>
-                        <h2 class="name-header">Google Pixel 4XL</h2>
-                        <p>
-                            The Google Pixel 4XL might be a year old at this point, but that does not mean that you are making large concessions on performance by picking up this phone! Google crammed all that they were capable off into this phone back in 2019 at it shows. A large
-                            and dense 2K 6.3 inches OLED Panel and 6GB of DDR4 RAM is nothing to be sneezed at.
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Snapdragon 855</td>
-                                <td>Adreno 640</td>
-                                <td>6GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>12.2MP & 16MP</td>
-                                <td>4K@30fps/ 1080p@120fps</td>
-                                <td>8MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.3 inches/OLED</td>
-                                <td>1440x3040/537 ppi</td>
-                                <td>Android 10 (Vanilla)</td>
-                            </tr>
-                        </table>
-
-                        <button id="pixel4xl-primary-img" class="primary-img-btn">Black</button>
-                        <button id="pixel4xl-secondary-img" class="secondary-img-btn">White</button>
-                        <div class="compare-price-container ">
-                            <a href="https://www.pricerunner.se/sp/pixel-5.html?gclid=CjwKCAiA_Kz-BRAJEiwAhJNY75Dks6T4K6i0mvil2cyEtTh2v-9xJtoD5c1fLqF_glsCcaeFHP3JzBoC5wQQAvD_BwE" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/google_pixel_5-10386.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">599$</h2>
-                        </div>
-                        <button id="pixel4xl-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-
-                    <div class="content-box">
-                        <div id="pixel4-img" class="img-container pixel4-primary"></div>
-                        <h2 class="name-header">Google Pixel 4</h2>
-                        <p>
-                            If you are interested of getting the Pixel 4XL but you are not quite sure whether or not the large screen is something for you, then this phone is the one for you! The smaller regular Google Pixel 4 has the same CPU, GPU and RAM as its bigger brother,
-                            with the only significant difference between the two being the screen real estate.
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Snapdragon 855</td>
-                                <td>Adreno 640</td>
-                                <td>6GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>12.2MP & 16MP</td>
-                                <td>4K@30fps/ 1080p@120fps</td>
-                                <td>8MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>5.7 inches/OLED</td>
-                                <td>1080x2280/444 ppi</td>
-                                <td>Android 10 (Vanilla)</td>
-                            </tr>
-                        </table>
-                        <button id="pixel4-primary-img" class="primary-img-btn">Pink</button>
-                        <button id="pixel4-secondary-img" class="secondary-img-btn">Black</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/pixel-5.html?gclid=CjwKCAiA_Kz-BRAJEiwAhJNY75Dks6T4K6i0mvil2cyEtTh2v-9xJtoD5c1fLqF_glsCcaeFHP3JzBoC5wQQAvD_BwE" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/google_pixel_5-10386.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">499$</h2>
-                        </div>
-                        <button id="pixel4-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div id="pixel-header-img-two" class="phone-header-img">
-                    <h1>
-                        Google Pixel Phones
-                    </h1>
-                    <button id="hide-pixel-btn-two" class="hide-section-btn">Hide</button>
-                </div>
-            </main>
+        <section id="pixel-cover" class="phone-cover scroll-child">
+            <button id="pixel-view-btn" class="view-phones-btn">Check out the Pixels</button>
         </section>
 
-        <section id="galaxy-section" class="phone-section">
-            <div id="galaxy-arrow-left" class="phone-arrow-left"></div>
-            <div id="galaxy-arrow-right" class="phone-arrow-right"></div>
-            <main id="galaxy-main" class="phone-main">
-                <div id="galaxy-header-img" class="galaxy-header-img phone-header-img">
-                    <h1>
-                        Samsung Galaxy Phones
-                    </h1>
-                    <button id="hide-galaxy-btn" class="hide-section-btn">Hide</button>
+        <section id="test-pixel-section" class="test-section scroll-child">
+            <div class="header">
+                <h1>Google Pixel</h1>
+            </div>
+
+            <div id="pixel5-container" data-img-count="2" data-img="one" class="phone-container one">
+                <button id="pixel5-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 5 - 128GB</button>
+                <button id="pixel5-switch-container" class="switch-container">Specs</button>
+                <div id="pixel5-img" class="img-container pixel5-one">
+                    <div id="pixel5-img-one" class="switch-img img-one"></div>
+                    <div id="pixel5-img-two" class="switch-img img-two"></div>
                 </div>
+                <button id="pixel5-add" class="add-phone-btn">Add To Cart</button>
+            </div>
 
-                <div class="content-box-container">
-                    <div class="content-box">
-                        <div id="galaxys20-img" class="img-container galaxys20-primary"></div>
-                        <h2 class="name-header">Samsung Galaxy S20</h2>
-                        <p>
-                            Released in 2020, the Galaxy S20 is Samsung's latest flagship phone. The newest offering from the tech giant offers all of the specs that you expect in a modern flagship. An Exynos 990 chip, 8GB of RAM, 128GB internal storage, Samsung's powerful camera
-                            technology and the latest version of Android One UI are all packed inside of this beauty! An awesome phone through and through.
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Exynos 990</td>
-                                <td>Mali-G77 MP11</td>
-                                <td>8GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>2x12MP & 64MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>10MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.2 inches/Super AMOLED</td>
-                                <td>1440x3200/563 ppi</td>
-                                <td>Android 10 (One UI 2.5)</td>
-                            </tr>
-                            <td>
-
-                            </td>
-                        </table>
-                        <button id="galaxys20-primary-img" class="primary-img-btn">Black</button>
-                        <button id="galaxys20-secondary-img" class="secondary-img-btn">Gray</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/samsung-s20.html?gclid=CjwKCAiAn7L-BRBbEiwAl9UtkP9U_hkGKfNqZn6fRGsUV6tGn3KWDvXcbqs71EDUN-Z3MJc0u-tVyhoCVIYQAvD_BwE" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/samsung_galaxy_s20-10081.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">799$</h2>
-                        </div>
-                        <button id="galaxys20-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-
-                    <div class="content-box">
-                        <div id="galaxynote20-img" class="img-container galaxynote20-primary"></div>
-                        <h2 class="name-header">Samsung Galaxy Note 20 5G</h2>
-                        <p>
-                            The Galaxy Note 20 5G is Samsung's latest phone for the people that want to have serious power in their handheld device. Alongside all of the A-list specs that you are accustomed with getting when purchasing a Note you also get a handset with the arguably
-                            best screen on the market. And of course, the pencil is always there, with special software installed for its usage!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Exynos 990</td>
-                                <td>Mali-G77 MP11</td>
-                                <td>8GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>2x12MP & 64MP</td>
-                                <td>8K@24fps/ 4K@60fps/ 1080p@240fps</td>
-                                <td>10MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.7 inches/Super AMOLED</td>
-                                <td>1080x2400/393 ppi</td>
-                                <td>Android 10 (One UI 2.5)</td>
-                            </tr>
-                        </table>
-                        <button id="galaxynote20-primary-img" class="primary-img-btn">Black</button>
-                        <button id="galaxynote20-secondary-img" class="secondary-img-btn">Pink</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/galaxy-note-20.html" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/samsung_galaxy_note20-10338.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">899$</h2>
-                        </div>
-                        <button id="galaxynote20-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
+            <div id="pixel4a-container" data-img-count="2" data-img="one" class="phone-container two">
+                <button id="pixel4a-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4a - 64GB</button>
+                <button id="pixel4a-switch-container" class="switch-container">Specs</button>
+                <div id="pixel4a-img" class="img-container pixel4a-one">
+                    <div id="pixel4a-img-one" class="switch-img img-one"></div>
+                    <div id="pixel4a-img-two" class="switch-img img-two"></div>
                 </div>
-                <div class="content-box-container">
-                    <div class="content-box">
-                        <div id="galaxys10-img" class="img-container galaxys10-primary"></div>
-                        <h2 class="name-header">Samsung Galaxy S10</h2>
-                        <p>
-                            Released in 2019, the Galaxy S10 may be more than a year old at this point, but this phone still packs a punch. The former flagship from the Korean tech giant comes with a stunning 2K Amoled display, a powerful Exynos chipset and 8GB of DDR4 RAM. Needless
-                            to say, this is more than enough for essentially all users in today's market!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Exynos 9820</td>
-                                <td>Mali-G76 MP12</td>
-                                <td>8GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>2x12MP & 16MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>10MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.1 inches/Dynamic AMOLED</td>
-                                <td>1440x3040/550 ppi</td>
-                                <td>Android 9 (One UI 2.5)</td>
-                            </tr>
-                            <td>
+                <button id="pixel4a-add" class="add-phone-btn">Add To Cart</button>
+            </div>
 
-                            </td>
-                        </table>
-                        <button id="galaxys10-primary-img" class="primary-img-btn">Black</button>
-                        <button id="galaxys10-secondary-img" class="secondary-img-btn">Gray</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/cl/1/Mobiltelefoner?attr_60501678=60525345" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/samsung_galaxy_s10-9536.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">649$</h2>
-                        </div>
-                        <button id="galaxys10-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-
-                    <div class="content-box">
-                        <div id="galaxynote10-img" class="img-container galaxynote10-primary"></div>
-                        <h2 class="name-header">Samsung Galaxy Note 10</h2>
-                        <p>
-                            The Galaxy Note 10 was released to the public in 2019, and the phone came with the best specs that Samsung had to offer, which is to be expected. Apart from the powerful CPU and GPU the Note 10 also offered a massive 6.3 inch AMOLED display and, of course,
-                            the patented Samsung Stylus Pen. This phone is simple a bargain!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Exynos 9825</td>
-                                <td>Mali-G76 MP12</td>
-                                <td>8GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>2x12MP & 16MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>10MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.3 inches/Dynamic AMOLED</td>
-                                <td>1080x2280/401 ppi</td>
-                                <td>Android 9 (One UI 2.5)</td>
-                            </tr>
-                        </table>
-                        <button id="galaxynote10-primary-img" class="primary-img-btn">Black</button>
-                        <button id="galaxynote10-secondary-img" class="secondary-img-btn">Pink</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/samsung-note-10.html?gclid=Cj0KCQiA2uH-BRCCARIsAEeef3mfc8DPinvnfMh8PMsDPTc0fsO1MAm6pieBk6_XCCS9fO_HTQWedRAaAueiEALw_wcB" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/samsung_galaxy_note10-9788.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">699$</h2>
-                        </div>
-                        <button id="galaxynote10-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
+            <div id="pixel4xl-container" data-img-count="3" data-img="one" class="phone-container three">
+                <button id="pixel4xl-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 4XL - 128GB</button>
+                <button id="pixel4xl-switch-container" class="switch-container">Specs</button>
+                <div id="pixel4xl-img" class="img-container pixel4xl-one">
+                    <div id="pixel4xl-img-one" class="switch-img img-one"></div>
+                    <div id="pixel4xl-img-two" class="switch-img img-two"></div>
+                    <div id="pixel4xl-img-three" class="switch-img img-three"></div>
                 </div>
+                <button id="pixel4xl-add" class="add-phone-btn">Add To Cart</button>
+            </div>
 
-                <div class="galaxy-header-img phone-header-img">
-                    <h1>
-                        Samsung Galaxy Phones
-                    </h1>
-                    <button class="hide-section-btn">Hide</button>
+            <div id="pixel4-container" data-img-count="3" data-img="one" class="phone-container four">
+                <button id="pixel4-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4 - 64GB</button>
+                <button id="pixel4-switch-container" class="switch-container">Specs</button>
+                <div id="pixel4-img" class="img-container pixel4-one">
+                    <div id="pixel4-img-one" class="switch-img img-one"></div>
+                    <div id="pixel4-img-two" class="switch-img img-two"></div>
+                    <div id="pixel4-img-three" class="switch-img img-three"></div>
                 </div>
-
-            </main>
+                <button id="pixel4-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <button id="pixel-hide" class="hide-phones-btn">Hide</button>
         </section>
 
-        <section id="iphone-section" class="phone-section">
-            <div id="iphone-arrow-left" class="phone-arrow-left"></div>
-            <div id="iphone-arrow-right" class="phone-arrow-right"></div>
-            <main id="iphone-main" class="phone-main">
-                <div class="iphone-header-img phone-header-img">
-                    <h1>
-                        Apple iPhones
-                    </h1>
-                    <button id="hide-iphone-btn" class="hide-section-btn">Hide</button>
-                </div>
-
-                <div class="content-box-container">
-                    <div class="content-box">
-                        <div id="iphone12promax-img" class="img-container iphone12promax-primary"></div>
-                        <h2 class="name-header">Apple Iphone 12 Pro Max</h2>
-                        <p>
-                            The Apple Iphone 12 Pro Max is the latest flagship from the American tech giant. The phone comes at a premium price but that is due to the premium features it offers. Apart from having the latest Apple CPU and GPU, the Pro Max also offers 5G-compatability,
-                            a main camera equipped with a LiDAR scanner and 8 GB of DDR4 RAM. This phone is as good as they come!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Apple A14 Bionic</td>
-                                <td>Apple GPU</td>
-                                <td>8GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>3x12MP & LiDAR</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>2x12MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.7 inches/OLED</td>
-                                <td>1284x2778/458ppi</td>
-                                <td>iOS 14.1</td>
-                            </tr>
-                            <td></td>
-                        </table>
-
-                        <button id="iphone12promax-primary-img" class="primary-img-btn">Blue</button>
-                        <button id="iphone12promax-secondary-img" class="secondary-img-btn">Silver</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/samsung-s20.html?gclid=CjwKCAiAn7L-BRBbEiwAl9UtkP9U_hkGKfNqZn6fRGsUV6tGn3KWDvXcbqs71EDUN-Z3MJc0u-tVyhoCVIYQAvD_BwE" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/samsung_galaxy_s20-10081.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">999$</h2>
-                        </div>
-                        <button id="iphone12promax-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-                    <div class="content-box">
-                        <div id="iphone12-img" class="img-container iphone12-primary"></div>
-                        <h2 class="name-header">Apple Iphone 12</h2>
-                        <p>
-                            Released alongside the Pro Max the regular Apple iPhone 12 is directed to people who still want the latest iPhone, but withing a more constrained budget. In exchange for a significantly cheaper asking price you are giving up on screen size, RAM and the
-                            main camera. But the corners that you quit are not large by any means. If you are looking for value for your money, this is the phone for you!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Apple A14 Bionic</td>
-                                <td>Apple GPU</td>
-                                <td>4GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>2x12MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>2x12MP</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.1 inches/OLED</td>
-                                <td>1170x2532/460ppi</td>
-                                <td>iOS 14.1</td>
-                            </tr>
-                            <td></td>
-                        </table>
-                        <button id="iphone12-primary-img" class="primary-img-btn">Black</button>
-                        <button id="iphone12-secondary-img" class="secondary-img-btn">Blue</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/pl/1-5261396/Mobiltelefoner/Apple-iPhone-12-64GB-priser" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/apple_iphone_12-10509.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">899$</h2>
-                        </div>
-                        <button id="iphone12-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="content-box-container">
-                    <div class="content-box">
-                        <div id="iphone11promax-img" class="img-container iphone11promax-primary"></div>
-                        <h2 class="name-header">Apple Iphone 11 Pro Max</h2>
-                        <p>
-                            The Apple iPhone 11 Pro Max is formiddable phone to this day, more than a year later after its release. The CPU and GPU are still performing at extremely high levels and the Main Camera is still capable of delivering absolutely stunning pictures. The
-                            iPhone 11 Pro Max is also cheaper than the iPhone 12 Pro Max, which is surely to be appreciated!
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Apple A13 Bionic</td>
-                                <td>Apple GPU</td>
-                                <td>4GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>3x12MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>12MP & SL 3D</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.5 inches/OLED</td>
-                                <td>1242x2688/458ppi</td>
-                                <td>iOS 14.1</td>
-                            </tr>
-                        </table>
-
-                        <button id="iphone11promax-primary-img" class="primary-img-btn">Blue</button>
-                        <button id="iphone11promax-secondary-img" class="secondary-img-btn">Silver</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/iphone-11-pro-max.html?gclid=Cj0KCQiA2uH-BRCCARIsAEeef3lGBwTebCYbZdeqZdo-4o57XAbZU6XYew_C7fgeM52BVMX1F1ZNxfcaAjzEEALw_wcB" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/apple_iphone_11_pro_max-9846.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">899$</h2>
-                        </div>
-                        <button id="iphone11promax-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-                    <div class="content-box">
-                        <div id="iphone11-img" class="img-container iphone11-primary"></div>
-                        <h2 class="name-header">Apple Iphone 11</h2>
-                        <p>
-                            The Apple iPhone 11 was released in 2019 and delivered on all the promises that the American techgiant had made. The software was polished, the camera amazing and the display absolutely stunning. More than a year later the Apple iPhone 11 is still a formiddable
-                            phone that is just shy of being as good as its more modern competition.
-                        </p>
-                        <table class="content-table">
-                            <tr>
-                                <th>CPU</th>
-                                <th>GPU</th>
-                                <th>RAM</th>
-                            </tr>
-                            <tr>
-                                <td>Apple A13 Bionic</td>
-                                <td>Apple GPU</td>
-                                <td>4GB DDR4</td>
-                            </tr>
-                            <tr>
-                                <th>Back Camera</th>
-                                <th>Video</th>
-                                <th>Front Camera</th>
-                            </tr>
-                            <tr>
-                                <td>2x12MP</td>
-                                <td>4K@60fps/ 1080p@240fps</td>
-                                <td>12MP & SL 3D</td>
-                            </tr>
-                            <tr>
-                                <th>Display</th>
-                                <th>Resolution</th>
-                                <th>OS</th>
-                            </tr>
-                            <tr>
-                                <td>6.1 inches/OLED</td>
-                                <td>828x1792/326ppi</td>
-                                <td>iOS 13</td>
-                            </tr>
-                        </table>
-                        <button id="iphone11-primary-img" class="primary-img-btn">Black</button>
-                        <button id="iphone11-secondary-img" class="secondary-img-btn">Blue</button>
-                        <div class="compare-price-container">
-                            <a href="https://www.pricerunner.se/sp/iphone-11.html?gclid=Cj0KCQiA2uH-BRCCARIsAEeef3mLils5cmGWc-cPz-jGLO3aiqIrogcEbdyqIcxHcg0BuohS9X2spuIaAlEhEALw_wcB" target="_blank">Prices</a>
-                        </div>
-                        <div class="indepth-specs-container">
-                            <a href="https://www.gsmarena.com/apple_iphone_11-9848.php" target="_blank">Specs</a>
-                        </div>
-                        <div class="price-header-container">
-                            <h2 class="price-header">799$</h2>
-                        </div>
-                        <button id="iphone11-cart-btn" class="add-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="iphone-header-img phone-header-img">
-                    <h1>
-                        Apple iPhones
-                    </h1>
-                    <button class="hide-section-btn">Hide</button>
-                </div>
-            </main>
+        <section id="galaxy-cover" class="phone-cover scroll-child">
+            <button id="galaxy-view-btn" class="view-phones-btn">Check out the Galaxies</button>
         </section>
 
-        <section id="cart-section">
+        <section id="test-galaxy-section" class="test-section scroll-child">
+            <div class="header">
+                <h1>Samsung Galaxy</h1>
+            </div>
+
+            <div id="galaxys20-container" data-img-count="3" data-img="one" lass="phone-container one">
+                <button id="galaxys20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy S20 - 128GB</button>
+                <button id="galaxys20-switch-container" class="switch-container">Specs</button>
+                <div id="galaxys20-img" class="img-container galaxys20-one">
+                    <div id="galaxys20-img-one" class="switch-img img-one"></div>
+                    <div id="galaxys20-img-two" class="switch-img img-two"></div>
+                    <div id="galaxys20-img-three" class="switch-img img-three"></div>
+                </div>
+                <button id="galaxys20-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <div id="galaxys10-container" data-img-count="2" data-img="one" class="phone-container two">
+                <button id="galaxys10-name-container" class="name-container" data-storage="64" data-counter="1">Samsung Galaxy S10 - 128GB</button>
+                <button id="galaxys10-switch-container" class="switch-container">Specs</button>
+                <div id="galaxys10-img" class="img-container galaxys10-one">
+                    <div id="galaxys10-img-one" class="switch-img img-one"></div>
+                    <div id="galaxys10-img-two" class="switch-img img-two"></div>
+                </div>
+                <button id="galaxys10-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <div id="galaxynote20-container" data-img-count="2" data-img="two" class="phone-container three">
+                <button id="galaxynote20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 20 5G - 128GB</button>
+                <button id="galaxynote20-switch-container" class="switch-container">Specs</button>
+                <div id="galaxynote20-img" class="img-container galaxynote20-one">
+                    <div id="galaxynote20-img-one" class="switch-img img-one"></div>
+                    <div id="galaxynote20-img-two" class="switch-img img-two"></div>
+                </div>
+                <button id="galaxynote20-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <div id="galaxynote10-container" data-img-count="2" data-img="one" class="phone-container four">
+                <button id="galaxynote10-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 10 - 128GB</button>
+                <button id="galaxynote10-switch-container" class="switch-container">Specs</button>
+                <div id="galaxynote10-img" class="img-container galaxynote10-one">
+                    <div id="galaxynote10-img-one" class="switch-img img-one"></div>
+                    <div id="galaxynote10-img-two" class="switch-img img-two"></div>
+                </div>
+                <button id="galaxynote10-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <button id="galaxy-hide" class="hide-phones-btn">Hide</button>
+        </section>
+
+        <section id="iphone-cover" class="phone-cover scroll-child">
+            <button id="iphone-view-btn" class="view-phones-btn">Check out the iPhones</button>
+        </section>
+
+        <section id="test-iphone-section" class="test-section scroll-child">
+            <div class="header">
+                <h1>Apple iPhone</h1>
+            </div>
+
+            <div id="iphone12promax-container" data-img-count="3" data-img="one" class="phone-container one">
+                <button id="iphone12promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 12 Pro Max - 128GB</button>
+                <button id="iphone12promax-switch-container" class="switch-container">Specs</button>
+                <div id="iphone12promax-img" class="img-container iphone12promax-one">
+                    <div id="iphone12promax-img-one" class="switch-img img-one"></div>
+                    <div id="iphone12promax-img-two" class="switch-img img-two"></div>
+                    <div id="iphone12promax-img-three" class="switch-img img-three"></div>
+                </div>
+                <button id="iphone12promax-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <div id="iphone11promax-container" data-img-count="3" data-img="one" class="phone-container two">
+                <button id="iphone11promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 11 Pro Max - 128GB</button>
+                <button id="iphone11promax-switch-container" class="switch-container">Specs</button>
+                <div id="iphone11promax-img" class="img-container iphone11promax-one">
+                    <div id="iphone11promax-img-one" class="switch-img img-one"></div>
+                    <div id="iphone11promax-img-two" class="switch-img img-two"></div>
+                    <div id="iphone11promax-img-three" class="switch-img img-three"></div>
+                </div>
+                <button id="iphone11promax-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <div id="iphone12-container" data-img-count="3" data-img="one" class="phone-container three">
+                <button id="iphone12-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 12 - 64GB</button>
+                <button id="iphone12-switch-container" class="switch-container">Specs</button>
+                <div id="iphone12-img" class="img-container iphone12-one">
+                    <div id="iphone12-img-one" class="switch-img img-one"></div>
+                    <div id="iphone12-img-two" class="switch-img img-two"></div>
+                    <div id="iphone12-img-three" class="switch-img img-three"></div>
+                </div>
+                <button id="iphone12-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <div id="iphone11-container" data-img-count="3" data-img="one" class="phone-container four">
+                <button id="iphone11-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 11 - 64GB</button>
+                <button id="iphone11-switch-container" class="switch-container">Specs</button>
+                <div id="iphone11-img" class="img-container iphone11-one">
+                    <div id="iphone11-img-one" class="switch-img img-one"></div>
+                    <div id="iphone11-img-two" class="switch-img img-two"></div>
+                    <div id="iphone11-img-three" class="switch-img img-three"></div>
+                </div>
+                <button id="iphone11-add" class="add-phone-btn">Add To Cart</button>
+            </div>
+            <button id="iphone-hide" class="hide-phones-btn">Hide</button>
+        </section>
+
+        <section id="cart-section" class="scroll-child">
             <main>
                 <div id="cart-container">
                     <h2 id="billing-header">Billing Details</h2>
@@ -834,7 +268,7 @@
             </main>
         </section>
 
-        <div id="show-btn-container">
+        <div id="show-btn-container" class="scroll-child">
             <button id="show-btn">What this website is about</button>
             <div class="text-container">
                 <h2>This is an online store for phones</h2>
@@ -844,15 +278,15 @@
                 </p>
             </div>
         </div>
-    </main>
 
-    <footer>
-        <div id="bottom-footer">
-            <h2><span>Made by Vedran Isak and Joachim Torp</span></h2>
-            <h2><span>Systemvetenskap</span></h2>
-            <h2><span>LiU</span></h2>
-        </div>
-    </footer>
+        <footer>
+            <div id="bottom-footer">
+                <h3>Vedran Isak and Joachim Torp</h3>
+                <h3>Systemvetenskap</h3>
+                <h3>LiU</h3>
+            </div>
+        </footer>
+    </main>
 </body>
 
 </html>

@@ -2,30 +2,137 @@
     background-image: url('../images/iphoneImages/header.jpg');
 }
 
-.iphone12promax-primary {
+.iphone12promax-one {
     background-image: url('../images/iphoneImages/iphone12promaxver1.png');
-    background-size: 125% 125%;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.iphone12promax-secondary {
+.iphone12promax-two {
     background-image: url('../images/iphoneImages/iphone12promaxver2.png');
-    background-size: 90% 110%;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.iphone12-primary {
+.iphone12promax-three {
+    background-image: url("../images/iphoneImages/iphone12promaxver3.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone11promax-one {
+    background-image: url('../images/iphoneImages/iphone11promaxver1.webp');
+    background-size: 105% 82.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone11promax-two {
+    background-image: url('../images/iphoneImages/iphone11promaxver2.webp');
+    background-size: 105% 82.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone11promax-three {
+    background-image: url("../images/iphoneImages/iphone11promaxver3.webp");
+    background-size: 105% 82.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone12-one {
     background-image: url('../images/iphoneImages/iphone12ver1.png');
-    background-size: 90% 110%;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.iphone12-secondary {
+.iphone12-two {
     background-image: url('../images/iphoneImages/iphone12ver2.png');
-    background-size: 125% 125%;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.iphone12-three {
+    background-image: url('../images/iphoneImages/iphone12ver3.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone11-one {
+    background-image: url('../images/iphoneImages/iphone11ver1.png');
+    background-size: 100% 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone11-two {
+    background-image: url('../images/iphoneImages/iphone11ver2.png');
+    background-size: 100% 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iphone11-three {
+    background-image: url('../images/iphoneImages/iphone11ver3.png');
+    background-size: 100% 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#iphone12promax-img-one {
+    background: white;
+    border: 0.5px solid black;
+}
+
+#iphone12promax-img-two {
+    background: gray;
+}
+
+#iphone12promax-img-three {
+    background: blue;
+}
+
+#iphone11promax-img-one {
+    background: gray;
+}
+
+#iphone11promax-img-two {
+    background: white;
+    border: 0.5px solid black;
+}
+
+#iphone11promax-img-three {
+    background: beige;
+    border: 0.5px solid black;
+}
+
+#iphone12-img-one {
+    background: blue;
+}
+
+#iphone12-img-two {
+    background: red;
+}
+
+#iphone12-img-three {
+    background: lightgreen;
+}
+
+#iphone11-img-one {
+    background: gold;
+}
+
+#iphone11-img-two {
+    background: lightblue;
+}
+
+#iphone11-img-three {
+    background: black;
 }

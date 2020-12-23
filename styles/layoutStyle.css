@@ -1,297 +1,232 @@
-        .phone-section {
-            height: 100vh;
-            width: 100vw;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .phone-main {
-            height: 100%;
-            width: 400vw;
-            max-width: 400%;
-            min-width: 400%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .phone-section .phone-arrow-left {
-            position: absolute;
-            top: 1.25%;
-            left: 1.5%;
-            width: 0;
-            height: 0;
-            border-top: 30px solid transparent;
-            border-bottom: 30px solid transparent;
-            border-right: 30px solid white;
-            cursor: pointer;
-            opacity: 0.75;
-            z-index: 3;
-            transition: opacity 0.5s;
-        }
-        
-        .phone-section .phone-arrow-left:hover {
-            opacity: 1;
-        }
-        
-        .phone-section .phone-arrow-right {
-            position: absolute;
-            top: 1.25%;
-            right: 1.5%;
-            width: 0;
-            height: 0;
-            border-top: 30px solid transparent;
-            border-bottom: 30px solid transparent;
-            border-left: 30px solid white;
-            cursor: pointer;
-            opacity: 0.75;
-            z-index: 3;
-            transition: 0.5s opacity;
-        }
-        
-        .phone-section .phone-arrow-right:hover {
-            opacity: 1;
-        }
-        
-        div.phone-header-img {
-            flex: 1 1 auto;
-            position: relative;
-            width: 100vw;
-            min-width: calc(100% / 4);
-            max-width: calc(100% / 4);
-            height: 100vh;
-            background-size: 100% 100%;
-        }
-        
-        div.phone-header-img h1 {
-            width: 100%;
-            height: auto;
-            text-align: center;
-            padding-top: 1.5%;
-            color: white;
-        }
-        
-        div.phone-header-img button.hide-section-btn {
-            position: absolute;
-            top: 45%;
-            left: 40%;
-            height: 10%;
-            width: 20%;
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            border-radius: 10px 10px;
-        }
-        
-        p {
-            opacity: 0.75;
-            padding: 2%;
-            border-bottom: 2.5px solid white;
-            background: white;
-            color: black;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            grid-column-start: 1;
-            grid-column-end: 7;
-        }
-        
-        .content-box-container {
-            flex: 1 1 auto;
-            width: 100vw;
-            min-width: calc(100% / 4);
-            max-width: calc(100% / 4);
-            background: black;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            justify-content: space-between;
-            align-items: stretch;
-        }
-        
-        .content-box {
-            width: 50vw;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(11, 1fr);
-            background-image: url("../images/homeImages/contentBoxBackSec.jpg");
-            background-size: 150% 150%;
-            background-position: center;
-            opacity: 0.9;
-        }
-        
-        .content-box:nth-child(2n+1) {
-            border-right: rgba(229, 229, 229, 0.75) solid 2px;
-            background-image: url("../images/homeImages/contentBoxBack.jpg");
-        }
-        
-        .primary-img-btn {
-            border: none;
-            border-top: 2.5px solid white;
-            grid-row-start: 10;
-            grid-row-end: 11;
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-        
-        .primary-img-btn:hover {
-            background: #C0C0C0;
-        }
-        
-        .secondary-img-btn {
-            border: none;
-            grid-row-start: 11;
-            grid-row-end: 12;
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-        
-        .secondary-img-btn:hover {
-            background: #C0C0C0;
-        }
-        
-        .img-container {
-            margin-top: 10%;
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 3;
-            grid-row-end: 9;
-        }
-        
-        .content-box button {
-            background: black;
-            color: rgba(256, 256, 256, 0.75);
-            opacity: 1;
-        }
-        
-        .content-box h2 {
-            text-align: center;
-            background: transparent;
-            opacity: 0.75;
-            margin: auto;
-        }
-        
-        h2.name-header {
-            grid-row: 1;
-            grid-column-start: 1;
-            grid-column-end: 7;
-            padding: 1% 3%;
-            opacity: 0.9;
-            background: white;
-            color: black;
-            text-align: center;
-        }
-        
-        .content-box a {
-            flex: 1 1 auto;
-            justify-self: stretch;
-            align-self: center;
-            font-size: 1.5rem;
-            text-align: center;
-            color: black;
-            text-decoration: none;
-            transition: color 0.5s;
-        }
-        
-        .content-box a:hover {
-            color: gray;
-        }
-        
-        .indepth-specs-container {
-            grid-row-start: 10;
-            grid-row-end: 11;
-            grid-column-start: 3;
-            grid-column-end: 5;
-            display: flex;
-            background: black;
-            border-top: 2.5px solid white;
-        }
-        
-        .indepth-specs-container a {
-            color: rgba(256, 256, 256, 0.75)
-        }
-        
-        .compare-price-container {
-            grid-row-start: 11;
-            grid-row-end: 12;
-            grid-column-start: 3;
-            grid-column-end: 5;
-            display: flex;
-            background: black;
-            color: white;
-        }
-        
-        .compare-price-container a {
-            color: rgba(256, 256, 256, 0.75);
-        }
-        
-        .content-box table {
-            table-layout: fixed;
-            border-spacing: 0;
-            background: transparent;
-            color: black;
-            height: 100%;
-            width: 100%;
-            margin-top: 5%;
-            grid-column-start: 3;
-            grid-column-end: 7;
-            grid-row-start: 3;
-            grid-row-end: 9;
-            padding: 3.5%;
-            opacity: 0.9;
-        }
-        
-        .content-box table th {
-            font-size: 1.5rem;
-            opacity: 0.9;
-            color: white;
-        }
-        
-        .content-box table td {
-            font-size: 1.25rem;
-            text-align: center;
-            color: rgba(229, 229, 229, 0.75);
-        }
-        
-        button.add-cart-btn {
-            border: none;
-            background: black;
-            color: rgba(256, 256, 256, 0.75);
-            grid-row-start: 11;
-            grid-row-end: 12;
-            grid-column-start: 5;
-            grid-column-end: 7;
-        }
-        
-        .add-cart-btn:hover {
-            background: #C0C0C0;
-        }
-        
-        .img-img {
-            width: 15%;
-            height: 80%;
-            vertical-align: middle;
-            background: transparent;
-            margin-left: 5%;
-        }
-        
-        .cart-img {
-            width: 20%;
-            height: auto;
-            vertical-align: middle;
-            background: transparent;
-            margin-left: 5%;
-        }
-        
-        .price-header-container {
-            grid-row-start: 10;
-            grid-row-end: 11;
-            grid-column-start: 5;
-            grid-column-end: 7;
-            background: black;
-            color: rgba(256, 256, 256, 0.75);
-            display: flex;
-            border-top: 2.5px solid white;
-        }
+      .phone-cover {
+          position: relative;
+          width: 100vw;
+          height: 100vh;
+          z-index: 4;
+      }
+      
+      #pixel-cover {
+          background-image: url("../images/homeImages/pixelBackground.jpg");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+      }
+      
+      #galaxy-cover {
+          background-image: url("../images/homeImages/galaxyBackground.jpg");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+      }
+      
+      #iphone-cover {
+          background-image: url("../images/homeImages/iphoneBackground.jpg");
+          background-size: 100% 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+      
+      .phone-cover button {
+          position: absolute;
+          background: rgba(200, 200, 200, 0.75);
+          color: white;
+          height: 7.5%;
+          width: 20%;
+          top: 42.5%;
+          right: 40%;
+          border-radius: 30px;
+          border: 1px solid white;
+      }
+      
+      .phone-container button {
+          background: white;
+          color: black;
+          transition: color 0.75s;
+          border: none;
+      }
+      
+      .phone-container button:hover {
+          color: rgba(200, 200, 200, 0.75);
+      }
+      
+      .test-section {
+          position: relative;
+          height: 100vh;
+          width: 100vw;
+          max-width: 100%;
+          background: black;
+          z-index: 4;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(12, 1fr);
+      }
+      
+      .test-section .header {
+          grid-row-start: 1;
+          grid-row-end: 2;
+          grid-column-start: 1;
+          grid-column-end: 13;
+      }
+      
+      .header h1 {
+          color: black;
+          background: white;
+          opacity: 0.90;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          padding: 1.5%;
+      }
+      
+      .hide-phones-btn {
+          position: absolute;
+          width: 18vmin;
+          height: 5.5vmin;
+          background: rgba(200, 200, 200, 0.75);
+          color: rgba(20, 20, 20, 0.8);
+          border: none;
+          border-radius: 30px;
+          top: 2.75%;
+          left: 2%;
+          transition: color .5s, background .5s;
+      }
+      
+      .hide-phones-btn:hover {
+          color: rgba(200, 200, 200, 1);
+          background: rgba(20, 20, 20, 0.8);
+      }
+      
+      .main-phone-container {
+          position: relative;
+          min-height: 90%;
+          max-height: 90%;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(12, 1fr);
+      }
+      
+      .test-section .phone-container {
+          position: relative;
+          grid-row-start: 2;
+          grid-row-end: 13;
+          border-radius: 9.5px 9.5px;
+          background: white;
+          opacity: 0.85;
+          margin: 1.5%;
+          margin-bottom: 5%;
+          display: grid;
+          grid-template-rows: repeat(14, 1fr);
+          grid-template-columns: repeat(1, 1fr);
+      }
+      
+      .phone-container .name-container {
+          width: 100%;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          text-align: center;
+          background: transparent;
+          color: black;
+          border-top-left-radius: 7.5px;
+          border-top-right-radius: 7.5px;
+      }
+      
+      .phone-container .switch-container {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          background: transparent;
+          font-size: 0.9;
+          color: black;
+      }
+      
+      .phone-container .img-container {
+          position: relative;
+          grid-row-start: 3;
+          grid-row-end: 14;
+          margin: 0;
+      }
+      
+      .phone-container .switch-img {
+          position: absolute;
+          height: 1.5vmin;
+          width: 1.5vmin;
+          border-radius: 2.5vmin 2.5vmin;
+          top: 1.5%;
+          cursor: pointer;
+      }
+      
+      .phone-container .img-one {
+          right: 3%;
+          background: black;
+      }
+      
+      .phone-container .img-two {
+          right: 8%;
+          background: gray;
+      }
+      
+      .phone-container .img-three {
+          right: 13%;
+          background: cyan;
+      }
+      
+      .phone-container .stats-container {
+          position: relative;
+          grid-row-start: 3;
+          grid-row-end: 14;
+          background: transparent;
+      }
+      
+      .stats-container table {
+          margin-top: 5%;
+          height: 95%;
+          width: 100%;
+          border-collapse: collapse;
+      }
+      
+      .stats-container table th {
+          text-align: left;
+          padding-left: 5%;
+          color: black;
+      }
+      
+      .stats-container table td {
+          font-size: 0.9rem;
+          text-align: left;
+          padding-left: 5%;
+      }
+      
+      .stats-container table td span {
+          background: #000d10;
+          color: white;
+          font-size: 0.75;
+          padding: 2.5%;
+          border-radius: 7.5px 7.5px;
+      }
+      
+      .phone-container .add-phone-btn {
+          grid-row-start: 14;
+          grid-row-end: 15;
+          background: rgba(0, 0, 0, 0.9);
+          color: white;
+          border-radius: 7.5px 7.5px;
+          border: 0.5px solid white;
+      }
+      
+      .phone-container.one {
+          grid-column-start: 1;
+          grid-column-end: 4;
+      }
+      
+      .phone-container.two {
+          grid-column-start: 4;
+          grid-column-end: 7;
+      }
+      
+      .phone-container.three {
+          grid-column-start: 7;
+          grid-column-end: 10;
+      }
+      
+      .phone-container.four {
+          grid-column-start: 10;
+          grid-column-end: 13;
+      }

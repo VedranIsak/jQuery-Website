@@ -10,6 +10,8 @@ $(document).ready(function(event) {
     const pixelAnchor = $("#pixel-anchor");
     const iphoneAnchor = $("#iphone-anchor");
     const galaxyAnchor = $("#galaxy-anchor");
+    const footer = $("footer");
+    const footerContainer = $("#bottom-footer");
 
     var indexer = 0;
     const procentMargin = '100';
@@ -28,28 +30,13 @@ $(document).ready(function(event) {
         }, 20000);
     }
 
-    var fullHeight = homeImageContainer.css("height");
-    var lastTopScrollTop = 0;
-    var lastBottomScrollTop = fullHeight;
-    $(this).on("scroll", function(e) {
-        if ($("html, body").scrollTop() > 50 && $("html, body").scrollTop() < 200) {
-            var currentTopScrollTop = $(this).scrollTop();
-            if (currentTopScrollTop > lastTopScrollTop) {
-                $("html, body").stop(true, false).animate({
-                    scrollTop: fullHeight
-                }, 1000);
-            }
-            lastTopScrollTop = currentTopScrollTop;
-        } else if ($("html, body").scrollTop() > (fullHeight + 50) && $("html, body").scrollTop() < (fullHeight + 200)) {
-            var currentBottomScrollTop = $(this).scrollTop();
-            if (currentBottomScrollTop > lastBottomScrollTop) {
-                $("html, body").stop(true, false).animate({
-                    scrollTop: fullHeight
-                }, 1000);
-            }
-            lastBottomScrollTop = currentBottomScrollTop;
-        }
+    footer.on("mouseenter", function(e) {
+        $("#bottom-footer h3").slideToggle(1000);
     });
+
+    footer.on("mouseleave", function(e) {
+        $("#bottom-footer h3").slideToggle(1000);
+    })
 
     // startSlide();
     $(imageContainers).find(".desc-container").hide();
@@ -97,26 +84,26 @@ $(document).ready(function(event) {
 
     pixelAnchor.on("click", function(e) {
         if (currentPage !== null) {
-            $(currentPage).hide(1000);
+            $(currentPage).hide(1000).removeClass("scroll-child");
         }
         currentPage = "#pixel-section";
-        $(currentPage).show(1000);
+        $(currentPage).show(1000).addClass("scroll-child");
     });
 
     iphoneAnchor.on("click", function(e) {
         if (currentPage !== null) {
-            $(currentPage).hide(1000);
+            $(currentPage).hide(1000).removeClass("scroll-child");
         }
         currentPage = "#iphone-section";
-        $(currentPage).show(1000);
+        $(currentPage).show(1000).addClass("scroll-child");
     });
 
     galaxyAnchor.on("click", function(e) {
         if (currentPage !== null) {
-            $(currentPage).hide(1000);
+            $(currentPage).hide(1000).removeClass("scroll-child");
         }
         currentPage = "#galaxy-section";
-        $(currentPage).show(1000);
+        $(currentPage).show(1000).addClass("scroll-child");
     });
 
     viewBtns.on("click", function(e) {
@@ -126,9 +113,9 @@ $(document).ready(function(event) {
         let newPageLower = newPage.toLowerCase();
 
         if (currentPage !== null) {
-            $(currentPage).hide(1000);
+            $(currentPage).hide(1000).removeClass("scroll-child");
         }
         currentPage = "#" + newPageLower + "-section";
-        $(currentPage).show(1000);
+        $(currentPage).show(1000).addClass("scroll-child");
     });
 });

@@ -1,5 +1,7 @@
  $(document).ready(function(event) {
      const showButton = $(".show-cart-btn");
+     const navbar = $("navbar");
+     const footer = $("footer");
      var ul = $("#cart-items");
      var totalPrice = 0;
      var totalItems = 0;
@@ -29,9 +31,9 @@
                  ul.append(
                      `
                    <li class="cart-item" data-obj-id=${cartItems[i].id}>
-                       <h2>${cartItems[i].name}</h2>
+                       <h2>${cartItems[i].name} - ${cartItems[i].storage}GB</h2>
                        <div class="content-container">
-                           <div style="background-image: url(${cartItems[i].img})"></div>
+                           <div style="background-image: ${cartItems[i].imgUrl}"></div>
                            <table>
                                <tr>
                                    <th>CPU</th>
@@ -54,7 +56,7 @@
                                    <th>Video</th>
                                </tr>
                                <tr>
-                                   <td>${cartItems[i].camera}</td>
+                                   <td>${cartItems[i].backCamera}</td>
                                    <td>${cartItems[i].video}</td>
                                </tr>
                            </table>

@@ -47,8 +47,6 @@ div ::-webkit-scrollbar-thumb {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 9;
-    /* height: calc(0.875 * 100vh);
-    max-height: calc(0.875 * 100vh); */
 }
 
 #billing-details-container {
@@ -262,14 +260,17 @@ div ::-webkit-scrollbar-thumb {
     grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 6;
-    background: transparent;
+    margin-top: 4.25%;
+    margin-bottom: 4.25%;
+    border: 1px solid white;
+    background: rgba(200, 200, 200, 0.75);
     color: white;
-    border-radius: 10px 10px;
-    transition: background 0.5s;
+    border-radius: 30px;
+    transition: background 0.75s;
 }
 
 .show-cart-btn:hover {
-    background: lightgray;
+    background: white;
 }
 
 .hide-cart-btn {
