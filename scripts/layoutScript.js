@@ -278,9 +278,8 @@ $(document).ready(function(event) {
 
             let imgCount = $("#" + fullPhoneName + "-container").attr("data-img-count");
 
-
             $("#" + fullPhoneName + "-stats-container").remove();
-            if (imgCount === 3) {
+            if (imgCount === "3") {
                 $("#" + fullPhoneName + "-container").append(`
                 <div id=${fullPhoneName}-img class="img-container ${fullPhoneName}-one">
                     <div id="${fullPhoneName}-img-one" class="switch-img img-one"></div>
@@ -328,8 +327,8 @@ $(document).ready(function(event) {
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
 
-        $("#" + fullPhoneName + "-cover").slideToggle(1000);
-        $("#test-" + fullPhoneName + "-section").slideToggle(500);
+        $("#" + fullPhoneName + "-cover").hide(1000);
+        $("#test-" + fullPhoneName + "-section").show(500);
     });
 
     hidePhonesBtns.on("click", function(e) {
@@ -337,8 +336,13 @@ $(document).ready(function(event) {
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
 
-        $("#test-" + fullPhoneName + "-section").slideToggle(1000);
-        $("#" + fullPhoneName + "-cover").slideToggle(500);
+        $("#test-" + fullPhoneName + "-section").hide(1000);
+        $("#" + fullPhoneName + "-cover").show(500);
+        setTimeout(() => {
+            $('html, body').animate({
+                scrollTop: $("#" + fullPhoneName + "-cover").offset().top
+            }, 1000)
+        }, 1000);
     });
 
     addPhonesBtns.on("click", function(e) {

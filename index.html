@@ -20,9 +20,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./scripts/indexScript.js"></script>
-    <script src="./scripts/pixelScript.js"></script>
-    <script src="./scripts/galaxyScript.js"></script>
-    <script src="./scripts/iphoneScript.js"></script>
     <script src="./scripts/cartScript.js"></script>
     <script src="./scripts/layoutScript.js"></script>
 </head>
@@ -32,6 +29,10 @@
         <navbar id="navbar">
             <ul id="menu">
                 <li class="menu-item"></li>
+                <li class="menu-item"></li>
+                <li class="menu-item">
+                    <h2>Start</h2>
+                </li>
                 <li class="menu-item">
                     <h2 id="pixel-anchor">Pixel</h2>
                 </li>
@@ -41,6 +42,10 @@
                 <li class="menu-item">
                     <h2 id="galaxy-anchor">Galaxy</h2>
                 </li>
+                <li class="menu-item">
+                    <h2>Cart</h2>
+                </li>
+                <li class="menu-item"></li>
                 <li class="menu-item"></li>
             </ul>
         </navbar>
@@ -82,7 +87,7 @@
             <button id="pixel-view-btn" class="view-phones-btn">Check out the Pixels</button>
         </section>
 
-        <section id="test-pixel-section" class="test-section scroll-child">
+        <section id="pixel-section" class="test-section scroll-child">
             <div class="header">
                 <h1>Google Pixel</h1>
             </div>
@@ -135,7 +140,7 @@
             <button id="galaxy-view-btn" class="view-phones-btn">Check out the Galaxies</button>
         </section>
 
-        <section id="test-galaxy-section" class="test-section scroll-child">
+        <section id="galaxy-section" class="test-section scroll-child">
             <div class="header">
                 <h1>Samsung Galaxy</h1>
             </div>
@@ -184,7 +189,7 @@
             <button id="iphone-view-btn" class="view-phones-btn">Check out the iPhones</button>
         </section>
 
-        <section id="test-iphone-section" class="test-section scroll-child">
+        <section id="iphone-section" class="test-section scroll-child">
             <div class="header">
                 <h1>Apple iPhone</h1>
             </div>
@@ -233,39 +238,72 @@
         </section>
 
         <section id="cart-section" class="scroll-child">
-            <main>
-                <div id="cart-container">
-                    <h2 id="billing-header">Billing Details</h2>
-                    <button class="show-cart-btn">Show your Cart</button>
-                    <h2 id="order-header">Order Details</h2>
-                    <form id="cart-form">
-                        <fieldset id="billing-details">
-                            <label id="first-name-label" for="first-name-input">First name</label>
-                            <input id="first-name-input" type="text" placeholder="John">
-                            <label id="last-name-label" for="last-name-input">Last name</label>
-                            <input id="last-name-input" type="text" placeholder="Doe">
-                            <label id="phone-number-label" for="phone-number-input">Phone number</label>
-                            <input id="phone-number-input" type="number" placeholder="1122334455">
-                            <label id="email-label" for="email-input">Email</label>
-                            <input id="email-input" type="text" placeholder="you@youremail.com">
-                            <label id="country-label" for="country-input">Country</label>
-                            <input id="country-input" type="text">
-                            <label id="city-label" for="city-input">City</label>
-                            <input id="city-input" type="text">
-                            <label id="zip-label" for="zip-input">ZIP</label>
-                            <input id="zip-input" type="number">
-                            <label id="address-label" for="address-input">Address</label>
-                            <input id="address-input" type="text">
-                        </fieldset>
-                        <input id="submit-btn" type="submit" value="Purchase">
-                    </form>
-                    <div id="cart-items-container">
-                        <ul id="cart-items">
-                        </ul>
-                        <button id="delete-btn">Delete</button>
-                    </div>
+            <button id="show-cart-btn" class="inactive-show-cart-btn">Show your Cart</button>
+            <div id="cart-container">
+                <button id="hide-cart-btn">Hide</button>
+                <button id="refresh-cart-btn">Refresh</button>
+                <div id="left-image-container"></div>
+                <div id="right-image-container"></div>
+                <div id="cart-header-container">
+                    <h1 id="cart-header">Your Cart</h1>
                 </div>
-            </main>
+                <div id="message-container">
+                    <h2 id="message-header">Thanks for purchasing our products</h2>
+                </div>
+                <div id="info-form">
+                    <h2>The Phone Company</h2>
+                </div>
+                <button id="environment-button">Make your order eco-friendly</button>
+                <div id="confirm-envir-container">
+                    <h3 id="confirm-envir-text">Thanks for making your order eco-friendly!</h3>
+                </div>
+                <div id="purchase-container">
+                </div>
+                <button id="purchase-btn">Purchase</button>
+                <form id="cart-form">
+                    <fieldset id="fieldset-one">
+                        <label id="first-name-label" for="first-name-input">First name</label>
+                        <input id="first-name-input" type="text" placeholder="John">
+                        <label id="last-name-label" for="last-name-input">Last name</label>
+                        <input id="last-name-input" type="text" placeholder="Doe">
+                    </fieldset>
+                    <fieldset id="fieldset-two">
+                        <label id="phone-number-label" for="phone-number-input">Phone number</label>
+                        <input id="phone-number-input" type="number" placeholder="1122334455">
+                        <label id="email-label" for="email-input">Email</label>
+                        <input id="email-input" type="text" placeholder="you@youremail.com">
+                    </fieldset>
+                    <fieldset id="fieldset-three">
+                        <label id="country-label" for="country-input">Country</label>
+                        <input id="country-input" type="text">
+                        <label id="city-label" for="city-input">City</label>
+                        <input id="city-input" type="text">
+                    </fieldset>
+                    <fieldset id="fieldset-four">
+                        <label id="zip-label" for="zip-input">ZIP</label>
+                        <input id="zip-input" type="number">
+                        <label id="address-label" for="address-input">Address</label>
+                        <input id="address-input" type="text">
+                    </fieldset>
+                </form>
+                <div id="cart-items-container">
+                    <ul id="cart-items">
+                        <div class="item-container">
+                            <h4 class="name-header">Google Pixel 5 - 128GB - Red</h4>
+                            <div class="img-container"></div>
+                            <h4 class="price-container">799$</h4>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                        <div class="item-container">
+                            <h4 class="name-header">Google Pixel 5 - 128GB - Red</h4>
+                            <div class="img-container"></div>
+                            <h4 class="price-container">799$</h4>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                        <div class="item-container"></div>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <div id="show-btn-container" class="scroll-child">

@@ -1,11 +1,19 @@
  $(document).ready(function(event) {
-     const showButton = $(".show-cart-btn");
-     const navbar = $("navbar");
-     const footer = $("footer");
+     const cartContainer = $("#cart-container");
+     const showBtn = $("#show-cart-btn");
+     const hideBtn = $("#hide-cart-btn");
+     const refreshBtn = $("#refresh-cart-btn");
+     const environmentBtn = $("#environment-button");
+     const envContainer = $("#confirm-envir-container");
      var ul = $("#cart-items");
      var totalPrice = 0;
      var totalItems = 0;
+     cartContainer.hide();
+     envContainer.hide();
      loadCartItems();
+     var orderedItems = $(".item-container");
+     var removeBtns = $(".remove-btn");
+     removeBtns.hide();
 
      function hash() {
          let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -30,42 +38,13 @@
                  totalPrice += cartItems[i].price;
                  ul.append(
                      `
-                   <li class="cart-item" data-obj-id=${cartItems[i].id}>
-                       <h2>${cartItems[i].name} - ${cartItems[i].storage}GB</h2>
-                       <div class="content-container">
-                           <div style="background-image: ${cartItems[i].imgUrl}"></div>
-                           <table>
-                               <tr>
-                                   <th>CPU</th>
-                                   <th>RAM</th>
-                               </tr>
-                               <tr>
-                                   <td>${cartItems[i].cpu}</td>
-                                   <td>${cartItems[i].ram}</td>
-                               </tr>
-                               <tr>
-                                   <th>Display</th>
-                                   <th>OS</th>
-                               </tr>
-                               <tr>
-                                   <td>${cartItems[i].display}</td>
-                                   <td>${cartItems[i].os}</td>
-                               </tr>
-                               <tr>
-                                   <th>Camera</th>
-                                   <th>Video</th>
-                               </tr>
-                               <tr>
-                                   <td>${cartItems[i].backCamera}</td>
-                                   <td>${cartItems[i].video}</td>
-                               </tr>
-                           </table>
-                       </div>
-                       <div class="bottom-container">
-                           <h2>${cartItems[i].price}$</h2>
-                           <input type="checkbox">
-                       </div>
-                   </li>`);
+                     <li class="item-container">
+                     <h3 class="name-header">${cartItems[i].name}</h3>
+                     <div class="img-container"></div>
+                     <h3 class="price-container">${cartItems[i].price}$</h3>
+                     <button class="remove-btn" data-id="${cartItems[i].id}">Remove</button>
+                     </li>
+                   `);
              }
              totalItems = cartItems.length;
              $("#total-price").html(totalPrice + '$');
@@ -73,45 +52,84 @@
          }
      }
 
-     showButton.on("click", function(e) {
+     showBtn.on("click", function(e, eventType) {
+         $(this).slideToggle(750);
+         cartContainer.slideToggle(1500);
+     });
+
+     hideBtn.on("click", function(e) {
+         cartContainer.slideToggle(750);
+         showBtn.slideToggle(1500);
+     })
+
+     refreshBtn.on("click", function(e) {
+         cartContainer.fadeToggle(150).fadeToggle(150);
+     });
+
+     var envTimer;
+     environmentBtn.hover(function(e) {
+         envTimer = setTimeout(() => {
+             $this = $(this);
+             $this.addClass("isActive");
+             $this.css("font-size", "1.15rem");
+             $this.css("background", "rgba(0, 65, 70, 0.6)");
+             $this.hide().text("Secure eco-friendly packaging and shipping for a small fee of 5$").fadeIn(750);
+         }, 750)
+     }, function(e) {
          $this = $(this);
-         if (!$this.hasClass("isClicked")) {
-             loadCartItems();
-             $this.fadeToggle(500);
+         $this.removeClass("isActive");
+         $this.css("background", "rgb(256, 256, 256)");
+         $this.css("font-size", "1.5rem");
+         $this.hide().text("Make your order eco-friendly?").fadeIn(750);
+         clearTimeout(envTimer);
+     });
+
+     var counter = 0;
+     environmentBtn.on("click", function(e) {
+         $this = $(this);
+         if ($this.hasClass("isActive") && counter === 0) {
+             envContainer.fadeToggle(750);
+             counter++;
              setTimeout(() => {
-                 $this.addClass("isClicked");
-                 $("#billing-header").show(1000);
-                 $("#order-header").show(1000);
-                 $("#cart-form").show(1000);
-                 $("#cart-items-container").show(1000);
-                 $this.html("Hide your Cart");
-                 $this.addClass("hide-cart-btn");
-                 $this.fadeToggle(1000);
-             }, 600);
-         } else {
-             $this.fadeToggle(500);
-             setTimeout(() => {
-                 $this.removeClass("isClicked");
-                 $("#billing-header").hide(1000);
-                 $("#order-header").hide(1000);
-                 $("#cart-form").hide(1000);
-                 $("#cart-items-container").hide(1000);
-                 $this.html("View your Cart");
-                 $this.removeClass("hide-cart-btn");
-                 $this.fadeToggle(1000);
-             }, 600)
+                 envContainer.fadeToggle(750);
+             }, 2500);
          }
+     })
+
+     var oldTimer;
+     orderedItems.hover(function(e) {
+         oldTimer = setTimeout(() => {
+             $this = $(this);
+             $this.children(".price-container").slideToggle(750);
+             setTimeout(() => { $this.children(".remove-btn").slideToggle(750); }, 1000);
+         }, 750);
+     }, function(e) {
+         $this = $(this);
+         $this.children(".remove-btn").slideToggle(750);
+         setTimeout(() => { $this.children(".price-container").slideToggle(750); }, 1000);
+         clearTimeout(oldTimer);
      });
 
 
-     $("input[type=checkbox]").change(function(e) {
+     removeBtns.on("click", function(e) {
          $this = $(this);
-         if ($this.prop("checked")) {
-             $this.parent().closest(".cart-item").addClass("remove");
-         } else {
-             $this.parent().closest(".cart-item").removeClass("remove");
+         $this.closest(".item-container").remove();
+         let cartItems = [];
+
+         console.log("removing");
+
+         if (cartItems !== null) {
+             let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+             for (let i = 0; i < cartItems.length; i++) {
+                 if (cartItems[i].id === $this.attr("data-id")) {
+                     cartItems.slice(i);
+                     console.log(i);
+                 }
+             }
          }
-     })
+
+         localStorage.setItem("cartItems", JSON.stringify(cartItems));
+     });
 
      $("#delete-btn").on("click", function(e) {
          let cartItems = [];

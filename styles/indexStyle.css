@@ -13,7 +13,10 @@ body {
     background: white;
     font-weight: 300;
     font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
-    overflow: hidden;
+}
+
+section {
+    max-width: 100%;
 }
 
 h1,
@@ -36,6 +39,11 @@ button {
 
 button:hover {
     background: lightgray;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 table {
@@ -197,7 +205,7 @@ footer {
     opacity: 0.75;
     z-index: 1000;
     width: 100%;
-    top: 10%;
+    top: 7.5%;
     text-align: center;
 }
 
@@ -242,14 +250,17 @@ footer {
 #img1 {
     background: black;
     background-image: url('../images/homeImages/pixel.jpg');
-    background-size: 100% 80%;
+    background-size: 80% 70%;
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 #img2 {
+    background: black;
     background-image: url('../images/homeImages/iphone.jpg');
-    background-size: 100% 100%;
+    background-size: 55% 80%;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 #img3 {
@@ -260,7 +271,7 @@ footer {
 #img4 {
     background: black;
     background-image: url('../images/homeImages/pixel.jpg');
-    background-size: 100% 80%;
+    background-size: 80% 70%;
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -291,7 +302,7 @@ footer {
 }
 
 #show-btn-container button:hover {
-    background: white;
+    color: rgba(200, 200, 200, 0.75);
 }
 
 .text-container {
@@ -305,9 +316,8 @@ footer {
 
 .text-container h2,
 .text-container p {
+    background: rgba(200, 200, 200, 0.75);
     color: white;
-    background: black;
-    opacity: 0.85;
 }
 
 .text-container h2 {
@@ -325,7 +335,6 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
     padding: 1%;
-    border: 2px solid black;
     border-radius: 10px 10px;
 }
 
@@ -350,18 +359,6 @@ footer {
     max-width: 100%;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    display: none;
-}
-
-#pixel-section {
-    display: none;
-}
-
-#galaxy-section {
-    display: none;
-}
-
-#iphone-section {
     display: none;
 }
 

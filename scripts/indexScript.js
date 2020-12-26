@@ -10,8 +10,13 @@ $(document).ready(function(event) {
     const pixelAnchor = $("#pixel-anchor");
     const iphoneAnchor = $("#iphone-anchor");
     const galaxyAnchor = $("#galaxy-anchor");
+    const pixelSection = $("#pixel-section");
+    const iphoneSection = $("#iphone-section");
+    const galaxySection = $("#galaxy-section");
     const footer = $("footer");
     const footerContainer = $("#bottom-footer");
+
+    // footerContainer.hide();
 
     var indexer = 0;
     const procentMargin = '100';
@@ -30,15 +35,19 @@ $(document).ready(function(event) {
         }, 20000);
     }
 
-    footer.on("mouseenter", function(e) {
-        $("#bottom-footer h3").slideToggle(1000);
-    });
-
-    footer.on("mouseleave", function(e) {
-        $("#bottom-footer h3").slideToggle(1000);
-    })
-
     // startSlide();
+
+    var footerTimer;
+    footer.hover(function(e) {
+            footerTimer = setTimeout(() => {
+                setTimeout(() => { $("#bottom-footer h3").slideDown(500); }, 500)
+            }, 500);
+        },
+        function(e) {
+            $("#bottom-footer h3").slideUp(500);
+            clearTimeout(footerTimer);
+        });
+
     $(imageContainers).find(".desc-container").hide();
 
     imageContainers.on("click", function(e) {
@@ -82,29 +91,11 @@ $(document).ready(function(event) {
         }
     });
 
-    pixelAnchor.on("click", function(e) {
-        if (currentPage !== null) {
-            $(currentPage).hide(1000).removeClass("scroll-child");
-        }
-        currentPage = "#pixel-section";
-        $(currentPage).show(1000).addClass("scroll-child");
-    });
+    pixelAnchor.on("click", function(e) {});
 
-    iphoneAnchor.on("click", function(e) {
-        if (currentPage !== null) {
-            $(currentPage).hide(1000).removeClass("scroll-child");
-        }
-        currentPage = "#iphone-section";
-        $(currentPage).show(1000).addClass("scroll-child");
-    });
+    iphoneAnchor.on("click", function(e) {});
 
-    galaxyAnchor.on("click", function(e) {
-        if (currentPage !== null) {
-            $(currentPage).hide(1000).removeClass("scroll-child");
-        }
-        currentPage = "#galaxy-section";
-        $(currentPage).show(1000).addClass("scroll-child");
-    });
+    galaxyAnchor.on("click", function(e) {});
 
     viewBtns.on("click", function(e) {
         let headerTxt = $(this).prev("h2").text();
