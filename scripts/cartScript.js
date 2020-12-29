@@ -4,16 +4,19 @@
      const hideBtn = $("#hide-cart-btn");
      const refreshBtn = $("#refresh-cart-btn");
      const environmentBtn = $("#environment-button");
+     const purchaseBtn = $("#purchase-btn");
      const envContainer = $("#confirm-envir-container");
+     const purContainer = $("#confirm-purchase-container");
+     const purText = $("#confirm-purchase-text");
      var ul = $("#cart-items");
      var totalPrice = 0;
-     var totalItems = 0;
      cartContainer.hide();
      envContainer.hide();
-     loadCartItems();
+     purContainer.hide();
      var orderedItems = $(".item-container");
      var removeBtns = $(".remove-btn");
      removeBtns.hide();
+     loadCartItems();
 
      function hash() {
          let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -24,46 +27,89 @@
          return hashValue;
      }
 
+     function getMap() {
+
+        let cartItems = 
+        JSON.parse(localStorage.getItem("cartItems"));
+        let itemsMap = new Map();
+        for(let i = 0; i < cartItems.length; i++) {
+           let counter = 1;
+            for(let y = i + 1; y < cartItems.length; y++) {
+               if(!cartItems[y].isDuplicate 
+                   && cartItems[i].name === cartItems[y].name 
+                   && cartItems[i].storage === cartItems[y].storage 
+                   && cartItems[i].imgNumber === cartItems[y].imgNumber) {
+                       counter++;
+                       itemsMap.set(cartItems[i], counter);
+                       cartItems[y].isDuplicate = true;
+               }
+            }
+            let singleton = true;
+            itemsMap.forEach((value, key) => {
+                if(key.name === cartItems[i].name) {
+                    singleton = false;
+                }
+            });
+            if(singleton) {
+                itemsMap.set(cartItems[i], 1);
+            }
+        }
+        return itemsMap;
+     }
+
      function loadCartItems() {
+         ul.empty();
+         totalPrice = 0;
+
          if (localStorage.getItem("cartItems") !== null) {
              let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-             totalPrice = 0;
-             totalItems = 0;
-             ul.empty();
-             for (let i = 0; i < cartItems.length; i++) {
-                 if (!cartItems[i].hasOwnProperty('id')) {
-                     cartItems[i].id = hash();
-                     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-                 }
-                 totalPrice += cartItems[i].price;
+
+             for(let i = 0; i < cartItems.length; i++) {
+                if (!cartItems[i].hasOwnProperty('id')) {
+                    cartItems[i].id = hash();
+                }
+                cartItems[i].isDuplicate = false;
+            }
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+            itemsMap = getMap();
+
+             itemsMap.forEach((value, key) => {
                  ul.append(
-                     `
-                     <li class="item-container">
-                     <h3 class="name-header">${cartItems[i].name}</h3>
-                     <div class="img-container"></div>
-                     <h3 class="price-container">${cartItems[i].price}$</h3>
-                     <button class="remove-btn" data-id="${cartItems[i].id}">Remove</button>
-                     </li>
-                   `);
-             }
-             totalItems = cartItems.length;
-             $("#total-price").html(totalPrice + '$');
-             $("#total-items").html(totalItems);
+                `
+                <li class="item-container ${key.name}">
+                <h4 class="name-header">${key.salesName} - ${key.storage}GB</h4>
+                <div class="count-header-container"><h4 class="count-header">${value}</h4></div>
+                <div class="img-container ${key.name}-${key.imgNumber}"></div>
+                <h3 class="price-container">${key.price}$</h3>
+                <button class="remove-btn" data-id="${key.id}">Remove</button>
+                </li>
+                `);
+                if(value === 1) {
+                    totalPrice += key.price;
+                }
+                else {
+                    totalPrice += (key.price * value);
+                }
+             });
+             $("#price-header").html(totalPrice + '$');
+             $(".remove-btn").hide();
          }
      }
 
      showBtn.on("click", function(e, eventType) {
-         $(this).slideToggle(750);
-         cartContainer.slideToggle(1500);
+         loadCartItems();
+         $(this).toggle(500);
+         cartContainer.slideToggle(1000);
      });
 
      hideBtn.on("click", function(e) {
          cartContainer.slideToggle(750);
-         showBtn.slideToggle(1500);
+         showBtn.toggle(1000);
      })
 
      refreshBtn.on("click", function(e) {
-         cartContainer.fadeToggle(150).fadeToggle(150);
+         loadCartItems();
      });
 
      var envTimer;
@@ -94,59 +140,39 @@
                  envContainer.fadeToggle(750);
              }, 2500);
          }
-     })
-
-     var oldTimer;
-     orderedItems.hover(function(e) {
-         oldTimer = setTimeout(() => {
-             $this = $(this);
-             $this.children(".price-container").slideToggle(750);
-             setTimeout(() => { $this.children(".remove-btn").slideToggle(750); }, 1000);
-         }, 750);
-     }, function(e) {
-         $this = $(this);
-         $this.children(".remove-btn").slideToggle(750);
-         setTimeout(() => { $this.children(".price-container").slideToggle(750); }, 1000);
-         clearTimeout(oldTimer);
      });
 
+    $(document).on("click", ".item-container", function(e) {
+        $this = $(this);
+        $this.children(".price-container").slideToggle(750);
+        $this.children(".remove-btn").slideToggle(750);
+    });
 
-     removeBtns.on("click", function(e) {
-         $this = $(this);
-         $this.closest(".item-container").remove();
-         let cartItems = [];
+    $(document).on("click", ".remove-btn", function(e) {
+        $this = $(this);
+        console.log("clicking");
 
-         console.log("removing");
+        let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+        let removeIndex;
+        for (let i = 0; i < cartItems.length; i++) {
+            if (cartItems[i].id === $this.attr("data-id")) {
+                removeIndex = i;
+            }
+        }
 
-         if (cartItems !== null) {
-             let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-             for (let i = 0; i < cartItems.length; i++) {
-                 if (cartItems[i].id === $this.attr("data-id")) {
-                     cartItems.slice(i);
-                     console.log(i);
-                 }
-             }
-         }
+        if(removeIndex !== undefined) {
+            cartItems.splice(removeIndex, 1);
+        }
 
-         localStorage.setItem("cartItems", JSON.stringify(cartItems));
-     });
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        refreshBtn.trigger("click");
+    });
 
-     $("#delete-btn").on("click", function(e) {
-         let cartItems = [];
-         let itemsToRemove = [];
-         if (localStorage.getItem("cartItems") !== null) {
-             cartItems = JSON.parse(localStorage.getItem("cartItems"));
-             itemsToRemove = $(".remove");
-             for (let i = 0; i < cartItems.length; i++) {
-                 for (let y = 0; y < itemsToRemove.length; y++) {
-                     if (cartItems[i].id == itemsToRemove[y].getAttribute('data-obj-id')) {
-                         cartItems.splice(i, 1);
-                     }
-                 }
-             }
-         }
-         localStorage.setItem("cartItems", JSON.stringify(cartItems));
-         $(".remove").remove();
-         loadCartItems();
-     });
+    purchaseBtn.on("click", function(e) {
+        purText.text("Thanks for your purchase! Your fee is " + totalPrice + "$");
+        purContainer.fadeToggle(750);
+        setTimeout(() => {
+            purContainer.fadeToggle(750);
+        }, 2500);
+    });
  });

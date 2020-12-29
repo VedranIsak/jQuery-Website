@@ -58,6 +58,27 @@
           grid-template-columns: repeat(12, 1fr);
           grid-template-rows: repeat(12, 1fr);
       }
+
+      .test-section .added-to-cart {
+          position: absolute;
+          top: 32.5vh;
+          left: 40vw;
+          width: 20vw;
+          height: 35vh;
+          border-radius: 15px;
+          border: 1px solid black;
+          box-shadow: 2px 2px 12px black;
+          background: rgba(255, 255, 255, 1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .added-to-cart h2 {
+          flex: 1 1 auto;
+          color: rgba(0, 0, 0, 1);
+          text-align: center;
+      }
       
       .test-section .header {
           grid-row-start: 1;
@@ -77,22 +98,23 @@
       }
       
       .hide-phones-btn {
-          position: absolute;
-          width: 18vmin;
-          height: 5.5vmin;
-          background: rgba(200, 200, 200, 0.75);
-          color: rgba(20, 20, 20, 0.8);
+          z-index: 5;
+          grid-row: 1;
+          grid-column-start: 1;
+          grid-column-end: 3;
+          margin-top: 6.5%;
+          margin-bottom: 6.5%;
+          margin-left: 6.5%;
+          background: white;
+          color: black;
           border: none;
           border-radius: 30px;
-          top: 2.75%;
-          left: 2%;
           transition: color .5s, background .5s;
       }
       
       .hide-phones-btn:hover {
-          color: rgba(200, 200, 200, 1);
-          background: rgba(20, 20, 20, 0.8);
-      }
+        background: rgba(200, 200, 200, 0.75);
+    }
       
       .main-phone-container {
           position: relative;

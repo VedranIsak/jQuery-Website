@@ -3,6 +3,7 @@ $(document).ready(function(event) {
 
     const phones = [{
             "name": "pixel5",
+            "salesName": "Google Pixel 5",
             "cpu": "Snapdragon 765G",
             "gpu": "Adreno 620",
             "ram": "8GB DDR4",
@@ -13,13 +14,13 @@ $(document).ready(function(event) {
             "resolution": "1080x2340/432ppi",
             "os": "Android 11 (Vanilla)",
             "price": 799,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 128
+            "storage": 128,
+            "isDuplicate": false
         },
         {
             "name": "pixel4a",
+            "salesName": "Google Pixel 4a",
             "cpu": "Snapdragon 765G",
             "gpu": "Adreno 620",
             "ram": "6GB DDR4",
@@ -30,13 +31,13 @@ $(document).ready(function(event) {
             "resolution": "1080x2340/413ppi",
             "os": "Android 11 (Vanilla)",
             "price": 499,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 64
+            "storage": 64,
+            "isDuplicate": false
         },
         {
             "name": "pixel4xl",
+            "salesName": "Google Pixel 4XL",
             "cpu": "Snapdragon 855",
             "gpu": "Adreno 640",
             "ram": "6GB DDR4",
@@ -47,13 +48,13 @@ $(document).ready(function(event) {
             "resolution": "1440x3040/537ppi",
             "os": "Android 10 (Vanilla)",
             "price": 599,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 128
+            "storage": 128,
+            "isDuplicate": false
         },
         {
             "name": "pixel4",
+            "salesName": "Google Pixel 4",
             "cpu": "Snapdragon 855",
             "gpu": "Adreno 640",
             "ram": "6GB DDR4",
@@ -64,13 +65,13 @@ $(document).ready(function(event) {
             "resolution": "1080x2280/444ppi",
             "os": "Android 10 (Vanilla)",
             "price": 499,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 64
+            "storage": 64,
+            "isDuplicate": false
         },
         {
             "name": "galaxys20",
+            "salesName": "Samsung Galaxy S20",
             "cpu": "Exynos 990",
             "gpu": "Mali G-77 MP11",
             "ram": "8GB DDR4",
@@ -81,13 +82,13 @@ $(document).ready(function(event) {
             "resolution": "1440x3200/563ppi",
             "os": "Android 10 (One UI 2.5)",
             "price": 799,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 128
+            "storage": 128,
+            "isDuplicate": false
         },
         {
             "name": "galaxynote20",
+            "salesName": "Samsung Galaxy Note 20",
             "cpu": "Exynos 990",
             "gpu": "Mali G-77 MP11",
             "ram": "8GB DDR4",
@@ -98,13 +99,13 @@ $(document).ready(function(event) {
             "resolution": "1080x2400/393ppi",
             "os": "Android 10 (One UI 2.5)",
             "price": 899,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 128
+            "storage": 128,
+            "isDuplicate": false
         },
         {
             "name": "galaxys10",
+            "salesName": "Samsung Galaxy S10",
             "cpu": "Exynos 9820",
             "gpu": "Mali G-76 MP12",
             "ram": "8GB DDR4",
@@ -115,13 +116,13 @@ $(document).ready(function(event) {
             "resolution": "1440x3040/550ppi",
             "os": "Android 9 (One UI 2.5)",
             "price": 649,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 64
+            "storage": 64,
+            "isDuplicate": false
         },
         {
             "name": "galaxynote10",
+            "salesName": "Samsung Galaxy Note 10",
             "cpu": "Exynos 9825",
             "gpu": "Mali G-76 MP12",
             "ram": "8GB DDR4",
@@ -132,13 +133,13 @@ $(document).ready(function(event) {
             "resolution": "1080x2280/401ppi",
             "os": "Android 9 (One UI 2.5)",
             "price": 749,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 128
+            "storage": 128,
+            "isDuplicate": false
         },
         {
             "name": "iphone12promax",
+            "salesName": "Apple iPhone 12 Pro Max",
             "cpu": "Apple A14 Bionic",
             "gpu": "Apple GPU",
             "ram": "8GB DDR4",
@@ -149,13 +150,13 @@ $(document).ready(function(event) {
             "resolution": "1284x2778/458ppi",
             "os": "iOS 14.1",
             "price": 999,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 128
+            "storage": 128,
+            "isDuplicate": false
         },
         {
             "name": "iphone12",
+            "salesName": "Apple iPhone 12",
             "cpu": "Apple A14 Bionic",
             "gpu": "Apple GPU",
             "ram": "4GB DDR4",
@@ -166,13 +167,13 @@ $(document).ready(function(event) {
             "resolution": "1170x2532/460ppi",
             "os": "iOS 14.1",
             "price": 849,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 64
+            "storage": 64,
+            "isDuplicate": false
         },
         {
             "name": "iphone11promax",
+            "salesName": "Apple iPhone 11 Pro Max",
             "cpu": "Apple A13 Bionic",
             "gpu": "Apple GPU",
             "ram": "4GB DDR4",
@@ -183,13 +184,13 @@ $(document).ready(function(event) {
             "resolution": "1242x2688/458ppi",
             "os": "iOS 13",
             "price": 899,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 128
+            "storage": 128,
+            "isDuplicate": false
         },
         {
             "name": "iphone11",
+            "salesName": "Apple iPhone 11",
             "cpu": "Apple A13 Bionic",
             "gpu": "Apple GPU",
             "ram": "4GB DDR4",
@@ -200,18 +201,18 @@ $(document).ready(function(event) {
             "resolution": "828x1792/326ppi",
             "os": "iOS 13",
             "price": 799,
-            "imgUrl": "",
             "imgNumber": "",
-            "color": "",
-            "storage": 64
+            "storage": 64,
+            "isDuplicate": false
         }
     ];
     const specsBtns = $(".switch-container");
-    var imgBtns = $(".switch-img");
     const viewPhonesBtns = $(".view-phones-btn");
     const hidePhonesBtns = $(".hide-phones-btn");
     const addPhonesBtns = $(".add-phone-btn");
     const switchStorageBtns = $(".name-container");
+    const addedToCartContainers = $(".added-to-cart");
+    addedToCartContainers.hide();
 
     specsBtns.on("click", function(e) {
         $this = $(this);
@@ -223,7 +224,6 @@ $(document).ready(function(event) {
         for (let i = 0; i < phones.length; i++) {
             if (fullPhoneName === phones[i].name) {
                 index = i;
-                console.log(phones[index].name);
             }
         }
 
@@ -277,11 +277,12 @@ $(document).ready(function(event) {
             $this.removeClass("active");
 
             let imgCount = $("#" + fullPhoneName + "-container").attr("data-img-count");
+            let imgNumber = $("#" + fullPhoneName + "-container").attr("data-img");
 
             $("#" + fullPhoneName + "-stats-container").remove();
-            if (imgCount === "3") {
+            if (imgCount === '3') {
                 $("#" + fullPhoneName + "-container").append(`
-                <div id=${fullPhoneName}-img class="img-container ${fullPhoneName}-one">
+                <div id=${fullPhoneName}-img class="img-container ${fullPhoneName}-${imgNumber}">
                     <div id="${fullPhoneName}-img-one" class="switch-img img-one"></div>
                     <div id="${fullPhoneName}-img-two" class="switch-img img-two"></div>
                     <div id="${fullPhoneName}-img-three" class="switch-img img-three"></div>
@@ -289,7 +290,7 @@ $(document).ready(function(event) {
                 `);
             } else {
                 $("#" + fullPhoneName + "-container").append(`
-                <div id=${fullPhoneName}-img class="img-container ${fullPhoneName}-one">
+                <div id=${fullPhoneName}-img class="img-container ${fullPhoneName}-${imgNumber}">
                     <div id="${fullPhoneName}-img-one" class="switch-img img-one"></div>
                     <div id="${fullPhoneName}-img-two" class="switch-img img-two"></div>
                 </div>
@@ -306,8 +307,6 @@ $(document).ready(function(event) {
         let imgNumber = phoneName.slice(breaker + 1, phoneName.length);
         let $imgContainer = $("#" + fullPhoneName + "-img");
         let $phoneContainer = $("#" + fullPhoneName + "-container");
-
-        console.log(fullPhoneName, imgNumber);
 
         $imgContainer.removeClass(fullPhoneName + "-one").removeClass(fullPhoneName + "-two").removeClass(fullPhoneName + "-three");
         if (imgNumber === "img-one") {
@@ -328,36 +327,32 @@ $(document).ready(function(event) {
         let fullPhoneName = phoneName.slice(0, breaker);
 
         $("#" + fullPhoneName + "-cover").hide(1000);
-        $("#test-" + fullPhoneName + "-section").show(500);
+        $("#" + fullPhoneName + "-section").show(500);
     });
 
     hidePhonesBtns.on("click", function(e) {
+        e.preventDefault();
         let phoneName = e.target.id;
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
-
-        $("#test-" + fullPhoneName + "-section").hide(1000);
+        
         $("#" + fullPhoneName + "-cover").show(500);
+        $("#" + fullPhoneName + "-section").hide(1000);
         setTimeout(() => {
-            $('html, body').animate({
-                scrollTop: $("#" + fullPhoneName + "-cover").offset().top
-            }, 1000)
-        }, 1000);
+            document.getElementById(fullPhoneName + "-cover").scrollIntoView({ behavior: "smooth" });
+        }, 1150);
     });
 
     addPhonesBtns.on("click", function(e) {
         let phoneName = e.target.id;
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
-        let $imgContainer = $("#" + fullPhoneName + "-img");
-        let imgUrl = $imgContainer.css("background-image");
-
         let phoneToSend = {};
 
         for (let i = 0; i < phones.length; i++) {
             if (fullPhoneName === phones[i].name) {
                 phoneToSend = phones[i];
-                phoneToSend.imgUrl = imgUrl;
+                phoneToSend.imgNumber = $("#" + fullPhoneName + "-container").attr("data-img");
             }
         }
 
@@ -367,34 +362,51 @@ $(document).ready(function(event) {
         let newCartItems = JSON.parse(localStorage.getItem("cartItems"));
         newCartItems.push(phoneToSend);
         localStorage.setItem("cartItems", JSON.stringify(newCartItems));
-        alert(`Added ${fullPhoneName} to your cart!`);
+
+        let addedCartContainer = $("#" + fullPhoneName + "-show-cart");
+        addedCartContainer.show(500);
+        setTimeout(() => {
+            addedCartContainer.hide(500);
+        }, 1500);
     });
 
     switchStorageBtns.on("click", function(e) {
+        let phoneName = e.target.id;
+        let breaker = phoneName.indexOf('-');
+        let fullPhoneName = phoneName.slice(0, breaker);
 
         let currentStorage = e.target.getAttribute("data-storage");
         let currentCounter = e.target.getAttribute("data-counter");
+        let price;
 
         if (currentCounter < 3) {
             currentStorage *= 2;
             currentCounter++;
+            for(let i = 0; i < phones.length; i++) {
+                if(phones[i].name === fullPhoneName) {
+                    phones[i].price += 100;
+                    price = phones[i].price;      
+                }
+            }
         } else {
             currentStorage /= 4;
             currentCounter = 1;
+            for(let i = 0; i < phones.length; i++) {
+                if(phones[i].name === fullPhoneName) {
+                    phones[i].price -= 200;
+                    price = phones[i].price;      
+                }
+            }
         }
 
         let target = $("#" + e.target.id);
         let oldText = target.text();
         let textBreaker = oldText.indexOf('-');
         let newText = oldText.slice(0, textBreaker);
-        newText += ("- " + currentStorage + "GB");
+        newText += ("- " + currentStorage + "GB" + " - " + price + "$");
         target.html(newText);
         target.attr("data-storage", currentStorage);
         target.attr("data-counter", currentCounter);
-
-        let phoneName = e.target.id;
-        let breaker = phoneName.indexOf('-');
-        let fullPhoneName = phoneName.slice(0, breaker);
 
         for (let i = 0; i < phones.length; i++) {
             if (fullPhoneName === phones[i].name) {

@@ -3,16 +3,13 @@ $(document).ready(function(event) {
     const imageContainers = $(".header-img-container");
     const showButton = $("#show-btn");
     const textContainer = $(".text-container");
-    const viewBtns = $(".view-btn");
-    var currentPage = "";
     const arrowRight = $(".arrow-right");
     const arrowLeft = $(".arrow-left");
+    const startAnchor = $("#start-anchor");
     const pixelAnchor = $("#pixel-anchor");
     const iphoneAnchor = $("#iphone-anchor");
     const galaxyAnchor = $("#galaxy-anchor");
-    const pixelSection = $("#pixel-section");
-    const iphoneSection = $("#iphone-section");
-    const galaxySection = $("#galaxy-section");
+    const cartAnchor = $("#cart-anchor");
     const footer = $("footer");
     const footerContainer = $("#bottom-footer");
 
@@ -51,6 +48,16 @@ $(document).ready(function(event) {
     $(imageContainers).find(".desc-container").hide();
 
     imageContainers.on("click", function(e) {
+        let id = e.target.id;
+        console.log(id);
+
+        if(id === "img1") {
+            $("#img4").find(".desc-container").slideToggle(750);
+        }
+        else if(id === "img4") {
+            $("#img4").find(".desc-container").slideToggle(750);
+        }
+ 
         $(this).find(".desc-container").slideToggle(750);
     });
 
@@ -91,22 +98,28 @@ $(document).ready(function(event) {
         }
     });
 
-    pixelAnchor.on("click", function(e) {});
+    startAnchor.click(function(e) {
+        e.preventDefault();
+        document.getElementById("home-content-container").scrollIntoView({ behavior: "smooth" });
+    })
 
-    iphoneAnchor.on("click", function(e) {});
+    pixelAnchor.click(function(e) {
+        e.preventDefault();
+        document.getElementById("pixel-cover").scrollIntoView({ behavior: "smooth" });
+    });
 
-    galaxyAnchor.on("click", function(e) {});
+    iphoneAnchor.click(function(e) {
+        e.preventDefault();
+        document.getElementById("iphone-cover").scrollIntoView({ behavior: "smooth" });
+    });
 
-    viewBtns.on("click", function(e) {
-        let headerTxt = $(this).prev("h2").text();
-        let spacer = headerTxt.indexOf(' ');
-        let newPage = headerTxt.slice(spacer + 1, headerTxt.length);
-        let newPageLower = newPage.toLowerCase();
+    galaxyAnchor.click(function(e) {
+        e.preventDefault();
+        document.getElementById("galaxy-cover").scrollIntoView({ behavior: "smooth" });
+    });
 
-        if (currentPage !== null) {
-            $(currentPage).hide(1000).removeClass("scroll-child");
-        }
-        currentPage = "#" + newPageLower + "-section";
-        $(currentPage).show(1000).addClass("scroll-child");
+    cartAnchor.click(function(e) {
+        e.preventDefault();
+        document.getElementById("cart-section").scrollIntoView({ behavior: "smooth" });
     });
 });

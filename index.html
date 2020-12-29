@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
-
     <title>Phonestore</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,7 +30,7 @@
                 <li class="menu-item"></li>
                 <li class="menu-item"></li>
                 <li class="menu-item">
-                    <h2>Start</h2>
+                    <h2 id="start-anchor">Start</h2>
                 </li>
                 <li class="menu-item">
                     <h2 id="pixel-anchor">Pixel</h2>
@@ -43,7 +42,7 @@
                     <h2 id="galaxy-anchor">Galaxy</h2>
                 </li>
                 <li class="menu-item">
-                    <h2>Cart</h2>
+                    <h2 id="cart-anchor">Cart</h2>
                 </li>
                 <li class="menu-item"></li>
                 <li class="menu-item"></li>
@@ -59,25 +58,25 @@
                 <div id="img1" class="header-img-container">
                     <div class="desc-container">
                         <h2>Google Pixel</h2>
-                        <button class="view-btn">View</button>
+                        <h3>The Pixel is Google's contribution to the smartphone market</h3>
                     </div>
                 </div>
                 <div id="img2" class="header-img-container">
                     <div class="desc-container">
                         <h2>Apple Iphone</h2>
-                        <button class="view-btn">View</button>
+                        <h3>The iPhone is the phone that started it all, and Apple keeps on improving it</h3>
                     </div>
                 </div>
                 <div id="img3" class="header-img-container">
                     <div class="desc-container">
                         <h2>Samsung Galaxy</h2>
-                        <button class="view-btn">View</button>
+                        <h3>The Galaxy is the flagship phone brand from the Korean tech giant</h3>
                     </div>
                 </div>
                 <div id="img4" class="header-img-container">
                     <div class="desc-container">
                         <h2>Google Pixel</h2>
-                        <button class="view-btn">View</button>
+                        <h3>The Pixel is Google's contribution to the smartphone market</h3>
                     </div>
                 </div>
             </div>
@@ -91,9 +90,21 @@
             <div class="header">
                 <h1>Google Pixel</h1>
             </div>
-
+            <button id="pixel-hide" class="hide-phones-btn">Hide</button>
+            <div id="pixel5-show-cart" class="added-to-cart">
+                <h2>Added Pixel 5 To Your Cart!</h2>
+            </div>
+            <div id="pixel4a-show-cart" class="added-to-cart">
+                <h2>Added Pixel 4A To Your Cart!</h2>
+            </div>
+            <div id="pixel4xl-show-cart" class="added-to-cart">
+                <h2>Added Pixel 4XL To Your Cart!</h2>
+            </div>
+            <div id="pixel4-show-cart" class="added-to-cart">
+                <h2>Added Pixel 4 To Your Cart!</h2>
+            </div>
             <div id="pixel5-container" data-img-count="2" data-img="one" class="phone-container one">
-                <button id="pixel5-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 5 - 128GB</button>
+                <button id="pixel5-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 5 - 128GB - 799$</button>
                 <button id="pixel5-switch-container" class="switch-container">Specs</button>
                 <div id="pixel5-img" class="img-container pixel5-one">
                     <div id="pixel5-img-one" class="switch-img img-one"></div>
@@ -103,7 +114,7 @@
             </div>
 
             <div id="pixel4a-container" data-img-count="2" data-img="one" class="phone-container two">
-                <button id="pixel4a-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4a - 64GB</button>
+                <button id="pixel4a-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4a - 64GB - 499$</button>
                 <button id="pixel4a-switch-container" class="switch-container">Specs</button>
                 <div id="pixel4a-img" class="img-container pixel4a-one">
                     <div id="pixel4a-img-one" class="switch-img img-one"></div>
@@ -113,7 +124,7 @@
             </div>
 
             <div id="pixel4xl-container" data-img-count="3" data-img="one" class="phone-container three">
-                <button id="pixel4xl-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 4XL - 128GB</button>
+                <button id="pixel4xl-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 4XL - 128GB - 599$</button>
                 <button id="pixel4xl-switch-container" class="switch-container">Specs</button>
                 <div id="pixel4xl-img" class="img-container pixel4xl-one">
                     <div id="pixel4xl-img-one" class="switch-img img-one"></div>
@@ -124,7 +135,7 @@
             </div>
 
             <div id="pixel4-container" data-img-count="3" data-img="one" class="phone-container four">
-                <button id="pixel4-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4 - 64GB</button>
+                <button id="pixel4-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4 - 64GB - 499$</button>
                 <button id="pixel4-switch-container" class="switch-container">Specs</button>
                 <div id="pixel4-img" class="img-container pixel4-one">
                     <div id="pixel4-img-one" class="switch-img img-one"></div>
@@ -133,7 +144,6 @@
                 </div>
                 <button id="pixel4-add" class="add-phone-btn">Add To Cart</button>
             </div>
-            <button id="pixel-hide" class="hide-phones-btn">Hide</button>
         </section>
 
         <section id="galaxy-cover" class="phone-cover scroll-child">
@@ -145,8 +155,8 @@
                 <h1>Samsung Galaxy</h1>
             </div>
 
-            <div id="galaxys20-container" data-img-count="3" data-img="one" lass="phone-container one">
-                <button id="galaxys20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy S20 - 128GB</button>
+            <div id="galaxys20-container" data-img-count="3" data-img="one" class="phone-container one">
+                <button id="galaxys20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy S20 - 128GB - 799$</button>
                 <button id="galaxys20-switch-container" class="switch-container">Specs</button>
                 <div id="galaxys20-img" class="img-container galaxys20-one">
                     <div id="galaxys20-img-one" class="switch-img img-one"></div>
@@ -156,7 +166,7 @@
                 <button id="galaxys20-add" class="add-phone-btn">Add To Cart</button>
             </div>
             <div id="galaxys10-container" data-img-count="2" data-img="one" class="phone-container two">
-                <button id="galaxys10-name-container" class="name-container" data-storage="64" data-counter="1">Samsung Galaxy S10 - 128GB</button>
+                <button id="galaxys10-name-container" class="name-container" data-storage="64" data-counter="1">Samsung Galaxy S10 - 128GB - 649$</button>
                 <button id="galaxys10-switch-container" class="switch-container">Specs</button>
                 <div id="galaxys10-img" class="img-container galaxys10-one">
                     <div id="galaxys10-img-one" class="switch-img img-one"></div>
@@ -165,7 +175,7 @@
                 <button id="galaxys10-add" class="add-phone-btn">Add To Cart</button>
             </div>
             <div id="galaxynote20-container" data-img-count="2" data-img="two" class="phone-container three">
-                <button id="galaxynote20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 20 5G - 128GB</button>
+                <button id="galaxynote20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 20 5G - 128GB - 899$</button>
                 <button id="galaxynote20-switch-container" class="switch-container">Specs</button>
                 <div id="galaxynote20-img" class="img-container galaxynote20-one">
                     <div id="galaxynote20-img-one" class="switch-img img-one"></div>
@@ -174,7 +184,7 @@
                 <button id="galaxynote20-add" class="add-phone-btn">Add To Cart</button>
             </div>
             <div id="galaxynote10-container" data-img-count="2" data-img="one" class="phone-container four">
-                <button id="galaxynote10-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 10 - 128GB</button>
+                <button id="galaxynote10-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 10 - 128GB - 749$</button>
                 <button id="galaxynote10-switch-container" class="switch-container">Specs</button>
                 <div id="galaxynote10-img" class="img-container galaxynote10-one">
                     <div id="galaxynote10-img-one" class="switch-img img-one"></div>
@@ -195,7 +205,7 @@
             </div>
 
             <div id="iphone12promax-container" data-img-count="3" data-img="one" class="phone-container one">
-                <button id="iphone12promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 12 Pro Max - 128GB</button>
+                <button id="iphone12promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 12 Pro Max - 128GB - 999$</button>
                 <button id="iphone12promax-switch-container" class="switch-container">Specs</button>
                 <div id="iphone12promax-img" class="img-container iphone12promax-one">
                     <div id="iphone12promax-img-one" class="switch-img img-one"></div>
@@ -205,7 +215,7 @@
                 <button id="iphone12promax-add" class="add-phone-btn">Add To Cart</button>
             </div>
             <div id="iphone11promax-container" data-img-count="3" data-img="one" class="phone-container two">
-                <button id="iphone11promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 11 Pro Max - 128GB</button>
+                <button id="iphone11promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 11 Pro Max - 128GB - 899$</button>
                 <button id="iphone11promax-switch-container" class="switch-container">Specs</button>
                 <div id="iphone11promax-img" class="img-container iphone11promax-one">
                     <div id="iphone11promax-img-one" class="switch-img img-one"></div>
@@ -215,7 +225,7 @@
                 <button id="iphone11promax-add" class="add-phone-btn">Add To Cart</button>
             </div>
             <div id="iphone12-container" data-img-count="3" data-img="one" class="phone-container three">
-                <button id="iphone12-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 12 - 64GB</button>
+                <button id="iphone12-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 12 - 64GB - 849$</button>
                 <button id="iphone12-switch-container" class="switch-container">Specs</button>
                 <div id="iphone12-img" class="img-container iphone12-one">
                     <div id="iphone12-img-one" class="switch-img img-one"></div>
@@ -225,7 +235,7 @@
                 <button id="iphone12-add" class="add-phone-btn">Add To Cart</button>
             </div>
             <div id="iphone11-container" data-img-count="3" data-img="one" class="phone-container four">
-                <button id="iphone11-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 11 - 64GB</button>
+                <button id="iphone11-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 11 - 64GB - 799$</button>
                 <button id="iphone11-switch-container" class="switch-container">Specs</button>
                 <div id="iphone11-img" class="img-container iphone11-one">
                     <div id="iphone11-img-one" class="switch-img img-one"></div>
@@ -242,20 +252,23 @@
             <div id="cart-container">
                 <button id="hide-cart-btn">Hide</button>
                 <button id="refresh-cart-btn">Refresh</button>
-                <div id="left-image-container"></div>
-                <div id="right-image-container"></div>
+                <div id="left-image-container"><h1>Reliable</h1></div>
+                <div id="right-image-container"><h1>Secure</h1></div>
                 <div id="cart-header-container">
                     <h1 id="cart-header">Your Cart</h1>
                 </div>
-                <div id="message-container">
-                    <h2 id="message-header">Thanks for purchasing our products</h2>
+                <div id="price-container">
+                    <h2 id="price-header"></h2>
                 </div>
                 <div id="info-form">
-                    <h2>The Phone Company</h2>
+                    <h3>The Phone Company</h3>
                 </div>
                 <button id="environment-button">Make your order eco-friendly</button>
-                <div id="confirm-envir-container">
-                    <h3 id="confirm-envir-text">Thanks for making your order eco-friendly!</h3>
+                <div id="confirm-envir-container" class="pop-up-container">
+                    <h3 id="confirm-envir-text" class="pop-up-text">Thanks for making your order eco-friendly!</h3>
+                </div>
+                <div id="confirm-purchase-container" class="pop-up-container">
+                    <h3 id="confirm-purchase-text" class="pop-up-text">Your purchase has been placed</h3>
                 </div>
                 <div id="purchase-container">
                 </div>
@@ -287,21 +300,7 @@
                     </fieldset>
                 </form>
                 <div id="cart-items-container">
-                    <ul id="cart-items">
-                        <div class="item-container">
-                            <h4 class="name-header">Google Pixel 5 - 128GB - Red</h4>
-                            <div class="img-container"></div>
-                            <h4 class="price-container">799$</h4>
-                            <button class="remove-btn">Remove</button>
-                        </div>
-                        <div class="item-container">
-                            <h4 class="name-header">Google Pixel 5 - 128GB - Red</h4>
-                            <div class="img-container"></div>
-                            <h4 class="price-container">799$</h4>
-                            <button class="remove-btn">Remove</button>
-                        </div>
-                        <div class="item-container"></div>
-                    </ul>
+                    <ul id="cart-items"></ul>
                 </div>
             </div>
         </section>

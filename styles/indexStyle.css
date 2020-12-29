@@ -233,18 +233,17 @@ footer {
     color: white;
 }
 
-.desc-container button {
+.desc-container h3 {
     background: black;
     opacity: 0.75;
     color: white;
     min-height: 25%;
-    min-width: 15%;
+    width: 50%;
     height: auto;
     margin-top: 1.5%;
-    margin-left: 42.5%;
-    margin-right: 42.5%;
-    border: 3px solid white;
-    border-radius: 5px 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
 }
 
 #img1 {
