@@ -10,42 +10,26 @@ $(document).ready(function(event) {
     const iphoneAnchor = $("#iphone-anchor");
     const galaxyAnchor = $("#galaxy-anchor");
     const cartAnchor = $("#cart-anchor");
-    const footer = $("footer");
-    const footerContainer = $("#bottom-footer");
-
-    // footerContainer.hide();
+    $(imageContainers).find(".desc-container").hide();
 
     var indexer = 0;
     const procentMargin = '100';
 
-    function startSlide() {
-        setInterval(() => {
-            homeImageContainer.animate({
-                'margin-left': '-=' + procentMargin + '%'
-            }, 4000, function() {
-                indexer++;
-                if (indexer == 3) {
-                    indexer = 0;
-                    homeImageContainer.css('margin-left', 0);
-                }
-            });
-        }, 20000);
-    }
-
+    // function startSlide() {
+    //     setInterval(() => {
+    //         homeImageContainer.animate({
+    //             'margin-left': '-=' + procentMargin + '%'
+    //         }, 4000, function() {
+    //             indexer++;
+    //             if (indexer == 3) {
+    //                 indexer = 0;
+    //                 homeImageContainer.css('margin-left', 0);
+    //             }
+    //         });
+    //     }, 20000);
+    // }
     // startSlide();
 
-    var footerTimer;
-    footer.hover(function(e) {
-            footerTimer = setTimeout(() => {
-                setTimeout(() => { $("#bottom-footer h3").slideDown(500); }, 500)
-            }, 500);
-        },
-        function(e) {
-            $("#bottom-footer h3").slideUp(500);
-            clearTimeout(footerTimer);
-        });
-
-    $(imageContainers).find(".desc-container").hide();
 
     imageContainers.on("click", function(e) {
         let id = e.target.id;

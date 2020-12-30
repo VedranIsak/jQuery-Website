@@ -46,6 +46,11 @@ button:focus {
     box-shadow: none;
 }
 
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 table {
     font-size: 1rem;
 }
@@ -128,12 +133,13 @@ footer {
     min-height: 7.5vh;
     width: 100vw;
     max-width: 100%;
+    z-index: 3;
 }
 
 #bottom-footer {
     height: 100%;
     width: 100%;
-    background: transparent;
+    background: rgba(10, 10, 10, 0.5);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -143,7 +149,6 @@ footer {
     text-align: center;
     padding: 2%;
     opacity: 0.9;
-    display: none;
 }
 
 #home-content-container {
@@ -301,7 +306,7 @@ footer {
 }
 
 #show-btn-container button:hover {
-    color: rgba(200, 200, 200, 0.75);
+    background: lightgray;
 }
 
 .text-container {

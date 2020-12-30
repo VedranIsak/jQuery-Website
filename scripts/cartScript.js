@@ -13,7 +13,6 @@
      cartContainer.hide();
      envContainer.hide();
      purContainer.hide();
-     var orderedItems = $(".item-container");
      var removeBtns = $(".remove-btn");
      removeBtns.hide();
      loadCartItems();
@@ -144,13 +143,12 @@
 
     $(document).on("click", ".item-container", function(e) {
         $this = $(this);
-        $this.children(".price-container").slideToggle(750);
+        $this.children(".price-container").fadeToggle(750);
         $this.children(".remove-btn").slideToggle(750);
     });
 
     $(document).on("click", ".remove-btn", function(e) {
         $this = $(this);
-        console.log("clicking");
 
         let cartItems = JSON.parse(localStorage.getItem("cartItems"));
         let removeIndex;
