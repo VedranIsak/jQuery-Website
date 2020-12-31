@@ -339,9 +339,9 @@ $(document).ready(function(event) {
 
         $("#" + fullPhoneName + "-cover").show(500);
         $("#" + fullPhoneName + "-section").hide(1000);
-        setTimeout(() => {
-            document.getElementById(fullPhoneName + "-cover").scrollIntoView({ behavior: "smooth" });
-        }, 1150);
+        // setTimeout(() => {
+        //     document.getElementById(fullPhoneName + "-cover").scrollIntoView({ behavior: "smooth" });
+        // }, 1150);
     });
 
     addPhonesBtns.on("click", function(e) {
