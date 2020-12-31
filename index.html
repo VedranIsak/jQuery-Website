@@ -36,10 +36,10 @@
                     <h2 id="pixel-anchor">Pixel</h2>
                 </li>
                 <li class="menu-item">
-                    <h2 id="iphone-anchor">iPhone</h2>
+                    <h2 id="galaxy-anchor">Galaxy</h2>
                 </li>
                 <li class="menu-item">
-                    <h2 id="galaxy-anchor">Galaxy</h2>
+                    <h2 id="iphone-anchor">iPhone</h2>
                 </li>
                 <li class="menu-item">
                     <h2 id="cart-anchor">Cart</h2>
@@ -91,17 +91,10 @@
                 <h1>Google Pixel</h1>
             </div>
             <button id="pixel-hide" class="hide-phones-btn">Hide</button>
-            <div id="pixel5-show-cart" class="added-to-cart">
-                <h2>Added Pixel 5 To Your Cart!</h2>
-            </div>
-            <div id="pixel4a-show-cart" class="added-to-cart">
-                <h2>Added Pixel 4A To Your Cart!</h2>
-            </div>
-            <div id="pixel4xl-show-cart" class="added-to-cart">
-                <h2>Added Pixel 4XL To Your Cart!</h2>
-            </div>
-            <div id="pixel4-show-cart" class="added-to-cart">
-                <h2>Added Pixel 4 To Your Cart!</h2>
+            <div class="added-to-cart pixel5-add pixel4a-add pixel4xl-add pixel4-add">
+                <h4></h4>
+                <div class="img-icon-container"></div>
+                <button class="go-to-cart-btn">Go To Your Cart</button>
             </div>
             <div id="pixel5-container" data-img-count="2" data-img="one" class="phone-container one">
                 <button id="pixel5-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 5 - 128GB - 799$</button>
@@ -154,7 +147,11 @@
             <div class="header">
                 <h1>Samsung Galaxy</h1>
             </div>
-
+            <div class="added-to-cart galaxy20-add galaxys10-add galaxynote20-add galaxynote10-add">
+                <h4></h4>
+                <div class="img-icon-container"></div>
+                <button class="go-to-cart-btn">Go To Your Cart</button>
+            </div>
             <div id="galaxys20-container" data-img-count="3" data-img="one" class="phone-container one">
                 <button id="galaxys20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy S20 - 128GB - 799$</button>
                 <button id="galaxys20-switch-container" class="switch-container">Specs</button>
@@ -203,7 +200,11 @@
             <div class="header">
                 <h1>Apple iPhone</h1>
             </div>
-
+            <div class="added-to-cart iphone12promax-add iphone11promax-add iphone12-add iphone11-add">
+                <h4></h4>
+                <div class="img-icon-container"></div>
+                <button class="go-to-cart-btn">Go To Your Cart</button>
+            </div>
             <div id="iphone12promax-container" data-img-count="3" data-img="one" class="phone-container one">
                 <button id="iphone12promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 12 Pro Max - 128GB - 999$</button>
                 <button id="iphone12promax-switch-container" class="switch-container">Specs</button>
@@ -252,8 +253,12 @@
             <div id="cart-container">
                 <button id="hide-cart-btn">Hide</button>
                 <button id="refresh-cart-btn">Refresh</button>
-                <div id="left-image-container"><h1>Reliable</h1></div>
-                <div id="right-image-container"><h1>Secure</h1></div>
+                <div id="left-image-container">
+                    <h1>Reliable</h1>
+                </div>
+                <div id="right-image-container">
+                    <h1>Secure</h1>
+                </div>
                 <div id="cart-header-container">
                     <h1 id="cart-header">Your Cart</h1>
                 </div>
@@ -316,13 +321,13 @@
             </div>
         </div>
 
-        <footer>
+        <!-- <footer>
             <div id="bottom-footer">
                 <h3>Vedran Isak and Joachim Torp</h3>
                 <h3>Systemvetenskap</h3>
                 <h3>LiU</h3>
             </div>
-        </footer>
+        </footer> -->
     </main>
 </body>
 

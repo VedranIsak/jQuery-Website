@@ -6,13 +6,17 @@
 
 html {
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     min-height: 100%;
+    max-width: 100%;
     background: white;
     font-weight: 300;
     font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 section {
@@ -55,11 +59,11 @@ table {
     font-size: 1rem;
 }
 
+
+/* 
 ::-webkit-scrollbar {
     width: 18px;
-    /* for vertical scrollbars */
     height: 12px;
-    /* for horizontal scrollbars */
 }
 
 ::-webkit-scrollbar-track {
@@ -68,7 +72,7 @@ table {
 
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.75);
-}
+} */
 
 #navbar {
     height: 7.5vh;
@@ -114,6 +118,7 @@ table {
 #main-container {
     overflow: scroll;
     height: 100vh;
+    max-width: 100%;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
@@ -121,6 +126,7 @@ table {
 
 .scroll-child {
     scroll-snap-align: start;
+    max-width: 100%;
 }
 
 footer {
@@ -129,8 +135,8 @@ footer {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 7.5vh;
-    min-height: 7.5vh;
+    height: 6vh;
+    min-height: 6vh;
     width: 100vw;
     max-width: 100%;
     z-index: 3;
@@ -140,14 +146,16 @@ footer {
     height: 100%;
     width: 100%;
     background: rgba(10, 10, 10, 0.5);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 #bottom-footer h3 {
+    flex: 1 1 calc(100% / 3);
     color: white;
     text-align: center;
-    padding: 2%;
     opacity: 0.9;
 }
 

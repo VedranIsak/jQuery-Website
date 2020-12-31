@@ -212,6 +212,7 @@ $(document).ready(function(event) {
     const addPhonesBtns = $(".add-phone-btn");
     const switchStorageBtns = $(".name-container");
     const addedToCartContainers = $(".added-to-cart");
+    const goToCartBtns = $(".go-to-cart-btn");
     addedToCartContainers.hide();
 
     specsBtns.on("click", function(e) {
@@ -335,7 +336,7 @@ $(document).ready(function(event) {
         let phoneName = e.target.id;
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
-        
+
         $("#" + fullPhoneName + "-cover").show(500);
         $("#" + fullPhoneName + "-section").hide(1000);
         setTimeout(() => {
@@ -344,6 +345,7 @@ $(document).ready(function(event) {
     });
 
     addPhonesBtns.on("click", function(e) {
+        $this = $(this);
         let phoneName = e.target.id;
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
@@ -363,11 +365,13 @@ $(document).ready(function(event) {
         newCartItems.push(phoneToSend);
         localStorage.setItem("cartItems", JSON.stringify(newCartItems));
 
-        let addedCartContainer = $("#" + fullPhoneName + "-show-cart");
+        let addedCartContainer = $("." + fullPhoneName + "-add");
+        let textHeader = addedCartContainer.children("h4");
+        textHeader.text(`Added ${phoneToSend.salesName} To Your Cart`);
         addedCartContainer.show(500);
         setTimeout(() => {
             addedCartContainer.hide(500);
-        }, 1500);
+        }, 3000);
     });
 
     switchStorageBtns.on("click", function(e) {
@@ -382,19 +386,19 @@ $(document).ready(function(event) {
         if (currentCounter < 3) {
             currentStorage *= 2;
             currentCounter++;
-            for(let i = 0; i < phones.length; i++) {
-                if(phones[i].name === fullPhoneName) {
+            for (let i = 0; i < phones.length; i++) {
+                if (phones[i].name === fullPhoneName) {
                     phones[i].price += 100;
-                    price = phones[i].price;      
+                    price = phones[i].price;
                 }
             }
         } else {
             currentStorage /= 4;
             currentCounter = 1;
-            for(let i = 0; i < phones.length; i++) {
-                if(phones[i].name === fullPhoneName) {
+            for (let i = 0; i < phones.length; i++) {
+                if (phones[i].name === fullPhoneName) {
                     phones[i].price -= 200;
-                    price = phones[i].price;      
+                    price = phones[i].price;
                 }
             }
         }
@@ -413,5 +417,9 @@ $(document).ready(function(event) {
                 phones[i].storage = currentStorage;
             }
         }
+    });
+
+    goToCartBtns.on("click", function(e) {
+        document.getElementById("cart-section").scrollIntoView({ behavior: "smooth" });
     });
 });

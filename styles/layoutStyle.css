@@ -58,26 +58,49 @@
           grid-template-columns: repeat(12, 1fr);
           grid-template-rows: repeat(12, 1fr);
       }
-
-      .test-section .added-to-cart {
+      
+      .test-section div.added-to-cart {
           position: absolute;
-          top: 32.5vh;
+          top: 30vh;
           left: 40vw;
           width: 20vw;
-          height: 35vh;
+          height: 40vh;
           border-radius: 15px;
-          border: 1px solid black;
           box-shadow: 2px 2px 12px black;
-          background: rgba(255, 255, 255, 1);
+          background: rgba(200, 200, 200, 0.95);
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-direction: column;
+          z-index: 5;
       }
-
-      .added-to-cart h2 {
-          flex: 1 1 auto;
-          color: rgba(0, 0, 0, 1);
+      
+      .added-to-cart h4 {
+          flex: 3 3 auto;
+          padding: 1%;
+          margin-top: 5%;
+          color: white;
           text-align: center;
+      }
+      
+      .added-to-cart .img-icon-container {
+          flex: 3 3 auto;
+          width: 50%;
+          height: 50%;
+          margin-bottom: 5%;
+          background-image: url("../images/cartImages/cartIcon.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+      }
+      
+      .added-to-cart .go-to-cart-btn {
+          flex: 1 1 auto;
+          width: 90%;
+          margin: 0 5% 5% 5%;
+          background: white;
+          border-radius: 15px;
+          border: none;
+          color: rgba(50, 50, 50, 0.95);
       }
       
       .test-section .header {
@@ -113,8 +136,8 @@
       }
       
       .hide-phones-btn:hover {
-        background: rgba(200, 200, 200, 0.75);
-    }
+          background: rgba(200, 200, 200, 0.75);
+      }
       
       .main-phone-container {
           position: relative;
