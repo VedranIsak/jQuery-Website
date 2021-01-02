@@ -51,7 +51,7 @@
           color: rgba(200, 200, 200, 0.75);
       }
       
-      .test-section {
+      .phone-content-section {
           position: relative;
           height: 100vh;
           width: 100vw;
@@ -63,7 +63,7 @@
           grid-template-rows: repeat(12, 1fr);
       }
       
-      .test-section div.added-to-cart {
+      .phone-content-section div.added-to-cart {
           position: absolute;
           top: 30vh;
           left: 40vw;
@@ -71,7 +71,8 @@
           height: 40vh;
           border-radius: 15px;
           box-shadow: 2px 2px 12px black;
-          background: rgba(200, 200, 200, 0.95);
+          background: rgb(36, 34, 28);
+          background: linear-gradient(90deg, rgba(36, 34, 28, 1) 15%, rgba(74, 77, 56, 1) 75%);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -100,14 +101,15 @@
       .added-to-cart .go-to-cart-btn {
           flex: 1 1 auto;
           width: 90%;
+          padding: 2%;
           margin: 0 5% 5% 5%;
-          background: white;
+          background: black;
           border-radius: 15px;
           border: none;
-          color: rgba(50, 50, 50, 0.95);
+          color: white;
       }
       
-      .test-section .header {
+      .phone-content-section .header {
           grid-row-start: 1;
           grid-row-end: 2;
           grid-column-start: 1;
@@ -154,7 +156,7 @@
           grid-template-rows: repeat(12, 1fr);
       }
       
-      .test-section .phone-container {
+      .phone-content-section .phone-container {
           position: relative;
           grid-row-start: 2;
           grid-row-end: 13;

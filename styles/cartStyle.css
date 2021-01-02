@@ -7,18 +7,19 @@ input {
     border-radius: 15px 15px;
 }
 
-div ::-webkit-scrollbar {
+div ::-webkit-scrollbar,
+div ::-moz-scrollbar {
     width: 18px;
-    /* for vertical scrollbars */
     height: 12px;
-    /* for horizontal scrollbars */
 }
 
-div ::-webkit-scrollbar-track {
+div ::-webkit-scrollbar-track,
+div ::-moz-scrollbar-track {
     background: rgba(0, 0, 0, 0.9);
 }
 
-div ::-webkit-scrollbar-thumb {
+div ::-webkit-scrollbar-thumb,
+div ::-moz-scrollbar-thumb {
     background: rgba(200, 200, 200, 0.75);
 }
 
@@ -26,7 +27,6 @@ div ::-webkit-scrollbar-thumb {
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    /* z-index: 4; */
     position: relative;
     background-image: url("../images/cartImages/cartImg.jpg");
     background-size: 100% 100%;

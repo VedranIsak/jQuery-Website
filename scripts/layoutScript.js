@@ -1,5 +1,5 @@
 $(document).ready(function(event) {
-    $(".test-section").hide();
+    $(".phone-content-section").hide();
 
     const phones = [{
             "name": "pixel5",
