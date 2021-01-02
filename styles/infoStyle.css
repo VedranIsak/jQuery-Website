@@ -1,0 +1,73 @@
+#info-section {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background-image: url('../images/homeImages/aboutImg.jpg');
+    background-size: 100% 100%;
+}
+
+#info-container {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+}
+
+#info-container h2 {
+    color: white;
+    grid-row: 3;
+    grid-column: 1 / 12;
+    text-align: center;
+}
+
+#info-container p {
+    color: white;
+    grid-row: 4;
+    grid-column: 3 / 10;
+    text-align: center;
+}
+
+#anchor-container {
+    grid-row: 5;
+    grid-column: 5 / 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#anchor-container a {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px 12px white;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    transition: text-decoration 0.75s;
+}
+
+#anchor-container a:hover {
+    text-decoration: underline;
+}
+
+#info-container iframe {
+    height: 83%;
+    width: 97%;
+}
+
+.frame-wrapper {
+    grid-row: 7 / 11;
+}
+
+#pixel-frame-wrapper {
+    grid-column: 2 / 5;
+}
+
+#galaxy-frame-wrapper {
+    grid-column: 5 / 8;
+}
+
+#iphone-frame-wrapper {
+    grid-column: 8 / 11;
+}

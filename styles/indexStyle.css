@@ -41,10 +41,6 @@ button {
     transition: background 0.5s;
 }
 
-button:hover {
-    background: lightgray;
-}
-
 button:focus {
     outline: none;
     box-shadow: none;
@@ -214,11 +210,16 @@ footer {
 
 #main-header {
     position: absolute;
-    color: white;
-    opacity: 0.75;
+    color: #f3ec78;
+    opacity: 0.5;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
     z-index: 1000;
     width: 100%;
-    top: 7.5%;
+    top: 10%;
     text-align: center;
 }
 
@@ -286,96 +287,4 @@ footer {
     background-size: 80% 70%;
     background-repeat: no-repeat;
     background-position: bottom;
-}
-
-#show-btn-container {
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    background-image: url('../images/homeImages/aboutImg.jpg');
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#show-btn-container button {
-    flex: 1 1 auto;
-    cursor: pointer;
-    min-height: 7.5%;
-    max-height: 7.5%;
-    width: 20%;
-    border: 1px solid white;
-    background: rgba(200, 200, 200, 0.75);
-    color: white;
-    border-radius: 30px;
-    transition: background 0.75s;
-}
-
-#show-btn-container button:hover {
-    background: lightgray;
-}
-
-.text-container {
-    height: 22.5vh;
-    width: 80vw;
-    max-width: 80%;
-    margin-top: 3.5vh;
-    margin-bottom: 1.5vh;
-    display: none;
-}
-
-.text-container h2,
-.text-container p {
-    background: rgba(200, 200, 200, 0.75);
-    color: white;
-}
-
-.text-container h2 {
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    padding: 1%;
-    border-radius: 10px 10px;
-    text-align: center;
-}
-
-.text-container p {
-    width: 90%;
-    margin-top: 1.75%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 1%;
-    border-radius: 10px 10px;
-}
-
-#text-img-one {
-    margin-top: 0;
-    background-image: url('../images/homeImages/jQuery.jpg');
-}
-
-#text-img-two {
-    background-image: url('../images/homeImages/html5.jpg');
-}
-
-#text-img-three {
-    background-image: url('../images/homeImages/css3.jpeg');
-    margin-bottom: 0;
-}
-
-.text-img-container {
-    background-size: 100% 100%;
-    height: 75vh;
-    width: 100vw;
-    max-width: 100%;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    display: none;
-}
-
-#cart-section {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
 }

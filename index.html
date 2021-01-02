@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/galaxyStyle.css">
     <link rel="stylesheet" href="./styles/iphoneStyle.css">
     <link rel="stylesheet" href="./styles/cartStyle.css">
+    <link rel="stylesheet" href="./styles/infoStyle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -44,6 +45,9 @@
                 <li class="menu-item">
                     <h2 id="cart-anchor">Cart</h2>
                 </li>
+                <li class="menu-item">
+                    <h2 id="info-anchor">Info</h2>
+                </li>
                 <li class="menu-item"></li>
                 <li class="menu-item"></li>
             </ul>
@@ -53,7 +57,7 @@
         <div id="home-content-container" class="scroll-child">
             <div class="arrow-right"></div>
             <div class="arrow-left"></div>
-            <h1 id="main-header">Press for more options</h1>
+            <h1 id="main-header">The Phone Company</h1>
             <div id="home-image-container">
                 <div id="img1" class="header-img-container">
                     <div class="desc-container">
@@ -249,77 +253,120 @@
         </section>
 
         <section id="cart-section" class="scroll-child">
-            <button id="show-cart-btn" class="inactive-show-cart-btn">Show your Cart</button>
-            <div id="cart-container">
-                <button id="hide-cart-btn">Hide</button>
-                <button id="refresh-cart-btn">Refresh</button>
-                <div id="left-image-container">
-                    <h1>Reliable</h1>
+            <div id="cart-wrapper">
+                <div id="cart-info-container">
+                    <div id="cart-info-header-container">
+                        <h2 id="cart-info-header">This is the Cart page</h2>
+                    </div>
+                    <div id="cart-img-container">
+                        <div id="cart-info-text-one" class="cart-info-container">
+                            <p>
+                                <span>
+                                This is where you can view and edit the items currently in your cart. Apart from that you can also view the current total price of your selected phones and the the total number of items in your cart.  
+                            </span>
+                            </p>
+                        </div>
+                        <div id="cart-info-text-two" class="cart-info-container">
+                            <p>
+                                <span>
+                                    You can also modify whether or not to allow your order to be shipped in a way
+                                    that is friendly to the environment. This comes of course with small extra fee, but we think that it's worth it! 
+                                </span>
+                            </p>
+                        </div>
+                        <div id="cart-info-text-three" class="cart-info-container">
+                            <p>
+                                <span>
+                                Since this website does not take advantage of having a backend server, all of the information regarding your items in the cart is being stored in the local storage of your browser!
+                            </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="cart-show-header-container">
+                        <h2 id="cart-show-header">Show Cart</h2>
+                    </div>
                 </div>
-                <div id="right-image-container">
-                    <h1>Secure</h1>
-                </div>
-                <div id="cart-header-container">
-                    <h1 id="cart-header">Your Cart</h1>
-                </div>
-                <div id="price-container">
-                    <h2 id="price-header"></h2>
-                </div>
-                <div id="info-form">
-                    <h3>The Phone Company</h3>
-                </div>
-                <button id="environment-button">Make your order eco-friendly</button>
-                <div id="confirm-envir-container" class="pop-up-container">
-                    <h3 id="confirm-envir-text" class="pop-up-text">Thanks for making your order eco-friendly!</h3>
-                </div>
-                <div id="confirm-purchase-container" class="pop-up-container">
-                    <h3 id="confirm-purchase-text" class="pop-up-text">Your purchase has been placed</h3>
-                </div>
-                <div id="purchase-container">
-                </div>
-                <button id="purchase-btn">Purchase</button>
-                <form id="cart-form">
-                    <fieldset id="fieldset-one">
-                        <label id="first-name-label" for="first-name-input">First name</label>
-                        <input id="first-name-input" type="text" placeholder="John">
-                        <label id="last-name-label" for="last-name-input">Last name</label>
-                        <input id="last-name-input" type="text" placeholder="Doe">
-                    </fieldset>
-                    <fieldset id="fieldset-two">
-                        <label id="phone-number-label" for="phone-number-input">Phone number</label>
-                        <input id="phone-number-input" type="text" placeholder="1122334455">
-                        <label id="email-label" for="email-input">Email</label>
-                        <input id="email-input" type="text" placeholder="you@youremail.com">
-                    </fieldset>
-                    <fieldset id="fieldset-three">
-                        <label id="country-label" for="country-input">Country</label>
-                        <input id="country-input" type="text">
-                        <label id="city-label" for="city-input">City</label>
-                        <input id="city-input" type="text">
-                    </fieldset>
-                    <fieldset id="fieldset-four">
-                        <label id="zip-label" for="zip-input">ZIP</label>
-                        <input id="zip-input" type="text">
-                        <label id="address-label" for="address-input">Address</label>
-                        <input id="address-input" type="text">
-                    </fieldset>
-                </form>
-                <div id="cart-items-container">
-                    <ul id="cart-items"></ul>
+
+                <div id="cart-container">
+                    <button id="hide-cart-btn">Hide</button>
+                    <button id="refresh-cart-btn">Refresh</button>
+                    <div id="left-image-container">
+                        <h1>Reliable</h1>
+                    </div>
+                    <div id="right-image-container">
+                        <h1>Secure</h1>
+                    </div>
+                    <div id="cart-header-container">
+                        <h1 id="cart-header">Your Cart</h1>
+                    </div>
+                    <div id="price-container">
+                        <h2 id="price-header"></h2>
+                    </div>
+                    <div id="info-form">
+                        <h3>The Phone Company</h3>
+                    </div>
+                    <button id="environment-button">Make your order eco-friendly?</button>
+                    <div id="confirm-envir-container" class="pop-up-container">
+                        <h3 id="confirm-envir-text" class="pop-up-text">Thanks for making your order eco-friendly!</h3>
+                    </div>
+                    <div id="confirm-purchase-container" class="pop-up-container">
+                        <h3 id="confirm-purchase-text" class="pop-up-text">Your purchase has been placed</h3>
+                    </div>
+                    <div id="purchase-container">
+                    </div>
+                    <button id="purchase-btn">Purchase</button>
+                    <form id="cart-form">
+                        <fieldset id="fieldset-one">
+                            <label id="first-name-label" for="first-name-input">First name</label>
+                            <input id="first-name-input" type="text" placeholder="John">
+                            <label id="last-name-label" for="last-name-input">Last name</label>
+                            <input id="last-name-input" type="text" placeholder="Doe">
+                        </fieldset>
+                        <fieldset id="fieldset-two">
+                            <label id="phone-number-label" for="phone-number-input">Phone number</label>
+                            <input id="phone-number-input" type="text" placeholder="1122334455">
+                            <label id="email-label" for="email-input">Email</label>
+                            <input id="email-input" type="text" placeholder="you@youremail.com">
+                        </fieldset>
+                        <fieldset id="fieldset-three">
+                            <label id="country-label" for="country-input">Country</label>
+                            <input id="country-input" type="text">
+                            <label id="city-label" for="city-input">City</label>
+                            <input id="city-input" type="text">
+                        </fieldset>
+                        <fieldset id="fieldset-four">
+                            <label id="zip-label" for="zip-input">ZIP</label>
+                            <input id="zip-input" type="text">
+                            <label id="address-label" for="address-input">Address</label>
+                            <input id="address-input" type="text">
+                        </fieldset>
+                    </form>
+                    <div id="cart-items-container">
+                        <ul id="cart-items"></ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div id="show-btn-container" class="scroll-child">
-            <button id="show-btn">What this website is about</button>
-            <div class="text-container">
-                <h2>This is an online store for phones</h2>
-                <p>In this store you can purchase all of the latest phones from all of the biggest brands. You can purchase Iphones, Samsung Galaxies and Google Pixels. The prices are cheap and shipment is always free. This website was made by using HTML5,
-                    CSS3 and a Javascript library called jQuery. This website was made in part with the course that both of us attended at LiU, 729G87. All of the animations and special effects are constructed using jQuery, and the website itself is structured
-                    using CSS3 and HTML5.
+        <section id="info-section" class="scroll-child">
+            <div id="info-container">
+                <h2>This is an online store for phones!</h2>
+                <p>This website was made by Vedran Isak and Joachim Torp @LiU. It shows off phones from three different brands and it is structured within a single HTML page. Apart from basic HTML5 and CSS3, we also took advantage of the jQuery library to
+                    make the animations look just a tad bit slicker. Enjoy!
                 </p>
+                <div id="anchor-container">
+                    <a href="https://github.com/VedranIsak/jQuery-Website" target="_blank">Source Code</a>
+                </div>
+                <div id="pixel-frame-wrapper" class="frame-wrapper">
+                    <iframe id="pixel-frame" src="https://www.youtube.com/embed/v_f3Km_eQnw"></iframe> </div>
+                <div id="galaxy-frame-wrapper" class="frame-wrapper">
+                    <iframe id="galaxy-frame" src="https://www.youtube.com/embed/OMsylV9JmeQ"></iframe>
+                </div>
+                <div id="iphone-frame-wrapper" class="frame-wrapper">
+                    <iframe id="iphone-frame" src="https://www.youtube.com/embed/65JrtwtTOdc"></iframe>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- <footer>
             <div id="bottom-footer">

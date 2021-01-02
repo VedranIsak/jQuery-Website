@@ -81,10 +81,12 @@
     }
     
     #pixel5-img-two {
+        border: 2.5px solid white;
         background: black;
     }
     
     #pixel4a-img-one {
+        border: 2.5px solid white;
         background: black;
     }
     
@@ -93,7 +95,6 @@
     }
     
     #pixel4xl-img-one {
-        border: 0.1px solid black;
         background: white;
     }
     
@@ -102,6 +103,7 @@
     }
     
     #pixel4xl-img-three {
+        border: 2.5px solid white;
         background: black;
     }
     
@@ -115,5 +117,6 @@
     }
     
     #pixel4-img-three {
+        border: 2.5px solid white;
         background: black;
     }

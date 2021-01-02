@@ -84,7 +84,6 @@
 
 #iphone12promax-img-one {
     background: white;
-    border: 0.5px solid black;
 }
 
 #iphone12promax-img-two {
@@ -101,12 +100,10 @@
 
 #iphone11promax-img-two {
     background: white;
-    border: 0.5px solid black;
 }
 
 #iphone11promax-img-three {
     background: beige;
-    border: 0.5px solid black;
 }
 
 #iphone12-img-one {
@@ -130,5 +127,6 @@
 }
 
 #iphone11-img-three {
+    border: 2.5px solid white;
     background: black;
 }

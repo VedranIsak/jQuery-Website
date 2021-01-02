@@ -1,6 +1,7 @@
  $(document).ready(function(event) {
      const cartContainer = $("#cart-container");
-     const showBtn = $("#show-cart-btn");
+     const showContainer = $("#cart-info-container");
+     const showHeader = $("#cart-show-header");
      const hideBtn = $("#hide-cart-btn");
      const refreshBtn = $("#refresh-cart-btn");
      const environmentBtn = $("#environment-button");
@@ -28,32 +29,32 @@
 
      function getMap() {
 
-        let cartItems = 
-        JSON.parse(localStorage.getItem("cartItems"));
-        let itemsMap = new Map();
-        for(let i = 0; i < cartItems.length; i++) {
-           let counter = 1;
-            for(let y = i + 1; y < cartItems.length; y++) {
-               if(!cartItems[y].isDuplicate 
-                   && cartItems[i].name === cartItems[y].name 
-                   && cartItems[i].storage === cartItems[y].storage 
-                   && cartItems[i].imgNumber === cartItems[y].imgNumber) {
-                       counter++;
-                       itemsMap.set(cartItems[i], counter);
-                       cartItems[y].isDuplicate = true;
-               }
-            }
-            let singleton = true;
-            itemsMap.forEach((value, key) => {
-                if(key.name === cartItems[i].name) {
-                    singleton = false;
-                }
-            });
-            if(singleton) {
-                itemsMap.set(cartItems[i], 1);
-            }
-        }
-        return itemsMap;
+         let cartItems =
+             JSON.parse(localStorage.getItem("cartItems"));
+         let itemsMap = new Map();
+         for (let i = 0; i < cartItems.length; i++) {
+             let counter = 1;
+             for (let y = i + 1; y < cartItems.length; y++) {
+                 if (!cartItems[y].isDuplicate &&
+                     cartItems[i].name === cartItems[y].name &&
+                     cartItems[i].storage === cartItems[y].storage &&
+                     cartItems[i].imgNumber === cartItems[y].imgNumber) {
+                     counter++;
+                     itemsMap.set(cartItems[i], counter);
+                     cartItems[y].isDuplicate = true;
+                 }
+             }
+             let singleton = true;
+             itemsMap.forEach((value, key) => {
+                 if (key.name === cartItems[i].name) {
+                     singleton = false;
+                 }
+             });
+             if (singleton) {
+                 itemsMap.set(cartItems[i], 1);
+             }
+         }
+         return itemsMap;
      }
 
      function loadCartItems() {
@@ -63,19 +64,19 @@
          if (localStorage.getItem("cartItems") !== null) {
              let cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
-             for(let i = 0; i < cartItems.length; i++) {
-                if (!cartItems[i].hasOwnProperty('id')) {
-                    cartItems[i].id = hash();
-                }
-                cartItems[i].isDuplicate = false;
-            }
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+             for (let i = 0; i < cartItems.length; i++) {
+                 if (!cartItems[i].hasOwnProperty('id')) {
+                     cartItems[i].id = hash();
+                 }
+                 cartItems[i].isDuplicate = false;
+             }
+             localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-            itemsMap = getMap();
+             itemsMap = getMap();
 
              itemsMap.forEach((value, key) => {
                  ul.append(
-                `
+                     `
                 <li class="item-container ${key.name}">
                 <h4 class="name-header">${key.salesName} - ${key.storage}GB</h4>
                 <div class="count-header-container"><h4 class="count-header">${value}</h4></div>
@@ -84,27 +85,28 @@
                 <button class="remove-btn" data-id="${key.id}">Remove</button>
                 </li>
                 `);
-                if(value === 1) {
-                    totalPrice += key.price;
-                }
-                else {
-                    totalPrice += (key.price * value);
-                }
+                 if (value === 1) {
+                     totalPrice += key.price;
+                 } else {
+                     totalPrice += (key.price * value);
+                 }
              });
              $("#price-header").html(totalPrice + '$');
              $(".remove-btn").hide();
          }
      }
 
-     showBtn.on("click", function(e, eventType) {
+     showHeader.on("click", function(e, eventType) {
          loadCartItems();
-         $(this).toggle(500);
+         showContainer.toggle(500);
+         //  $(this).toggle(500);
          cartContainer.slideToggle(1000);
      });
 
      hideBtn.on("click", function(e) {
          cartContainer.slideToggle(750);
-         showBtn.toggle(1000);
+         showContainer.toggle(1000);
+         //  showHeader.toggle(1000);
      })
 
      refreshBtn.on("click", function(e) {
@@ -123,7 +125,7 @@
      }, function(e) {
          $this = $(this);
          $this.removeClass("isActive");
-         $this.css("background", "rgb(256, 256, 256)");
+         $this.css("background", "rgb(0, 0, 0)");
          $this.css("font-size", "1.5rem");
          $this.hide().text("Make your order eco-friendly?").fadeIn(750);
          clearTimeout(envTimer);
@@ -141,36 +143,36 @@
          }
      });
 
-    $(document).on("click", ".item-container", function(e) {
-        $this = $(this);
-        $this.children(".price-container").fadeToggle(750);
-        $this.children(".remove-btn").slideToggle(750);
-    });
+     $(document).on("click", ".item-container", function(e) {
+         $this = $(this);
+         $this.children(".price-container").fadeToggle(750);
+         $this.children(".remove-btn").slideToggle(750);
+     });
 
-    $(document).on("click", ".remove-btn", function(e) {
-        $this = $(this);
+     $(document).on("click", ".remove-btn", function(e) {
+         $this = $(this);
 
-        let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-        let removeIndex;
-        for (let i = 0; i < cartItems.length; i++) {
-            if (cartItems[i].id === $this.attr("data-id")) {
-                removeIndex = i;
-            }
-        }
+         let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+         let removeIndex;
+         for (let i = 0; i < cartItems.length; i++) {
+             if (cartItems[i].id === $this.attr("data-id")) {
+                 removeIndex = i;
+             }
+         }
 
-        if(removeIndex !== undefined) {
-            cartItems.splice(removeIndex, 1);
-        }
+         if (removeIndex !== undefined) {
+             cartItems.splice(removeIndex, 1);
+         }
 
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-        refreshBtn.trigger("click");
-    });
+         localStorage.setItem("cartItems", JSON.stringify(cartItems));
+         refreshBtn.trigger("click");
+     });
 
-    purchaseBtn.on("click", function(e) {
-        purText.text("Thanks for your purchase! Your fee is " + totalPrice + "$");
-        purContainer.fadeToggle(750);
-        setTimeout(() => {
-            purContainer.fadeToggle(750);
-        }, 2500);
-    });
+     purchaseBtn.on("click", function(e) {
+         purText.text("Thanks for your purchase! Your fee is " + totalPrice + "$");
+         purContainer.fadeToggle(750);
+         setTimeout(() => {
+             purContainer.fadeToggle(750);
+         }, 2500);
+     });
  });

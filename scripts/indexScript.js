@@ -10,6 +10,7 @@ $(document).ready(function(event) {
     const iphoneAnchor = $("#iphone-anchor");
     const galaxyAnchor = $("#galaxy-anchor");
     const cartAnchor = $("#cart-anchor");
+    const infoAnchor = $("#info-anchor");
     $(imageContainers).find(".desc-container").hide();
 
     var indexer = 0;
@@ -35,13 +36,12 @@ $(document).ready(function(event) {
         let id = e.target.id;
         console.log(id);
 
-        if(id === "img1") {
+        if (id === "img1") {
+            $("#img4").find(".desc-container").slideToggle(750);
+        } else if (id === "img4") {
             $("#img4").find(".desc-container").slideToggle(750);
         }
-        else if(id === "img4") {
-            $("#img4").find(".desc-container").slideToggle(750);
-        }
- 
+
         $(this).find(".desc-container").slideToggle(750);
     });
 
@@ -69,19 +69,6 @@ $(document).ready(function(event) {
         })
     });
 
-    showButton.on("click", function(e) {
-        $this = $(this);
-        if (!$this.hasClass("isClicked")) {
-            $this.addClass("isClicked");
-            textContainer.show(1000);
-            $this.html("Hide");
-        } else {
-            $this.removeClass("isClicked");
-            textContainer.hide(1000);
-            $this.html("What this website is about");
-        }
-    });
-
     startAnchor.click(function(e) {
         e.preventDefault();
         document.getElementById("home-content-container").scrollIntoView({ behavior: "smooth" });
@@ -106,4 +93,8 @@ $(document).ready(function(event) {
         e.preventDefault();
         document.getElementById("cart-section").scrollIntoView({ behavior: "smooth" });
     });
+
+    infoAnchor.click(function(e) {
+        document.getElementById("info-section").scrollIntoView({ behavior: "smooth" });
+    })
 });
