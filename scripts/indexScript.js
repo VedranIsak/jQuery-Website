@@ -1,16 +1,9 @@
 $(document).ready(function(event) {
     const homeImageContainer = $("#home-image-container");
     const imageContainers = $(".header-img-container");
-    const showButton = $("#show-btn");
-    const textContainer = $(".text-container");
     const arrowRight = $(".arrow-right");
     const arrowLeft = $(".arrow-left");
-    const startAnchor = $("#start-anchor");
-    const pixelAnchor = $("#pixel-anchor");
-    const iphoneAnchor = $("#iphone-anchor");
-    const galaxyAnchor = $("#galaxy-anchor");
-    const cartAnchor = $("#cart-anchor");
-    const infoAnchor = $("#info-anchor");
+    const anchors = $(".anchor");
     $(imageContainers).find(".desc-container").hide();
 
     var indexer = 0;
@@ -30,7 +23,6 @@ $(document).ready(function(event) {
     //     }, 20000);
     // }
     // startSlide();
-
 
     imageContainers.on("click", function(e) {
         let id = e.target.id;
@@ -69,32 +61,12 @@ $(document).ready(function(event) {
         })
     });
 
-    startAnchor.click(function(e) {
+    anchors.click(function(e) {
         e.preventDefault();
-        document.getElementById("home-content-container").scrollIntoView({ behavior: "smooth" });
-    })
+        let phoneName = e.target.id;
+        let breaker = phoneName.indexOf('-');
+        let fullPhoneName = phoneName.slice(0, breaker);
 
-    pixelAnchor.click(function(e) {
-        e.preventDefault();
-        document.getElementById("pixel-cover").scrollIntoView({ behavior: "smooth" });
+        document.getElementById(fullPhoneName + "-section").scrollIntoView({ behavior: "smooth" });
     });
-
-    iphoneAnchor.click(function(e) {
-        e.preventDefault();
-        document.getElementById("iphone-cover").scrollIntoView({ behavior: "smooth" });
-    });
-
-    galaxyAnchor.click(function(e) {
-        e.preventDefault();
-        document.getElementById("galaxy-cover").scrollIntoView({ behavior: "smooth" });
-    });
-
-    cartAnchor.click(function(e) {
-        e.preventDefault();
-        document.getElementById("cart-section").scrollIntoView({ behavior: "smooth" });
-    });
-
-    infoAnchor.click(function(e) {
-        document.getElementById("info-section").scrollIntoView({ behavior: "smooth" });
-    })
 });

@@ -326,9 +326,8 @@ $(document).ready(function(event) {
         let phoneName = e.target.id;
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
-
-        $("#" + fullPhoneName + "-cover").hide(1000);
-        $("#" + fullPhoneName + "-section").show(500);
+        $("#" + fullPhoneName + "-cover").slideToggle(750);
+        $("#" + fullPhoneName + "-phone-section").slideToggle(1500);
     });
 
     hidePhonesBtns.on("click", function(e) {
@@ -337,11 +336,8 @@ $(document).ready(function(event) {
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
 
-        $("#" + fullPhoneName + "-cover").show(500);
-        $("#" + fullPhoneName + "-section").hide(1000);
-        // setTimeout(() => {
-        //     document.getElementById(fullPhoneName + "-cover").scrollIntoView({ behavior: "smooth" });
-        // }, 1150);
+        $("#" + fullPhoneName + "-phone-section").slideToggle(750);
+        $("#" + fullPhoneName + "-cover").slideToggle(1500);
     });
 
     addPhonesBtns.on("click", function(e) {
@@ -368,9 +364,9 @@ $(document).ready(function(event) {
         let addedCartContainer = $("." + fullPhoneName + "-add");
         let textHeader = addedCartContainer.children("h4");
         textHeader.text(`Added ${phoneToSend.salesName} To Your Cart`);
-        addedCartContainer.show(500);
+        addedCartContainer.fadeToggle(750);
         setTimeout(() => {
-            addedCartContainer.hide(500);
+            addedCartContainer.fadeToggle(750);
         }, 3000);
     });
 

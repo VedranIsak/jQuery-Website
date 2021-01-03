@@ -31,22 +31,22 @@
                 <li class="menu-item"></li>
                 <li class="menu-item"></li>
                 <li class="menu-item">
-                    <h2 id="start-anchor">Start</h2>
+                    <h2 id="start-anchor" class="anchor">Start</h2>
                 </li>
                 <li class="menu-item">
-                    <h2 id="pixel-anchor">Pixel</h2>
+                    <h2 id="pixel-anchor" class="anchor">Pixel</h2>
                 </li>
                 <li class="menu-item">
-                    <h2 id="galaxy-anchor">Galaxy</h2>
+                    <h2 id="galaxy-anchor" class="anchor">Galaxy</h2>
                 </li>
                 <li class="menu-item">
-                    <h2 id="iphone-anchor">iPhone</h2>
+                    <h2 id="iphone-anchor" class="anchor">iPhone</h2>
                 </li>
                 <li class="menu-item">
-                    <h2 id="cart-anchor">Cart</h2>
+                    <h2 id="cart-anchor" class="anchor">Cart</h2>
                 </li>
                 <li class="menu-item">
-                    <h2 id="info-anchor">Info</h2>
+                    <h2 id="info-anchor" class="anchor">Info</h2>
                 </li>
                 <li class="menu-item"></li>
                 <li class="menu-item"></li>
@@ -54,7 +54,7 @@
         </navbar>
     </header>
     <main id="main-container">
-        <div id="home-content-container" class="scroll-child">
+        <section id="start-section" class="scroll-child">
             <div class="arrow-right"></div>
             <div class="arrow-left"></div>
             <h1 id="main-header">The Phone Company</h1>
@@ -84,172 +84,176 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <section id="pixel-cover" class="phone-cover scroll-child">
-            <button id="pixel-view-btn" class="view-phones-btn">Check out the Pixels</button>
         </section>
 
-        <section id="pixel-section" class="phone-content-section scroll-child">
-            <div class="header">
-                <h1>Google Pixel</h1>
+        <section id="pixel-section" class="scroll-child">
+            <div id="pixel-cover" class="phone-cover">
+                <button id="pixel-view-btn" class="view-phones-btn">Check out the Pixels</button>
             </div>
-            <button id="pixel-hide" class="hide-phones-btn">Hide</button>
-            <div class="added-to-cart pixel5-add pixel4a-add pixel4xl-add pixel4-add">
-                <h4></h4>
-                <div class="img-icon-container"></div>
-                <button class="go-to-cart-btn">Go To Your Cart</button>
-            </div>
-            <div id="pixel5-container" data-img-count="2" data-img="one" class="phone-container one">
-                <button id="pixel5-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 5 - 128GB - 799$</button>
-                <button id="pixel5-switch-container" class="switch-container">Specs</button>
-                <div id="pixel5-img" class="img-container pixel5-one">
-                    <div id="pixel5-img-one" class="switch-img img-one"></div>
-                    <div id="pixel5-img-two" class="switch-img img-two"></div>
+            <div id="pixel-phone-section" class="phone-content-section">
+                <div class="header">
+                    <h1>Google Pixel</h1>
                 </div>
-                <button id="pixel5-add" class="add-phone-btn">Add To Cart</button>
-            </div>
+                <button id="pixel-hide" class="hide-phones-btn">Hide</button>
+                <div class="added-to-cart pixel5-add pixel4a-add pixel4xl-add pixel4-add">
+                    <h4></h4>
+                    <div class="img-icon-container"></div>
+                    <button class="go-to-cart-btn">Go To Your Cart</button>
+                </div>
+                <div id="pixel5-container" data-img-count="2" data-img="one" class="phone-container one">
+                    <button id="pixel5-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 5 - 128GB - 799$</button>
+                    <button id="pixel5-switch-container" class="switch-container">Specs</button>
+                    <div id="pixel5-img" class="img-container pixel5-one">
+                        <div id="pixel5-img-one" class="switch-img img-one"></div>
+                        <div id="pixel5-img-two" class="switch-img img-two"></div>
+                    </div>
+                    <button id="pixel5-add" class="add-phone-btn">Add To Cart</button>
+                </div>
 
-            <div id="pixel4a-container" data-img-count="2" data-img="one" class="phone-container two">
-                <button id="pixel4a-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4a - 64GB - 499$</button>
-                <button id="pixel4a-switch-container" class="switch-container">Specs</button>
-                <div id="pixel4a-img" class="img-container pixel4a-one">
-                    <div id="pixel4a-img-one" class="switch-img img-one"></div>
-                    <div id="pixel4a-img-two" class="switch-img img-two"></div>
+                <div id="pixel4a-container" data-img-count="2" data-img="one" class="phone-container two">
+                    <button id="pixel4a-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4a - 64GB - 499$</button>
+                    <button id="pixel4a-switch-container" class="switch-container">Specs</button>
+                    <div id="pixel4a-img" class="img-container pixel4a-one">
+                        <div id="pixel4a-img-one" class="switch-img img-one"></div>
+                        <div id="pixel4a-img-two" class="switch-img img-two"></div>
+                    </div>
+                    <button id="pixel4a-add" class="add-phone-btn">Add To Cart</button>
                 </div>
-                <button id="pixel4a-add" class="add-phone-btn">Add To Cart</button>
-            </div>
 
-            <div id="pixel4xl-container" data-img-count="3" data-img="one" class="phone-container three">
-                <button id="pixel4xl-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 4XL - 128GB - 599$</button>
-                <button id="pixel4xl-switch-container" class="switch-container">Specs</button>
-                <div id="pixel4xl-img" class="img-container pixel4xl-one">
-                    <div id="pixel4xl-img-one" class="switch-img img-one"></div>
-                    <div id="pixel4xl-img-two" class="switch-img img-two"></div>
-                    <div id="pixel4xl-img-three" class="switch-img img-three"></div>
+                <div id="pixel4xl-container" data-img-count="3" data-img="one" class="phone-container three">
+                    <button id="pixel4xl-name-container" class="name-container" data-storage="128" data-counter="1">Google Pixel 4XL - 128GB - 599$</button>
+                    <button id="pixel4xl-switch-container" class="switch-container">Specs</button>
+                    <div id="pixel4xl-img" class="img-container pixel4xl-one">
+                        <div id="pixel4xl-img-one" class="switch-img img-one"></div>
+                        <div id="pixel4xl-img-two" class="switch-img img-two"></div>
+                        <div id="pixel4xl-img-three" class="switch-img img-three"></div>
+                    </div>
+                    <button id="pixel4xl-add" class="add-phone-btn">Add To Cart</button>
                 </div>
-                <button id="pixel4xl-add" class="add-phone-btn">Add To Cart</button>
-            </div>
 
-            <div id="pixel4-container" data-img-count="3" data-img="one" class="phone-container four">
-                <button id="pixel4-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4 - 64GB - 499$</button>
-                <button id="pixel4-switch-container" class="switch-container">Specs</button>
-                <div id="pixel4-img" class="img-container pixel4-one">
-                    <div id="pixel4-img-one" class="switch-img img-one"></div>
-                    <div id="pixel4-img-two" class="switch-img img-two"></div>
-                    <div id="pixel4-img-three" class="switch-img img-three"></div>
+                <div id="pixel4-container" data-img-count="3" data-img="one" class="phone-container four">
+                    <button id="pixel4-name-container" class="name-container" data-storage="64" data-counter="1">Google Pixel 4 - 64GB - 499$</button>
+                    <button id="pixel4-switch-container" class="switch-container">Specs</button>
+                    <div id="pixel4-img" class="img-container pixel4-one">
+                        <div id="pixel4-img-one" class="switch-img img-one"></div>
+                        <div id="pixel4-img-two" class="switch-img img-two"></div>
+                        <div id="pixel4-img-three" class="switch-img img-three"></div>
+                    </div>
+                    <button id="pixel4-add" class="add-phone-btn">Add To Cart</button>
                 </div>
-                <button id="pixel4-add" class="add-phone-btn">Add To Cart</button>
             </div>
         </section>
 
-        <section id="galaxy-cover" class="phone-cover scroll-child">
-            <button id="galaxy-view-btn" class="view-phones-btn">Check out the Galaxies</button>
+        <section id="galaxy-section" class="scroll-child">
+            <div id="galaxy-cover" class="phone-cover">
+                <button id="galaxy-view-btn" class="view-phones-btn">Check out the Galaxies</button>
+            </div>
+            <div id="galaxy-phone-section" class="phone-content-section">
+                <div class="header">
+                    <h1>Samsung Galaxy</h1>
+                </div>
+                <div class="added-to-cart galaxy20-add galaxys10-add galaxynote20-add galaxynote10-add">
+                    <h4></h4>
+                    <div class="img-icon-container"></div>
+                    <button class="go-to-cart-btn">Go To Your Cart</button>
+                </div>
+                <div id="galaxys20-container" data-img-count="3" data-img="one" class="phone-container one">
+                    <button id="galaxys20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy S20 - 128GB - 799$</button>
+                    <button id="galaxys20-switch-container" class="switch-container">Specs</button>
+                    <div id="galaxys20-img" class="img-container galaxys20-one">
+                        <div id="galaxys20-img-one" class="switch-img img-one"></div>
+                        <div id="galaxys20-img-two" class="switch-img img-two"></div>
+                        <div id="galaxys20-img-three" class="switch-img img-three"></div>
+                    </div>
+                    <button id="galaxys20-add" class="add-phone-btn">Add To Cart</button>
+                </div>
+                <div id="galaxys10-container" data-img-count="2" data-img="one" class="phone-container two">
+                    <button id="galaxys10-name-container" class="name-container" data-storage="64" data-counter="1">Samsung Galaxy S10 - 128GB - 649$</button>
+                    <button id="galaxys10-switch-container" class="switch-container">Specs</button>
+                    <div id="galaxys10-img" class="img-container galaxys10-one">
+                        <div id="galaxys10-img-one" class="switch-img img-one"></div>
+                        <div id="galaxys10-img-two" class="switch-img img-two"></div>
+                    </div>
+                    <button id="galaxys10-add" class="add-phone-btn">Add To Cart</button>
+                </div>
+                <div id="galaxynote20-container" data-img-count="2" data-img="two" class="phone-container three">
+                    <button id="galaxynote20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 20 5G - 128GB - 899$</button>
+                    <button id="galaxynote20-switch-container" class="switch-container">Specs</button>
+                    <div id="galaxynote20-img" class="img-container galaxynote20-one">
+                        <div id="galaxynote20-img-one" class="switch-img img-one"></div>
+                        <div id="galaxynote20-img-two" class="switch-img img-two"></div>
+                    </div>
+                    <button id="galaxynote20-add" class="add-phone-btn">Add To Cart</button>
+                </div>
+                <div id="galaxynote10-container" data-img-count="2" data-img="one" class="phone-container four">
+                    <button id="galaxynote10-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 10 - 128GB - 749$</button>
+                    <button id="galaxynote10-switch-container" class="switch-container">Specs</button>
+                    <div id="galaxynote10-img" class="img-container galaxynote10-one">
+                        <div id="galaxynote10-img-one" class="switch-img img-one"></div>
+                        <div id="galaxynote10-img-two" class="switch-img img-two"></div>
+                    </div>
+                    <button id="galaxynote10-add" class="add-phone-btn">Add To Cart</button>
+                </div>
+                <button id="galaxy-hide" class="hide-phones-btn">Hide</button>
+            </div>
         </section>
 
-        <section id="galaxy-section" class="phone-content-section scroll-child">
-            <div class="header">
-                <h1>Samsung Galaxy</h1>
+        <section id="iphone-section" class="scroll-child">
+            <div id="iphone-cover" class="phone-cover">
+                <button id="iphone-view-btn" class="view-phones-btn">Check out the iPhones</button>
             </div>
-            <div class="added-to-cart galaxy20-add galaxys10-add galaxynote20-add galaxynote10-add">
-                <h4></h4>
-                <div class="img-icon-container"></div>
-                <button class="go-to-cart-btn">Go To Your Cart</button>
-            </div>
-            <div id="galaxys20-container" data-img-count="3" data-img="one" class="phone-container one">
-                <button id="galaxys20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy S20 - 128GB - 799$</button>
-                <button id="galaxys20-switch-container" class="switch-container">Specs</button>
-                <div id="galaxys20-img" class="img-container galaxys20-one">
-                    <div id="galaxys20-img-one" class="switch-img img-one"></div>
-                    <div id="galaxys20-img-two" class="switch-img img-two"></div>
-                    <div id="galaxys20-img-three" class="switch-img img-three"></div>
-                </div>
-                <button id="galaxys20-add" class="add-phone-btn">Add To Cart</button>
-            </div>
-            <div id="galaxys10-container" data-img-count="2" data-img="one" class="phone-container two">
-                <button id="galaxys10-name-container" class="name-container" data-storage="64" data-counter="1">Samsung Galaxy S10 - 128GB - 649$</button>
-                <button id="galaxys10-switch-container" class="switch-container">Specs</button>
-                <div id="galaxys10-img" class="img-container galaxys10-one">
-                    <div id="galaxys10-img-one" class="switch-img img-one"></div>
-                    <div id="galaxys10-img-two" class="switch-img img-two"></div>
-                </div>
-                <button id="galaxys10-add" class="add-phone-btn">Add To Cart</button>
-            </div>
-            <div id="galaxynote20-container" data-img-count="2" data-img="two" class="phone-container three">
-                <button id="galaxynote20-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 20 5G - 128GB - 899$</button>
-                <button id="galaxynote20-switch-container" class="switch-container">Specs</button>
-                <div id="galaxynote20-img" class="img-container galaxynote20-one">
-                    <div id="galaxynote20-img-one" class="switch-img img-one"></div>
-                    <div id="galaxynote20-img-two" class="switch-img img-two"></div>
-                </div>
-                <button id="galaxynote20-add" class="add-phone-btn">Add To Cart</button>
-            </div>
-            <div id="galaxynote10-container" data-img-count="2" data-img="one" class="phone-container four">
-                <button id="galaxynote10-name-container" class="name-container" data-storage="128" data-counter="1">Samsung Galaxy Note 10 - 128GB - 749$</button>
-                <button id="galaxynote10-switch-container" class="switch-container">Specs</button>
-                <div id="galaxynote10-img" class="img-container galaxynote10-one">
-                    <div id="galaxynote10-img-one" class="switch-img img-one"></div>
-                    <div id="galaxynote10-img-two" class="switch-img img-two"></div>
-                </div>
-                <button id="galaxynote10-add" class="add-phone-btn">Add To Cart</button>
-            </div>
-            <button id="galaxy-hide" class="hide-phones-btn">Hide</button>
-        </section>
 
-        <section id="iphone-cover" class="phone-cover scroll-child">
-            <button id="iphone-view-btn" class="view-phones-btn">Check out the iPhones</button>
-        </section>
-
-        <section id="iphone-section" class="phone-content-section scroll-child">
-            <div class="header">
-                <h1>Apple iPhone</h1>
-            </div>
-            <div class="added-to-cart iphone12promax-add iphone11promax-add iphone12-add iphone11-add">
-                <h4></h4>
-                <div class="img-icon-container"></div>
-                <button class="go-to-cart-btn">Go To Your Cart</button>
-            </div>
-            <div id="iphone12promax-container" data-img-count="3" data-img="one" class="phone-container one">
-                <button id="iphone12promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 12 Pro Max - 128GB - 999$</button>
-                <button id="iphone12promax-switch-container" class="switch-container">Specs</button>
-                <div id="iphone12promax-img" class="img-container iphone12promax-one">
-                    <div id="iphone12promax-img-one" class="switch-img img-one"></div>
-                    <div id="iphone12promax-img-two" class="switch-img img-two"></div>
-                    <div id="iphone12promax-img-three" class="switch-img img-three"></div>
+            <div id="iphone-phone-section" class="phone-content-section">
+                <div class="header">
+                    <h1>Apple iPhone</h1>
                 </div>
-                <button id="iphone12promax-add" class="add-phone-btn">Add To Cart</button>
-            </div>
-            <div id="iphone11promax-container" data-img-count="3" data-img="one" class="phone-container two">
-                <button id="iphone11promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 11 Pro Max - 128GB - 899$</button>
-                <button id="iphone11promax-switch-container" class="switch-container">Specs</button>
-                <div id="iphone11promax-img" class="img-container iphone11promax-one">
-                    <div id="iphone11promax-img-one" class="switch-img img-one"></div>
-                    <div id="iphone11promax-img-two" class="switch-img img-two"></div>
-                    <div id="iphone11promax-img-three" class="switch-img img-three"></div>
+                <div class="added-to-cart iphone12promax-add iphone11promax-add iphone12-add iphone11-add">
+                    <h4></h4>
+                    <div class="img-icon-container"></div>
+                    <button class="go-to-cart-btn">Go To Your Cart</button>
                 </div>
-                <button id="iphone11promax-add" class="add-phone-btn">Add To Cart</button>
-            </div>
-            <div id="iphone12-container" data-img-count="3" data-img="one" class="phone-container three">
-                <button id="iphone12-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 12 - 64GB - 849$</button>
-                <button id="iphone12-switch-container" class="switch-container">Specs</button>
-                <div id="iphone12-img" class="img-container iphone12-one">
-                    <div id="iphone12-img-one" class="switch-img img-one"></div>
-                    <div id="iphone12-img-two" class="switch-img img-two"></div>
-                    <div id="iphone12-img-three" class="switch-img img-three"></div>
+                <div id="iphone12promax-container" data-img-count="3" data-img="one" class="phone-container one">
+                    <button id="iphone12promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 12 Pro Max - 128GB - 999$</button>
+                    <button id="iphone12promax-switch-container" class="switch-container">Specs</button>
+                    <div id="iphone12promax-img" class="img-container iphone12promax-one">
+                        <div id="iphone12promax-img-one" class="switch-img img-one"></div>
+                        <div id="iphone12promax-img-two" class="switch-img img-two"></div>
+                        <div id="iphone12promax-img-three" class="switch-img img-three"></div>
+                    </div>
+                    <button id="iphone12promax-add" class="add-phone-btn">Add To Cart</button>
                 </div>
-                <button id="iphone12-add" class="add-phone-btn">Add To Cart</button>
-            </div>
-            <div id="iphone11-container" data-img-count="3" data-img="one" class="phone-container four">
-                <button id="iphone11-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 11 - 64GB - 799$</button>
-                <button id="iphone11-switch-container" class="switch-container">Specs</button>
-                <div id="iphone11-img" class="img-container iphone11-one">
-                    <div id="iphone11-img-one" class="switch-img img-one"></div>
-                    <div id="iphone11-img-two" class="switch-img img-two"></div>
-                    <div id="iphone11-img-three" class="switch-img img-three"></div>
+                <div id="iphone11promax-container" data-img-count="3" data-img="one" class="phone-container two">
+                    <button id="iphone11promax-name-container" class="name-container" data-storage="128" data-counter="1">Apple iPhone 11 Pro Max - 128GB - 899$</button>
+                    <button id="iphone11promax-switch-container" class="switch-container">Specs</button>
+                    <div id="iphone11promax-img" class="img-container iphone11promax-one">
+                        <div id="iphone11promax-img-one" class="switch-img img-one"></div>
+                        <div id="iphone11promax-img-two" class="switch-img img-two"></div>
+                        <div id="iphone11promax-img-three" class="switch-img img-three"></div>
+                    </div>
+                    <button id="iphone11promax-add" class="add-phone-btn">Add To Cart</button>
                 </div>
-                <button id="iphone11-add" class="add-phone-btn">Add To Cart</button>
+                <div id="iphone12-container" data-img-count="3" data-img="one" class="phone-container three">
+                    <button id="iphone12-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 12 - 64GB - 849$</button>
+                    <button id="iphone12-switch-container" class="switch-container">Specs</button>
+                    <div id="iphone12-img" class="img-container iphone12-one">
+                        <div id="iphone12-img-one" class="switch-img img-one"></div>
+                        <div id="iphone12-img-two" class="switch-img img-two"></div>
+                        <div id="iphone12-img-three" class="switch-img img-three"></div>
+                    </div>
+                    <button id="iphone12-add" class="add-phone-btn">Add To Cart</button>
+                </div>
+                <div id="iphone11-container" data-img-count="3" data-img="one" class="phone-container four">
+                    <button id="iphone11-name-container" class="name-container" data-storage="64" data-counter="1">Apple iPhone 11 - 64GB - 799$</button>
+                    <button id="iphone11-switch-container" class="switch-container">Specs</button>
+                    <div id="iphone11-img" class="img-container iphone11-one">
+                        <div id="iphone11-img-one" class="switch-img img-one"></div>
+                        <div id="iphone11-img-two" class="switch-img img-two"></div>
+                        <div id="iphone11-img-three" class="switch-img img-three"></div>
+                    </div>
+                    <button id="iphone11-add" class="add-phone-btn">Add To Cart</button>
+                </div>
+                <button id="iphone-hide" class="hide-phones-btn">Hide</button>
             </div>
-            <button id="iphone-hide" class="hide-phones-btn">Hide</button>
         </section>
 
         <section id="cart-section" class="scroll-child">
@@ -358,10 +362,9 @@
                     <a href="https://github.com/VedranIsak/jQuery-Website" target="_blank">Source Code</a>
                 </div>
                 <div id="pixel-frame-wrapper" class="frame-wrapper">
-                    <iframe id="pixel-frame" src="https://www.youtube.com/embed/v_f3Km_eQnw"></iframe> </div>
+                    <iframe id="pixel-frame" src="https://www.youtube.com/embed/QOU9nAzHY7I"></iframe> </div>
                 <div id="galaxy-frame-wrapper" class="frame-wrapper">
-                    <iframe id="galaxy-frame" src="https://www.youtube.com/embed/OMsylV9JmeQ"></iframe>
-                </div>
+                    <iframe id="galaxy-frame" src="https://www.youtube.com/embed/OZ7CpRiwkPU"></iframe> </div>
                 <div id="iphone-frame-wrapper" class="frame-wrapper">
                     <iframe id="iphone-frame" src="https://www.youtube.com/embed/65JrtwtTOdc"></iframe>
                 </div>
