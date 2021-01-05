@@ -1,20 +1,20 @@
 .galaxys20-one {
     background-image: url("../images/galaxyImages/galaxys20ver2_-Smartphone---Rosa");
-    background-size: 105% 85%;
+    background-size: 130% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .galaxys20-two {
     background-image: url('../images/galaxyImages/galaxys20ver3_-Smartphone---Grå');
-    background-size: 105% 85%;
+    background-size: 130% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .galaxys20-three {
     background-image: url('../images/galaxyImages/galaxys20ver1_-Smartphone---Ljusblå');
-    background-size: 105% 85%;
+    background-size: 130% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -34,28 +34,28 @@
 }
 
 .galaxys10-one {
-    background-image: url('../images/galaxyImages/galaxys10ver1.webp');
+    background-image: url('../images/galaxyImages/galaxys10ver1.png');
     background-size: 100% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .galaxys10-two {
-    background-image: url('../images/galaxyImages/galaxys10ver2.webp');
+    background-image: url('../images/galaxyImages/galaxys10ver2.png');
     background-size: 100% 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .galaxynote10-one {
-    background-image: url("../images/galaxyImages/galaxynote10ver1.jpg");
+    background-image: url("../images/galaxyImages/galaxynote10ver1.png");
     background-size: 107.5% 86.5%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .galaxynote10-two {
-    background-image: url("../images/galaxyImages/galaxynote10ver2.jpg");
+    background-image: url("../images/galaxyImages/galaxynote10ver2.png");
     background-size: 100% 86.5%;
     background-position: center;
     background-repeat: no-repeat;

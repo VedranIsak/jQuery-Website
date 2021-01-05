@@ -8,28 +8,29 @@
     
     .pixel5-one {
         background-image: url('../images/pixelImages/pixel5ver1.png');
-        background-size: 80% 80%;
+        background-size: 120% 115%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel5-two {
         background-image: url('../images/pixelImages/pixel5ver2.png');
-        background-size: 80% 80%;
+        background-size: 120% 115%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel4a-one {
         background-image: url('../images/pixelImages/pixel4aver1.png');
-        background-size: 120% 97.5%;
-        background-position: center;
+        background-size: 97.5% 85%;
+        background-position-y: center;
+        background-position-x: right;
         background-repeat: no-repeat;
     }
     
     .pixel4a-two {
         background-image: url('../images/pixelImages/pixel4aver2.webp');
-        background-size: 105% 87.5%;
+        background-size: 115% 95%;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -42,14 +43,14 @@
     }
     
     .pixel4xl-two {
-        background-image: url('../images/pixelImages/pixel4ver2.jpg');
+        background-image: url('../images/pixelImages/pixel4ver2.png');
         background-size: 80% 83.5%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel4xl-three {
-        background-image: url("../images/pixelImages/pixel4ver3.jpg");
+        background-image: url("../images/pixelImages/pixel4ver3.png");
         background-size: 80% 85%;
         background-position: center;
         background-repeat: no-repeat;
@@ -63,26 +64,27 @@
     }
     
     .pixel4-two {
-        background-image: url('../images/pixelImages/pixel4ver2.jpg');
+        background-image: url('../images/pixelImages/pixel4ver2.png');
         background-size: 80% 83.5%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel4-three {
-        background-image: url("../images/pixelImages/pixel4ver3.jpg");
+        background-image: url("../images/pixelImages/pixel4ver3.png");
         background-size: 80% 85%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     #pixel5-img-one {
-        background: gray;
+        border: 2.5px solid white;
+        background: black;
     }
     
     #pixel5-img-two {
-        border: 2.5px solid white;
-        background: black;
+
+        background: gray;
     }
     
     #pixel4a-img-one {
