@@ -143,11 +143,8 @@
      environmentBtn.on("click", function(e) {
          $this = $(this);
          if ($this.hasClass("isActive") && counter === 0) {
-             envContainer.fadeToggle(750);
+             envContainer.fadeToggle(500).delay(2000).fadeToggle(500);
              counter++;
-             setTimeout(() => {
-                 envContainer.fadeToggle(750);
-             }, 2500);
              envPrice = 5;
              loadCartItems();
              environmentBtn.text("Thanks for making your order eco-friendly!");
@@ -183,9 +180,6 @@
      purchaseBtn.on("click", function(e) {
          if(itemsCount === 0) { return; }
          purText.text("Thanks for your purchase! Your fee is " + totalPrice + "$");
-         purContainer.fadeToggle(750);
-         setTimeout(() => {
-             purContainer.fadeToggle(750);
-         }, 2500);
+         purContainer.fadeToggle(500).delay(2000).fadeToggle(500);
      });
  });
