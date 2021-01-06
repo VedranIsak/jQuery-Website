@@ -7,7 +7,6 @@
 html {
     height: 100%;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -16,7 +15,6 @@ body {
     background: black;
     font-weight: 300;
     font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
 }
 
 section {
@@ -135,6 +133,7 @@ footer {
 
 #main-container {
     overflow: scroll;
+    overflow-x: hidden;
     height: 100vh;
     max-width: 100%;
     scroll-snap-type: mandatory;

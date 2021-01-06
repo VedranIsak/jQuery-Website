@@ -11,6 +11,9 @@
      const purText = $("#confirm-purchase-text");
      var ul = $("#cart-items");
      var totalPrice = 0;
+     var envPrice = 0;
+     var itemsCount = 0;
+     var showEnv = true;
      cartContainer.hide();
      envContainer.hide();
      purContainer.hide();
@@ -59,7 +62,7 @@
 
      function loadCartItems() {
          ul.empty();
-         totalPrice = 0;
+         totalPrice = envPrice;
 
          if (localStorage.getItem("cartItems") !== null) {
              let cartItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -93,20 +96,19 @@
              });
              $("#price-header").html(totalPrice + '$');
              $(".remove-btn").hide();
+             itemsCount = cartItems.length;
          }
      }
 
      showHeader.on("click", function(e, eventType) {
          loadCartItems();
          showContainer.toggle(500);
-         //  $(this).toggle(500);
          cartContainer.slideToggle(1000);
      });
 
      hideBtn.on("click", function(e) {
          cartContainer.slideToggle(750);
          showContainer.toggle(1000);
-         //  showHeader.toggle(1000);
      })
 
      refreshBtn.on("click", function(e) {
@@ -115,6 +117,9 @@
 
      var envTimer;
      environmentBtn.hover(function(e) {
+         if(!showEnv) {
+             return;
+         }
          envTimer = setTimeout(() => {
              $this = $(this);
              $this.addClass("isActive");
@@ -123,6 +128,9 @@
              $this.hide().text("Secure eco-friendly packaging and shipping for a small fee of 5$").fadeIn(750);
          }, 750)
      }, function(e) {
+         if(!showEnv) {
+             return;
+         }
          $this = $(this);
          $this.removeClass("isActive");
          $this.css("background", "rgb(0, 0, 0)");
@@ -140,6 +148,10 @@
              setTimeout(() => {
                  envContainer.fadeToggle(750);
              }, 2500);
+             envPrice = 5;
+             loadCartItems();
+             environmentBtn.text("Thanks for making your order eco-friendly!");
+             showEnv = false;
          }
      });
 
@@ -169,6 +181,7 @@
      });
 
      purchaseBtn.on("click", function(e) {
+         if(itemsCount === 0) { return; }
          purText.text("Thanks for your purchase! Your fee is " + totalPrice + "$");
          purContainer.fadeToggle(750);
          setTimeout(() => {

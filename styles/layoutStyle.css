@@ -245,11 +245,11 @@
       }
       
       .stats-container table td span {
-          background: #000d10;
-          color: white;
+          background: white;
+          color: #000d10;
           font-size: 0.75;
-          padding: 2.5%;
-          border-radius: 7.5px 7.5px;
+          padding: 3.5%;
+          border-radius: 15px;
       }
       
       .phone-container .add-phone-btn {
