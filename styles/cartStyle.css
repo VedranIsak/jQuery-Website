@@ -129,6 +129,7 @@ div ::-webkit-scrollbar-thumb {
     flex: 1 1 auto;
     color: white;
     text-align: center;
+    padding: 5%;
 }
 
 #info-form {
@@ -146,6 +147,7 @@ div ::-webkit-scrollbar-thumb {
     align-self: center;
     color: white;
     text-align: center;
+    padding: 5%;
 }
 
 #environment-button {
@@ -160,6 +162,7 @@ div ::-webkit-scrollbar-thumb {
     grid-row-start: 4;
     grid-row-end: 5;
     transition: background 0.75s;
+    padding: 5%;
 }
 
 .pop-up-container {

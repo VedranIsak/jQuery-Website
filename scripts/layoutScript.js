@@ -206,6 +206,7 @@ $(document).ready(function(event) {
             "isDuplicate": false
         }
     ];
+
     const specsBtns = $(".switch-container");
     const viewPhonesBtns = $(".view-phones-btn");
     const hidePhonesBtns = $(".hide-phones-btn");
@@ -342,6 +343,12 @@ $(document).ready(function(event) {
 
     addPhonesBtns.on("click", function(e) {
         $this = $(this);
+
+        addPhonesBtns.prop('disabled',true);
+        window.setTimeout(function(){ 
+            addPhonesBtns.prop('disabled',false);
+        },2000);    
+
         let phoneName = e.target.id;
         let breaker = phoneName.indexOf('-');
         let fullPhoneName = phoneName.slice(0, breaker);
@@ -364,10 +371,8 @@ $(document).ready(function(event) {
         let addedCartContainer = $("." + fullPhoneName + "-add");
         let textHeader = addedCartContainer.children("h4");
         textHeader.text(`Added ${phoneToSend.salesName} To Your Cart`);
-        addedCartContainer.fadeToggle(750);
-        setTimeout(() => {
-            addedCartContainer.fadeToggle(750);
-        }, 3000);
+        addedCartContainer.fadeToggle(500).delay(1000).fadeToggle(500);
+            
     });
 
     switchStorageBtns.on("click", function(e) {
