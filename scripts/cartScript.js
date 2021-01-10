@@ -31,7 +31,6 @@
      }
 
      function getMap() {
-
          let cartItems =
              JSON.parse(localStorage.getItem("cartItems"));
          let itemsMap = new Map();
@@ -81,7 +80,7 @@
                  ul.append(
                      `
                 <li class="item-container ${key.name}">
-                <h4 class="name-header">${key.salesName} - ${key.storage}GB</h4>
+                <h4 id=${key.id} class="name-header" data-storage=${key.storage} data-start-storage=${key.storage} data-price=${key.price}>${key.salesName} - ${key.storage}GB</h4>
                 <div class="count-header-container"><h4 class="count-header">${value}</h4></div>
                 <div class="img-container ${key.name}-${key.imgNumber}"></div>
                 <h3 class="price-container">${key.price}$</h3>
@@ -117,7 +116,7 @@
 
      var envTimer;
      environmentBtn.hover(function(e) {
-         if(!showEnv) {
+         if (!showEnv) {
              return;
          }
          envTimer = setTimeout(() => {
@@ -128,7 +127,7 @@
              $this.hide().text("Secure eco-friendly packaging and shipping for a small fee of 5$").fadeIn(750);
          }, 750)
      }, function(e) {
-         if(!showEnv) {
+         if (!showEnv) {
              return;
          }
          $this = $(this);
@@ -158,6 +157,44 @@
          $this.children(".remove-btn").slideToggle(750);
      });
 
+     $(document).on("click", ".item-container .name-header", function(e) {
+         let targetId = e.target.id;
+         let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+         let targetPhone = {}
+
+         let price;
+         let currentStorage;
+         let defaultStorage;
+
+         for (let i = 0; i < cartItems.length; i++) {
+             if (cartItems[i].id === targetId) {
+                 price = cartItems[i].price;
+                 defaultStorage = parseInt(cartItems[i].defaultStorage);
+                 currentStorage = parseInt(cartItems[i].storage);
+                 targetPhone = cartItems[i];
+             }
+         }
+
+         if (currentStorage === (defaultStorage * 4)) {
+             currentStorage = defaultStorage;
+             price -= 200;
+         } else {
+             currentStorage *= 2;
+             price += 100;
+         }
+
+         for (let i = 0; i < cartItems.length; i++) {
+             if (cartItems[i].id === targetId) {
+                 cartItems[i].price = price;
+                 cartItems[i].storage = currentStorage;
+                 targetPhone = cartItems[i];
+             }
+         }
+
+         localStorage.setItem("cartItems", JSON.stringify(cartItems));
+         refreshBtn.trigger("click");
+     });
+
      $(document).on("click", ".remove-btn", function(e) {
          $this = $(this);
 
@@ -178,7 +215,7 @@
      });
 
      purchaseBtn.on("click", function(e) {
-         if(itemsCount === 0) { return; }
+         if (itemsCount === 0) { return; }
          purText.text("Thanks for your purchase! Your fee is " + totalPrice + "$");
          purContainer.fadeToggle(500).delay(2000).fadeToggle(500);
      });

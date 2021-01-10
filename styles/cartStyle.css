@@ -13,7 +13,7 @@ div ::-webkit-scrollbar {
 }
 
 div ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
     background-color: rgba(256, 256, 256, 1);
     border-radius: 10px;
 }
@@ -21,7 +21,7 @@ div ::-webkit-scrollbar-track {
 div ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
 }
 
 #cart-section {
@@ -162,7 +162,7 @@ div ::-webkit-scrollbar-thumb {
     grid-row-start: 4;
     grid-row-end: 5;
     transition: background 0.75s;
-    padding: 5%;
+    padding: 3%;
 }
 
 .pop-up-container {
@@ -286,10 +286,7 @@ div ::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.item-container .name-header h4 {
-    text-align: center;
+    z-index: 5;
 }
 
 .item-container .count-header-container {
@@ -340,12 +337,12 @@ div ::-webkit-scrollbar-thumb {
 
 .item-container .remove-btn {
     position: absolute;
-    top: 92%;
-    height: 8%;
+    top: 88%;
+    height: 12%;
     width: 100%;
-    color: white;
-    background: red;
     border: none;
+    color: white;
+    background: rgba(128, 0, 0, 0.75);
 }
 
 #cart-info-container {

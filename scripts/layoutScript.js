@@ -16,7 +16,9 @@ $(document).ready(function(event) {
             "price": 799,
             "imgNumber": "",
             "storage": 128,
-            "isDuplicate": false
+            "defaultStorage": 128,
+            "isDuplicate": false,
+            "imgCount": 2
         },
         {
             "name": "pixel4a",
@@ -33,7 +35,9 @@ $(document).ready(function(event) {
             "price": 499,
             "imgNumber": "",
             "storage": 64,
-            "isDuplicate": false
+            "defaultStorage": 64,
+            "isDuplicate": false,
+            "imgCount": 2
         },
         {
             "name": "pixel4xl",
@@ -50,7 +54,9 @@ $(document).ready(function(event) {
             "price": 599,
             "imgNumber": "",
             "storage": 128,
-            "isDuplicate": false
+            "defaultStorage": 128,
+            "isDuplicate": false,
+            "imgCount": 3
         },
         {
             "name": "pixel4",
@@ -67,7 +73,9 @@ $(document).ready(function(event) {
             "price": 499,
             "imgNumber": "",
             "storage": 64,
-            "isDuplicate": false
+            "defaultStorage": 64,
+            "isDuplicate": false,
+            "imgCount": 3
         },
         {
             "name": "galaxys20",
@@ -84,7 +92,9 @@ $(document).ready(function(event) {
             "price": 799,
             "imgNumber": "",
             "storage": 128,
-            "isDuplicate": false
+            "defaultStorage": 128,
+            "isDuplicate": false,
+            "imgCount": 3
         },
         {
             "name": "galaxynote20",
@@ -101,7 +111,9 @@ $(document).ready(function(event) {
             "price": 899,
             "imgNumber": "",
             "storage": 128,
-            "isDuplicate": false
+            "defaultStorage": 128,
+            "isDuplicate": false,
+            "imgCount": 2
         },
         {
             "name": "galaxys10",
@@ -118,7 +130,9 @@ $(document).ready(function(event) {
             "price": 649,
             "imgNumber": "",
             "storage": 64,
-            "isDuplicate": false
+            "defaultStorage": 64,
+            "isDuplicate": false,
+            "imgCount": 2
         },
         {
             "name": "galaxynote10",
@@ -135,7 +149,9 @@ $(document).ready(function(event) {
             "price": 749,
             "imgNumber": "",
             "storage": 128,
-            "isDuplicate": false
+            "defaultStorage": 128,
+            "isDuplicate": false,
+            "imgCount": 2
         },
         {
             "name": "iphone12promax",
@@ -152,7 +168,9 @@ $(document).ready(function(event) {
             "price": 999,
             "imgNumber": "",
             "storage": 128,
-            "isDuplicate": false
+            "defaultStorage": 128,
+            "isDuplicate": false,
+            "imgCount": 3
         },
         {
             "name": "iphone12",
@@ -169,7 +187,9 @@ $(document).ready(function(event) {
             "price": 849,
             "imgNumber": "",
             "storage": 64,
-            "isDuplicate": false
+            "defaultStorage": 64,
+            "isDuplicate": false,
+            "imgCount": 3
         },
         {
             "name": "iphone11promax",
@@ -186,7 +206,9 @@ $(document).ready(function(event) {
             "price": 899,
             "imgNumber": "",
             "storage": 128,
-            "isDuplicate": false
+            "defaultStorage": 128,
+            "isDuplicate": false,
+            "imgCount": 3
         },
         {
             "name": "iphone11",
@@ -203,7 +225,9 @@ $(document).ready(function(event) {
             "price": 799,
             "imgNumber": "",
             "storage": 64,
-            "isDuplicate": false
+            "defaultStorage": 64,
+            "isDuplicate": false,
+            "imgCount": 3
         }
     ];
 
@@ -344,10 +368,10 @@ $(document).ready(function(event) {
     addPhonesBtns.on("click", function(e) {
         $this = $(this);
 
-        addPhonesBtns.prop('disabled',true);
-        window.setTimeout(function(){ 
-            addPhonesBtns.prop('disabled',false);
-        },2000);    
+        addPhonesBtns.prop('disabled', true);
+        window.setTimeout(function() {
+            addPhonesBtns.prop('disabled', false);
+        }, 2000);
 
         let phoneName = e.target.id;
         let breaker = phoneName.indexOf('-');
@@ -372,7 +396,7 @@ $(document).ready(function(event) {
         let textHeader = addedCartContainer.children("h4");
         textHeader.text(`Added ${phoneToSend.salesName} To Your Cart`);
         addedCartContainer.fadeToggle(500).delay(1000).fadeToggle(500);
-            
+
     });
 
     switchStorageBtns.on("click", function(e) {
