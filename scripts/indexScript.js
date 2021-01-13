@@ -9,21 +9,6 @@ $(document).ready(function(event) {
     var indexer = 0;
     const procentMargin = '100';
 
-    // function startSlide() {
-    //     setInterval(() => {
-    //         homeImageContainer.animate({
-    //             'margin-left': '-=' + procentMargin + '%'
-    //         }, 4000, function() {
-    //             indexer++;
-    //             if (indexer == 3) {
-    //                 indexer = 0;
-    //                 homeImageContainer.css('margin-left', 0);
-    //             }
-    //         });
-    //     }, 20000);
-    // }
-    // startSlide();
-
     imageContainers.on("click", function(e) {
         let id = e.target.id;
         console.log(id);

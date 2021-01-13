@@ -77,16 +77,35 @@
              itemsMap = getMap();
 
              itemsMap.forEach((value, key) => {
-                 ul.append(
-                     `
-                <li class="item-container ${key.name}">
-                <h4 id=${key.id} class="name-header" data-storage=${key.storage} data-start-storage=${key.storage} data-price=${key.price}>${key.salesName} - ${key.storage}GB</h4>
-                <div class="count-header-container"><h4 class="count-header">${value}</h4></div>
-                <div class="img-container ${key.name}-${key.imgNumber}"></div>
-                <h3 class="price-container">${key.price}$</h3>
-                <button class="remove-btn" data-id="${key.id}">Remove</button>
-                </li>
-                `);
+                 if(key.imgCount === 3) {
+                    ul.append(
+                        `
+                   <li class="item-container ${key.name}">
+                   <div id="${key.name}-cart-img-one" data-phone-id="${key.id}" class="cart-switch-img img-one"></div>
+                   <div id="${key.name}-cart-img-two" data-phone-id="${key.id}" class="cart-switch-img img-two"></div>
+                   <div id="${key.name}-cart-img-three" data-phone-id="${key.id}" class="cart-switch-img img-three"></div>
+                   <h4 id=${key.id} class="name-header" data-storage=${key.storage} data-start-storage=${key.storage} data-price=${key.price}>${key.salesName} - ${key.storage}GB</h4>
+                   <div class="count-header-container"><h4 class="count-header">${value}</h4></div>
+                   <div id="${key.id}-img" class="img-container ${key.name}-${key.imgNumber} ${key.name}" data-phone-id="${key.id}"></div>
+                   <h3 class="price-container">${key.price}$</h3>
+                   <button class="remove-btn" data-id="${key.id}">Remove</button>
+                   </li>
+                   `);
+                 }
+                 else {
+                    ul.append(
+                        `
+                   <li class="item-container ${key.name}">
+                   <div id="${key.name}-cart-img-one" data-phone-id="${key.id}" class="cart-switch-img img-one"></div>
+                   <div id="${key.name}-cart-img-two" data-phone-id="${key.id}" class="cart-switch-img img-two"></div>
+                   <h4 id=${key.id} class="name-header" data-storage=${key.storage} data-start-storage=${key.storage} data-price=${key.price}>${key.salesName} - ${key.storage}GB</h4>
+                   <div class="count-header-container"><h4 class="count-header">${value}</h4></div>
+                   <div id="${key.id}-img" class="img-container ${key.name}-${key.imgNumber} ${key.name}"></div>
+                   <h3 class="price-container">${key.price}$</h3>
+                   <button class="remove-btn" data-id="${key.id}">Remove</button>
+                   </li>
+                   `);
+                 }
                  if (value === 1) {
                      totalPrice += key.price;
                  } else {
@@ -151,16 +170,47 @@
          }
      });
 
-     $(document).on("click", ".item-container", function(e) {
+     $(document).on("click", ".item-container .img-container", function(e) {
          $this = $(this);
-         $this.children(".price-container").fadeToggle(750);
-         $this.children(".remove-btn").slideToggle(750);
+         $this.toggleClass("isClicked");
+
+         if($this.hasClass("isClicked")) {
+            $this.siblings("h3.price-container").fadeToggle(750);
+            setTimeout(() => {
+                $this.siblings("button.remove-btn").slideToggle(750);
+            }, 500);
+         }
+         else {
+             $this.siblings("button.remove-btn").slideToggle(750);
+             setTimeout(() => {
+                 $this.siblings("h3.price-container").fadeToggle(750);
+             }, 500);
+         }
+     });
+
+     $(document).on("click", ".cart-switch-img", function(e) {
+         $this = $(this);
+         let id = $this.attr("data-phone-id");
+         let phoneName = e.target.id;
+         let breaker = phoneName.indexOf('-');
+         let fullPhoneName = phoneName.slice(0, breaker); 
+
+         $("#" + id + "-img").removeClass(fullPhoneName + "-one").removeClass(fullPhoneName + "-two").removeClass(fullPhoneName + "-three");
+         if($this.hasClass("img-one")) {
+             $("#" + id + "-img").addClass(fullPhoneName + "-one");
+         }
+         else if($this.hasClass("img-two")) {
+            $("#" + id + "-img").addClass(fullPhoneName + "-two");
+         }
+         else if($this.hasClass("img-three")) {
+            $("#" + id + "-img").addClass(fullPhoneName + "-three");
+         }
+           
      });
 
      $(document).on("click", ".item-container .name-header", function(e) {
          let targetId = e.target.id;
          let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-         let targetPhone = {}
 
          let price;
          let currentStorage;

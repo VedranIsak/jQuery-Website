@@ -115,8 +115,25 @@ div ::-webkit-scrollbar-thumb {
     text-align: center;
 }
 
+#storage-info-container {
+    grid-column: 4 / 6;
+    grid-row: 4 / 5;
+    background: black;
+    border-left: 0.5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#storage-info-header {
+    flex: 1 1 auto;
+    color: white;
+    text-align: center;
+    padding: 5%;
+}
+
 #how-to-container {
-    grid-column: 4 / 9;
+    grid-column: 6 / 9;
     grid-row: 4 / 5;
     background: black;
     border-left: 0.5px solid white;
@@ -337,8 +354,8 @@ div ::-webkit-scrollbar-thumb {
 
 .item-container .remove-btn {
     position: absolute;
-    top: 88%;
-    height: 12%;
+    top: 92%;
+    height: 8%;
     width: 100%;
     border: none;
     color: white;
@@ -484,4 +501,154 @@ div ::-webkit-scrollbar-thumb {
 
 #purchase-btn:hover {
     background: black;
+}
+
+.cart-switch-img {
+    position: absolute;
+    right: 2%;
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 100%;
+    z-index: 7;
+}
+
+.cart-switch-img.img-one {
+    top: 10%;
+}
+
+.cart-switch-img.img-two {
+    top: 18%;
+}
+
+.cart-switch-img.img-three {
+    top: 26%;
+}
+
+#pixel5-cart-img-one {
+    background: black;
+}
+#pixel5-cart-img-two {
+    background: gray;
+}
+#pixel4a-cart-img-one {
+    background: black;
+}
+#pixel4a-cart-img-two {
+    background: cyan;
+}
+#pixel4xl-cart-img-one {
+    background: white;
+}
+#pixel4xl-cart-img-two {
+    background: red;
+}
+#pixel4xl-cart-img-three {
+    background: black;
+}
+#pixel4-cart-img-one {
+    background: white;
+}
+#pixel4-cart-img-two {
+    background: red;
+}
+#pixel4-cart-img-three {
+    background: black;
+}
+
+
+#galaxys20-cart-img-one {
+    background: pink;
+}
+#galaxys20-cart-img-two {
+    background: gray;
+}
+#galaxys20-cart-img-three {
+    background: cyan;
+}
+#galaxys10-cart-img-one {
+    background: cyan;
+}
+#galaxys10-cart-img-two {
+    background: black;
+}
+#galaxynote20-cart-img-one {
+    background: gray;
+}
+#galaxynote20-cart-img-two {
+    background: pink;
+}
+#galaxynote10-cart-img-one {
+    background: red;
+}
+#galaxynote10-cart-img-two {
+    background: lightblue;
+}
+
+
+#iphone12promax-cart-img-one {
+    background: white;
+}
+#iphone12promax-cart-img-two {   
+     background: gray;
+}
+#iphone12promax-cart-img-three {
+    background: blue;
+}
+#iphone11promax-cart-img-one {
+    background: gray;
+}
+#iphone11promax-cart-img-two {
+    background: white;
+}
+#iphone11promax-cart-img-three {
+    background: beige;
+}
+#iphone12-cart-img-one {
+    background: blue;
+}
+#iphone12-cart-img-two {
+    background: red;
+}
+#iphone12-cart-img-three {
+    background: lightgreen;
+}
+#iphone11-cart-img-one {
+    background: gold;
+}
+#iphone11-cart-img-two {
+    background: lightblue;
+}
+#iphone11-cart-img-three {
+    background: black;
+}
+
+div.pixel5 {
+    background-size: 110% 120% !important;
+}
+
+div.pixel4a {
+    background-size: 77.5% 82.5% !important;
+}
+
+div.galaxys20 {
+    background-size: 115% 82.5% !important;
+}
+
+div.galaxys10 {
+    background-size: 87.5% 83.5% !important;
+}
+
+div.galaxynote20 {
+    background-size: 97.5% 95% !important;
+}
+div.galaxynote10 {
+    background-size: 92.5% 87.5% !important;
+}
+
+div.iphone11promax {
+    background-size: 115% 87.5% !important;
+}
+
+div.iphone11 {
+    background-size: 90% 87.5% !important;
 }
