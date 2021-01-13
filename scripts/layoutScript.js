@@ -56,7 +56,7 @@ $(document).ready(function(event) {
             "storage": 128,
             "defaultStorage": 128,
             "isDuplicate": false,
-            "imgCount": 3
+            "imgCount": 2
         },
         {
             "name": "pixel4",
@@ -75,7 +75,7 @@ $(document).ready(function(event) {
             "storage": 64,
             "defaultStorage": 64,
             "isDuplicate": false,
-            "imgCount": 3
+            "imgCount": 2
         },
         {
             "name": "galaxys20",
@@ -388,6 +388,7 @@ $(document).ready(function(event) {
         if (localStorage.getItem("cartItems") === null) {
             localStorage.setItem("cartItems", "[]");
         }
+
         let newCartItems = JSON.parse(localStorage.getItem("cartItems"));
         newCartItems.push(phoneToSend);
         localStorage.setItem("cartItems", JSON.stringify(newCartItems));

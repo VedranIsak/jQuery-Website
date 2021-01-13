@@ -48,7 +48,9 @@
              }
              let singleton = true;
              itemsMap.forEach((value, key) => {
-                 if (key.name === cartItems[i].name) {
+                 if (key.name === cartItems[i].name
+                    && key.storage === cartItems[i].storage 
+                    && key.imgNumber === cartItems[i].imgNumber) {
                      singleton = false;
                  }
              });
@@ -191,6 +193,7 @@
      $(document).on("click", ".cart-switch-img", function(e) {
          $this = $(this);
          let id = $this.attr("data-phone-id");
+         let imgNumber;
          let phoneName = e.target.id;
          let breaker = phoneName.indexOf('-');
          let fullPhoneName = phoneName.slice(0, breaker); 
@@ -198,14 +201,26 @@
          $("#" + id + "-img").removeClass(fullPhoneName + "-one").removeClass(fullPhoneName + "-two").removeClass(fullPhoneName + "-three");
          if($this.hasClass("img-one")) {
              $("#" + id + "-img").addClass(fullPhoneName + "-one");
+             imgNumber = "one";
          }
          else if($this.hasClass("img-two")) {
             $("#" + id + "-img").addClass(fullPhoneName + "-two");
+            imgNumber = "two";
          }
          else if($this.hasClass("img-three")) {
             $("#" + id + "-img").addClass(fullPhoneName + "-three");
+            imgNumber = "three";
          }
-           
+
+         let newCartItems = JSON.parse(localStorage.getItem("cartItems"));
+         for(let i = 0; i < newCartItems.length; i++) {
+             if(newCartItems[i].id === id) {
+                 newCartItems[i].imgNumber = imgNumber;
+             }
+         }
+
+         localStorage.setItem("cartItems", JSON.stringify(newCartItems));
+         loadCartItems();
      });
 
      $(document).on("click", ".item-container .name-header", function(e) {
