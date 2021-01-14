@@ -30,49 +30,35 @@
     
     .pixel4a-two {
         background-image: url('../images/pixelImages/pixel4aver2.webp');
-        background-size: 115% 95%;
+        background-size: 112.5% 90%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel4xl-one {
         background-image: url('../images/pixelImages/pixel4ver1.png');
-        background-size: 115% 97.5%;
+        background-size: 85% 83.5%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel4xl-two {
         background-image: url('../images/pixelImages/pixel4ver2.png');
-        background-size: 80% 83.5%;
+        background-size: 85% 83.5%;
         background-position: center;
         background-repeat: no-repeat;
     }
-    
-    .pixel4xl-three {
-        background-image: url("../images/pixelImages/pixel4ver3.png");
-        background-size: 80% 85%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
+
     .pixel4-one {
         background-image: url('../images/pixelImages/pixel4ver1.png');
-        background-size: 115% 97.5%;
+        background-size: 85% 83.5%;
         background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel4-two {
         background-image: url('../images/pixelImages/pixel4ver2.png');
-        background-size: 80% 83.5%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
-    .pixel4-three {
-        background-image: url("../images/pixelImages/pixel4ver3.png");
-        background-size: 80% 85%;
+        background-size: 85% 83.5%;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -96,28 +82,19 @@
     }
     
     #pixel4xl-img-one {
-        background: white;
+        border: 0.1px solid white;
+        background: black;
     }
     
     #pixel4xl-img-two {
         background: red;
     }
     
-    #pixel4xl-img-three {
-        border: 2.5px solid white;
-        background: black;
-    }
-    
     #pixel4-img-one {
-        border: 0.1px solid black;
-        background: white;
+        border: 0.1px solid white;
+        background: black;
     }
     
     #pixel4-img-two {
         background: red;
-    }
-    
-    #pixel4-img-three {
-        border: 2.5px solid white;
-        background: black;
     }

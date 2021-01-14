@@ -630,6 +630,10 @@ div.pixel4a {
     background-size: 77.5% 82.5% !important;
 }
 
+div.pixel4xl, div.pixel4 {
+    background-size: 78% 90% !important;
+}
+
 div.galaxys20 {
     background-size: 115% 82.5% !important;
 }
