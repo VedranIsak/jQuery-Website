@@ -388,6 +388,7 @@ $(document).ready(function(event) {
         if (localStorage.getItem("cartItems") === null) {
             localStorage.setItem("cartItems", "[]");
         }
+
         let newCartItems = JSON.parse(localStorage.getItem("cartItems"));
         newCartItems.push(phoneToSend);
         localStorage.setItem("cartItems", JSON.stringify(newCartItems));
@@ -396,7 +397,6 @@ $(document).ready(function(event) {
         let textHeader = addedCartContainer.children("h4");
         textHeader.text(`Added ${phoneToSend.salesName} To Your Cart`);
         addedCartContainer.fadeToggle(500).delay(1000).fadeToggle(500);
-
     });
 
     switchStorageBtns.on("click", function(e) {
