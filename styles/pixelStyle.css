@@ -21,16 +21,15 @@
     }
     
     .pixel4a-one {
-        background-image: url('../images/pixelImages/pixel4aver1.png');
-        background-size: 97.5% 85%;
-        background-position-y: center;
-        background-position-x: right;
+        background-image: url('../images/pixelImages/pixel5ver1.png');
+        background-size: 120% 115%;
+        background-position: center;
         background-repeat: no-repeat;
     }
     
     .pixel4a-two {
-        background-image: url('../images/pixelImages/pixel4aver2.webp');
-        background-size: 112.5% 90%;
+        background-image: url('../images/pixelImages/pixel5ver2.png');
+        background-size: 120% 115%;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -48,7 +47,7 @@
         background-position: center;
         background-repeat: no-repeat;
     }
-
+    
     .pixel4-one {
         background-image: url('../images/pixelImages/pixel4ver1.png');
         background-size: 85% 83.5%;
@@ -78,7 +77,7 @@
     }
     
     #pixel4a-img-two {
-        background: cyan;
+        background: gray;
     }
     
     #pixel4xl-img-one {

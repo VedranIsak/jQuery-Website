@@ -30,7 +30,6 @@ $(document).ready(function(event) {
         return hashValue;
     }
 
-<<<<<<< HEAD
     function getMap() {
         let cartItems =
             JSON.parse(localStorage.getItem("cartItems"));
@@ -59,38 +58,37 @@ $(document).ready(function(event) {
         }
         return itemsMap;
     }
-=======
-     function getMap() {
-         let cartItems =
-             JSON.parse(localStorage.getItem("cartItems"));
-         let itemsMap = new Map();
-         for (let i = 0; i < cartItems.length; i++) {
-             let counter = 1;
-             for (let y = i + 1; y < cartItems.length; y++) {
-                 if (!cartItems[y].isDuplicate &&
-                     cartItems[i].name === cartItems[y].name &&
-                     cartItems[i].storage === cartItems[y].storage &&
-                     cartItems[i].imgNumber === cartItems[y].imgNumber) {
-                     counter++;
-                     itemsMap.set(cartItems[i], counter);
-                     cartItems[y].isDuplicate = true;
-                 }
-             }
-             let singleton = true;
-             itemsMap.forEach((value, key) => {
-                 if (key.name === cartItems[i].name
-                    && key.storage === cartItems[i].storage 
-                    && key.imgNumber === cartItems[i].imgNumber) {
-                     singleton = false;
-                 }
-             });
-             if (singleton) {
-                 itemsMap.set(cartItems[i], 1);
-             }
-         }
-         return itemsMap;
-     }
->>>>>>> 7321961bc2bf9d231cf8c1567ec23111b35ac8ba
+
+    function getMap() {
+        let cartItems =
+            JSON.parse(localStorage.getItem("cartItems"));
+        let itemsMap = new Map();
+        for (let i = 0; i < cartItems.length; i++) {
+            let counter = 1;
+            for (let y = i + 1; y < cartItems.length; y++) {
+                if (!cartItems[y].isDuplicate &&
+                    cartItems[i].name === cartItems[y].name &&
+                    cartItems[i].storage === cartItems[y].storage &&
+                    cartItems[i].imgNumber === cartItems[y].imgNumber) {
+                    counter++;
+                    itemsMap.set(cartItems[i], counter);
+                    cartItems[y].isDuplicate = true;
+                }
+            }
+            let singleton = true;
+            itemsMap.forEach((value, key) => {
+                if (key.name === cartItems[i].name &&
+                    key.storage === cartItems[i].storage &&
+                    key.imgNumber === cartItems[i].imgNumber) {
+                    singleton = false;
+                }
+            });
+            if (singleton) {
+                itemsMap.set(cartItems[i], 1);
+            }
+        }
+        return itemsMap;
+    }
 
     function loadCartItems() {
         ul.empty();
@@ -194,6 +192,10 @@ $(document).ready(function(event) {
         $this = $(this);
         if ($this.hasClass("isActive") && counter === 0) {
             envContainer.fadeToggle(500).delay(2000).fadeToggle(500);
+            $("#price-header").toggleClass("active");
+            setTimeout(() => {
+                $("#price-header").toggleClass("active");
+            }, 150);
             counter++;
             envPrice = 5;
             loadCartItems();
@@ -207,19 +209,19 @@ $(document).ready(function(event) {
         $this.toggleClass("isClicked");
 
         if ($this.hasClass("isClicked")) {
-            $this.siblings("h3.price-container").fadeToggle(750);
+            $this.siblings("h3.price-container").slideToggle(750);
             setTimeout(() => {
                 $this.siblings("button.remove-btn").slideToggle(750);
             }, 500);
         } else {
             $this.siblings("button.remove-btn").slideToggle(750);
             setTimeout(() => {
-                $this.siblings("h3.price-container").fadeToggle(750);
+                $this.siblings("h3.price-container").slideToggle(750);
             }, 500);
         }
     });
 
-<<<<<<< HEAD
+
     $(document).on("click", ".cart-switch-img", function(e) {
         $this = $(this);
         let id = $this.attr("data-phone-id");
@@ -235,42 +237,38 @@ $(document).ready(function(event) {
         } else if ($this.hasClass("img-three")) {
             $("#" + id + "-img").addClass(fullPhoneName + "-three");
         }
-
     });
-=======
-     $(document).on("click", ".cart-switch-img", function(e) {
-         $this = $(this);
-         let id = $this.attr("data-phone-id");
-         let imgNumber;
-         let phoneName = e.target.id;
-         let breaker = phoneName.indexOf('-');
-         let fullPhoneName = phoneName.slice(0, breaker); 
 
-         $("#" + id + "-img").removeClass(fullPhoneName + "-one").removeClass(fullPhoneName + "-two").removeClass(fullPhoneName + "-three");
-         if($this.hasClass("img-one")) {
-             $("#" + id + "-img").addClass(fullPhoneName + "-one");
-             imgNumber = "one";
-         }
-         else if($this.hasClass("img-two")) {
+    $(document).on("click", ".cart-switch-img", function(e) {
+        $this = $(this);
+        let id = $this.attr("data-phone-id");
+        let imgNumber;
+        let phoneName = e.target.id;
+        let breaker = phoneName.indexOf('-');
+        let fullPhoneName = phoneName.slice(0, breaker);
+
+        $("#" + id + "-img").removeClass(fullPhoneName + "-one").removeClass(fullPhoneName + "-two").removeClass(fullPhoneName + "-three");
+        if ($this.hasClass("img-one")) {
+            $("#" + id + "-img").addClass(fullPhoneName + "-one");
+            imgNumber = "one";
+        } else if ($this.hasClass("img-two")) {
             $("#" + id + "-img").addClass(fullPhoneName + "-two");
             imgNumber = "two";
-         }
-         else if($this.hasClass("img-three")) {
+        } else if ($this.hasClass("img-three")) {
             $("#" + id + "-img").addClass(fullPhoneName + "-three");
             imgNumber = "three";
-         }
+        }
 
-         let newCartItems = JSON.parse(localStorage.getItem("cartItems"));
-         for(let i = 0; i < newCartItems.length; i++) {
-             if(newCartItems[i].id === id) {
-                 newCartItems[i].imgNumber = imgNumber;
-             }
-         }
+        let newCartItems = JSON.parse(localStorage.getItem("cartItems"));
+        for (let i = 0; i < newCartItems.length; i++) {
+            if (newCartItems[i].id === id) {
+                newCartItems[i].imgNumber = imgNumber;
+            }
+        }
 
-         localStorage.setItem("cartItems", JSON.stringify(newCartItems));
-         loadCartItems();
-     });
->>>>>>> 7321961bc2bf9d231cf8c1567ec23111b35ac8ba
+        localStorage.setItem("cartItems", JSON.stringify(newCartItems));
+        loadCartItems();
+    });
 
     $(document).on("click", ".item-container .name-header", function(e) {
         let targetId = e.target.id;
@@ -325,11 +323,17 @@ $(document).ready(function(event) {
         }
 
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        $("#price-header").toggleClass("active");
+        setTimeout(() => {
+            $("#price-header").toggleClass("active");
+        }, 150)
         refreshBtn.trigger("click");
     });
 
     purchaseBtn.on("click", function(e) {
-        if (itemsCount === 0) { return; }
+        $this = $(this);
+        if (itemsCount === 0 || $this.hasClass("active")) { return; }
+        $this.addClass("active");
         purText.text("Thanks for your purchase! Your fee is " + totalPrice + "$");
         purContainer.fadeToggle(500).delay(2000).fadeToggle(500);
     });
