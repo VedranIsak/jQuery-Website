@@ -11,7 +11,6 @@ $(document).ready(function(event) {
 
     imageContainers.on("click", function(e) {
         let id = e.target.id;
-        console.log(id);
 
         if (id === "img1") {
             $("#img4").find(".desc-container").slideToggle(750);
