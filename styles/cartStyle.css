@@ -113,6 +113,15 @@ div ::-webkit-scrollbar-thumb {
     align-self: center;
     color: white;
     text-align: center;
+    -webkit-transition: text-shadow 0.1s;
+    -moz-transition: text-shadow 0.1s out;
+    -o-transition: text-shadow 0.1s;
+    -ms-transition: text-shadow 0.1s;
+    transition: text-shadow 0.1s;
+}
+
+#price-header.active {
+    text-shadow: 2.5px 2.5px 12px white;
 }
 
 #storage-info-container {
@@ -212,11 +221,11 @@ div ::-webkit-scrollbar-thumb {
 }
 
 #confirm-purchase-container {
-    background: white;
+    background: rgb(42, 42, 20);
 }
 
 #confirm-purchase-text {
-    color: black;
+    color: white;
     padding: 2%;
 }
 
@@ -297,9 +306,10 @@ div ::-webkit-scrollbar-thumb {
 
 .item-container .name-header {
     position: absolute;
-    height: 10%;
+    height: 17.5%;
     width: 100%;
     color: white;
+    text-shadow: 1px 1px 16px white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -308,7 +318,7 @@ div ::-webkit-scrollbar-thumb {
 
 .item-container .count-header-container {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 2%;
     width: 3.5vmin;
     height: 3.5vmin;
@@ -329,19 +339,22 @@ div ::-webkit-scrollbar-thumb {
 .item-container .img-container {
     position: absolute;
     width: 80%;
-    top: 10%;
+    top: 15%;
     margin-left: 10%;
     margin-right: 10%;
-    height: 80%;
+    height: 75%;
     background-size: 100% 100%;
     background-position: center;
 }
 
 .item-container .price-container {
     position: absolute;
-    top: 90%;
-    height: 10%;
-    width: 100%;
+    top: 87%;
+    height: 12.5%;
+    width: 98%;
+    left: 1%;
+    border: 2px solid white;
+    border-radius: 15px;
     color: white;
     display: flex;
     align-items: center;
@@ -354,12 +367,14 @@ div ::-webkit-scrollbar-thumb {
 
 .item-container .remove-btn {
     position: absolute;
-    top: 92%;
-    height: 8%;
-    width: 100%;
-    border: none;
+    top: 87%;
+    height: 12.5%;
+    width: 98%;
+    left: 1%;
     color: white;
-    background: rgba(128, 0, 0, 0.75);
+    border: 2px solid white;
+    border-radius: 15px;
+    background: rgb(128, 0, 0);
 }
 
 #cart-info-container {
@@ -506,131 +521,155 @@ div ::-webkit-scrollbar-thumb {
 .cart-switch-img {
     position: absolute;
     right: 2%;
-    height: 2vmin;
-    width: 2vmin;
+    height: 3.25vmin;
+    width: 3.25vmin;
     border-radius: 100%;
     z-index: 7;
 }
 
 .cart-switch-img.img-one {
-    top: 10%;
+    top: 20%;
 }
 
 .cart-switch-img.img-two {
-    top: 18%;
+    top: 30%;
 }
 
 .cart-switch-img.img-three {
-    top: 26%;
+    top: 40%;
 }
 
 #pixel5-cart-img-one {
     background: black;
 }
+
 #pixel5-cart-img-two {
     background: gray;
 }
+
 #pixel4a-cart-img-one {
     background: black;
 }
+
 #pixel4a-cart-img-two {
-    background: cyan;
+    background: gray;
 }
+
 #pixel4xl-cart-img-one {
     background: white;
 }
+
 #pixel4xl-cart-img-two {
     background: red;
 }
+
 #pixel4xl-cart-img-three {
     background: black;
 }
+
 #pixel4-cart-img-one {
     background: white;
 }
+
 #pixel4-cart-img-two {
     background: red;
 }
+
 #pixel4-cart-img-three {
     background: black;
 }
 
-
 #galaxys20-cart-img-one {
     background: pink;
 }
+
 #galaxys20-cart-img-two {
     background: gray;
 }
+
 #galaxys20-cart-img-three {
     background: cyan;
 }
+
 #galaxys10-cart-img-one {
     background: cyan;
 }
+
 #galaxys10-cart-img-two {
     background: black;
 }
+
 #galaxynote20-cart-img-one {
     background: gray;
 }
+
 #galaxynote20-cart-img-two {
     background: pink;
 }
+
 #galaxynote10-cart-img-one {
     background: red;
 }
+
 #galaxynote10-cart-img-two {
     background: lightblue;
 }
 
-
 #iphone12promax-cart-img-one {
     background: white;
 }
-#iphone12promax-cart-img-two {   
-     background: gray;
+
+#iphone12promax-cart-img-two {
+    background: gray;
 }
+
 #iphone12promax-cart-img-three {
     background: blue;
 }
+
 #iphone11promax-cart-img-one {
     background: gray;
 }
+
 #iphone11promax-cart-img-two {
     background: white;
 }
+
 #iphone11promax-cart-img-three {
     background: beige;
 }
+
 #iphone12-cart-img-one {
     background: blue;
 }
+
 #iphone12-cart-img-two {
     background: red;
 }
+
 #iphone12-cart-img-three {
     background: lightgreen;
 }
+
 #iphone11-cart-img-one {
     background: gold;
 }
+
 #iphone11-cart-img-two {
     background: lightblue;
 }
+
 #iphone11-cart-img-three {
     background: black;
 }
 
-div.pixel5 {
-    background-size: 110% 120% !important;
-}
-
+div.pixel5,
 div.pixel4a {
-    background-size: 77.5% 82.5% !important;
+    background-size: 110% 110% !important;
 }
 
-div.pixel4xl, div.pixel4 {
+div.pixel4xl,
+div.pixel4 {
     background-size: 78% 90% !important;
 }
 
@@ -645,6 +684,7 @@ div.galaxys10 {
 div.galaxynote20 {
     background-size: 97.5% 95% !important;
 }
+
 div.galaxynote10 {
     background-size: 92.5% 87.5% !important;
 }

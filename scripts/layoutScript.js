@@ -397,7 +397,6 @@ $(document).ready(function(event) {
         let textHeader = addedCartContainer.children("h4");
         textHeader.text(`Added ${phoneToSend.salesName} To Your Cart`);
         addedCartContainer.fadeToggle(500).delay(1000).fadeToggle(500);
-
     });
 
     switchStorageBtns.on("click", function(e) {
